@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container hero-content">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1>
+                    Sécuriser le numérique,<br>
+                    <span class="highlight">transformer l'avenir</span>
+                </h1>
+                <p>
+                    CYBERILL est une initiative dédiée à la cybersécurité et à la transformation digitale.
+                    Conseil, sensibilisation, audit, formation — je mets mes compétences au service
+                    de votre sécurité numérique.
+                </p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="{% url 'about' %}" class="btn btn-accent">Découvrir CYBERILL →</a>
+                    <a href="{% url 'contact' %}" class="btn btn-outline">Me contacter</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>4+</h3>
+                        <p>Années d'expérience IT</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>4</h3>
+                        <p>Certifications cyber</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>3</h3>
+                        <p>Langues parlées</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                <img src="{% static 'images/cyberill-banner-800.png' %}" alt="CYBERILL" class="hero-banner img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission Section -->
+<section class="section">
+    <div class="container text-center">
+        <h2 class="section-title">Ma Mission</h2>
+        <p class="section-subtitle">Donner de la valeur à mes connaissances et compétences</p>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <p class="lead text-muted">
+                    CYBERILL est né d'une conviction : la cybersécurité et la transformation digitale
+                    doivent être accessibles à tous. Mon objectif est d'aider les personnes et les organisations
+                    à mieux exprimer leur génie tout en rendant notre entourage plus sûr et plus heureux.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Mes Services</h2>
+            <p class="section-subtitle">Un accompagnement complet en cybersécurité et transformation digitale</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h4>Conseil & Audit</h4>
+                    <p>Diagnostic de sécurité, analyse des risques, conformité (ISO 27001, DSGVO), recommandations stratégiques.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h4>Formation & Sensibilisation</h4>
+                    <p>Workshops, formations interactives et sessions de sensibilisation aux bonnes pratiques de sécurité.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h4>Pentesting & Dev</h4>
+                    <p>Tests d'intrusion, développement d'applications sécurisées, audit de code et correction de vulnérabilités.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h4>Community Management</h4>
+                    <p>Animation de communautés tech, veille stratégique, contenu éducatif et gestion de présence digitale.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values -->
+<section class="section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nos Valeurs</h2>
+            <p class="section-subtitle">Ce qui guide chaque action CYBERILL</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-3">
+                <div class="value-card">
+                    <span class="value-icon">🔐</span>
+                    <h4>Intégrité</h4>
+                    <p>La confiance est notre fondation. Transparence et honnêteté dans chaque conseil.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="value-card">
+                    <span class="value-icon">🌍</span>
+                    <h4>Accessibilité</h4>
+                    <p>La cybersécurité pour tous, sans barrière — en Afrique comme en Europe.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="value-card">
+                    <span class="value-icon">💡</span>
+                    <h4>Innovation</h4>
+                    <p>Toujours à la pointe des technologies et des menaces pour des solutions actuelles.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="value-card">
+                    <span class="value-icon">🤝</span>
+                    <h4>Impact</h4>
+                    <p>Créer une valeur qui compte vraiment — pour vous, votre équipe, votre communauté.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-alt text-center">
+    <div class="container">
+        <h2 class="section-title">Travaillons ensemble</h2>
+        <p class="section-subtitle">Vous avez un projet ou besoin de conseils ? Parlons-en.</p>
+        <a href="{% url 'contact' %}" class="btn btn-accent btn-lg">Me contacter →</a>
+    </div>
+</section>
+{% endblock %}

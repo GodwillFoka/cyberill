@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ article.title }} — CYBERILL Blog{% endblock %}
+{% block meta_desc %}{{ article.content|truncatewords:30 }}{% endblock %}
+
+{% block newsletter %}{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <a href="{% url 'blog_list' %}" class="text-muted" style="text-decoration: none;">← Retour au blog</a>
+                <h1 class="mt-3 mb-3" style="font-weight: 800;">{{ article.title }}</h1>
+                <div class="text-muted mb-4">
+                    <span>{{ article.created_at|date:"d F Y" }}</span>
+                    {% if article.category %}
+                    <span class="ms-3" style="color: var(--accent);">{{ article.category }}</span>
+                    {% endif %}
+                </div>
+                <div style="line-height: 1.8; font-size: 1.05rem;">
+                    {{ article.content|linebreaks }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
