@@ -12,23 +12,25 @@
     <div class="container hero-content">
         <div class="row align-items-center g-5">
             <div class="col-lg-7">
-                <div class="hero-badge fade-in">Cybersecurity Engineer &bull; Berlin &bull; 🇩🇪</div>
+                <div class="hero-badge fade-in">Cybersecurity Engineer &bull; Berlin &bull; 
+                    {% if lang == 'de' %}🇩🇪{% elif lang == 'en' %}🇬🇧{% else %}🇫🇷{% endif %}
+                </div>
 
                 <div class="hero-slider-wrapper fade-in">
                     <!-- Slide 1 -->
                     <div class="hero-slide active">
-                        <h1>Sécuriser le<br><span class="highlight">numérique</span></h1>
-                        <p>CYBERILL est mon initiative dédiée à la cybersécurité et à la transformation digitale. Conseil, audit, formation — je mets mes compétences au service de votre sécurité.</p>
+                        <h1>{% if lang == 'fr' %}Sécuriser le<br><span class="highlight">numérique</span>{% elif lang == 'de' %}Digital<br><span class="highlight">sichern</span>{% else %}Securing<br><span class="highlight">digital</span>{% endif %}</h1>
+                        <p>{% if lang == 'fr' %}CYBERILL est mon initiative dédiée à la cybersécurité et à la transformation digitale. Conseil, audit, formation — je mets mes compétences au service de votre sécurité.{% elif lang == 'de' %}CYBERILL ist meine Initiative für Cybersicherheit und digitale Transformation. Beratung, Audit, Schulung — ich stelle meine Fähigkeiten in den Dienst Ihrer Sicherheit.{% else %}CYBERILL is my initiative for cybersecurity and digital transformation. Consulting, audit, training — I put my skills at the service of your security.{% endif %}</p>
                     </div>
                     <!-- Slide 2 -->
                     <div class="hero-slide">
-                        <h1>Former &<br><span class="highlight">sensibiliser</span></h1>
-                        <p>La cybersécurité commence par la connaissance. Workshops, formations interactives et sessions de sensibilisation pour tous les niveaux.</p>
+                        <h1>{% if lang == 'fr' %}Former &<br><span class="highlight">sensibiliser</span>{% elif lang == 'de' %}Schulen &<br><span class="highlight">sensibilisieren</span>{% else %}Training &<br><span class="highlight">awareness</span>{% endif %}</h1>
+                        <p>{% if lang == 'fr' %}La cybersécurité commence par la connaissance. Workshops, formations interactives et sessions de sensibilisation pour tous les niveaux.{% elif lang == 'de' %}Cybersicherheit beginnt mit Wissen. Workshops, interaktive Schulungen und Sensibilisierung für alle Niveaus.{% else %}Cybersecurity starts with knowledge. Workshops, interactive training and awareness sessions for all levels.{% endif %}</p>
                     </div>
                     <!-- Slide 3 -->
                     <div class="hero-slide">
-                        <h1>Innover &<br><span class="highlight">transformer</span></h1>
-                        <p>Accompagnement à la transformation digitale, développement d'applications sécurisées et veille stratégique pour rester à la pointe.</p>
+                        <h1>{% if lang == 'fr' %}Innover &<br><span class="highlight">transformer</span>{% elif lang == 'de' %}Innovieren &<br><span class="highlight">transformieren</span>{% else %}Innovate &<br><span class="highlight">transform</span>{% endif %}</h1>
+                        <p>{% if lang == 'fr' %}Accompagnement à la transformation digitale, développement d'applications sécurisées et veille stratégique.{% elif lang == 'de' %}Begleitung der digitalen Transformation, Entwicklung sicherer Anwendungen und strategische Beobachtung.{% else %}Digital transformation support, secure application development and strategic monitoring.{% endif %}</p>
                     </div>
 
                     <div class="hero-dots">
@@ -39,22 +41,22 @@
                 </div>
 
                 <div class="d-flex gap-3 flex-wrap mt-4 fade-in">
-                    <a href="{% url 'contact' %}" class="btn btn-accent">Démarrer un projet →</a>
-                    <a href="{% url 'about' %}" class="btn btn-outline">En savoir plus</a>
+                    <a href="{% url 'contact' %}" class="btn btn-accent">{% if lang == 'fr' %}Démarrer un projet →{% elif lang == 'de' %}Projekt starten →{% else %}Start a project →{% endif %}</a>
+                    <a href="{% url 'about' %}" class="btn btn-outline">{% if lang == 'fr' %}En savoir plus{% elif lang == 'de' %}Mehr erfahren{% else %}Learn more{% endif %}</a>
                 </div>
 
                 <div class="hero-stats fade-in">
                     <div class="stat-item">
                         <h3><span class="count-up" data-target="4" data-suffix="+">0</span></h3>
-                        <p>Années d'expérience IT</p>
+                        <p>{% if lang == 'fr' %}Années d'expérience IT{% elif lang == 'de' %}Jahre IT-Erfahrung{% else %}Years of IT experience{% endif %}</p>
                     </div>
                     <div class="stat-item">
                         <h3><span class="count-up" data-target="4" data-suffix="">0</span></h3>
-                        <p>Certifications cyber</p>
+                        <p>{% if lang == 'fr' %}Certifications cyber{% elif lang == 'de' %}Cyber-Zertifizierungen{% else %}Cyber certifications{% endif %}</p>
                     </div>
                     <div class="stat-item">
                         <h3><span class="count-up" data-target="3" data-suffix="">0</span></h3>
-                        <p>Langues parlées</p>
+                        <p>{% if lang == 'fr' %}Langues parlées{% elif lang == 'de' %}Gesprochene Sprachen{% else %}Languages spoken{% endif %}</p>
                     </div>
                 </div>
             </div>
@@ -80,11 +82,10 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center fade-in">
-                <span class="section-tag">Mission</span>
-                <h2 class="section-title">Ma Mission</h2>
+                <span class="section-tag">{% if lang == 'fr' %}Mission{% elif lang == 'de' %}Mission{% else %}Mission{% endif %}</span>
+                <h2 class="section-title">{% if lang == 'fr' %}Ma Mission{% elif lang == 'de' %}Meine Mission{% else %}My Mission{% endif %}</h2>
                 <p class="section-subtitle" style="font-size: 1.15rem; color: var(--text);">
-                    Donner de la valeur à mes connaissances et compétences, aider les personnes et les organisations
-                    à mieux exprimer leur génie tout en rendant notre entourage numérique plus sûr et plus heureux.
+                    {% if lang == 'fr' %}Donner de la valeur à mes connaissances et compétences, aider les personnes et les organisations à mieux exprimer leur génie tout en rendant notre entourage numérique plus sûr et plus heureux.{% elif lang == 'de' %}Meinem Wissen und meinen Fähigkeiten einen Mehrwert zu verleihen, Menschen und Organisationen zu helfen, ihr Potenzial zu entfalten, und unsere digitale Umgebung sicherer und glücklicher zu machen.{% else %}To bring value through my knowledge and skills, help people and organizations express their genius, while making our digital environment safer and happier.{% endif %}
                 </p>
             </div>
         </div>
@@ -95,16 +96,16 @@
 <section class="section section-alt">
     <div class="container">
         <div class="section-header fade-in">
-            <span class="section-tag">Services</span>
-            <h2 class="section-title">Ce que je propose</h2>
-            <p class="section-subtitle">Un accompagnement complet en cybersécurité et transformation digitale</p>
+            <span class="section-tag">{% if lang == 'fr' %}Services{% elif lang == 'de' %}Leistungen{% else %}Services{% endif %}</span>
+            <h2 class="section-title">{% if lang == 'fr' %}Ce que je propose{% elif lang == 'de' %}Was ich biete{% else %}What I offer{% endif %}</h2>
+            <p class="section-subtitle">{% if lang == 'fr' %}Un accompagnement complet en cybersécurité et transformation digitale{% elif lang == 'de' %}Eine umfassende Begleitung in Cybersicherheit und digitaler Transformation{% else %}Comprehensive support in cybersecurity and digital transformation{% endif %}</p>
         </div>
         <div class="row g-4 stagger-children">
             <div class="col-md-6 col-lg-3">
                 <div class="service-card">
                     <div class="service-icon">🛡️</div>
-                    <h4>Conseil & Audit</h4>
-                    <p>Diagnostic de sécurité, analyse des risques, conformité (ISO 27001, DSGVO, BSI), recommandations stratégiques.</p>
+                    <h4>{% if lang == 'fr' %}Conseil & Audit{% elif lang == 'de' %}Beratung & Audit{% else %}Consulting & Audit{% endif %}</h4>
+                    <p>{% if lang == 'fr' %}Diagnostic de sécurité, analyse des risques, conformité (ISO 27001, DSGVO, BSI), recommandations stratégiques.{% elif lang == 'de' %}Sicherheitsdiagnose, Risikoanalyse, Compliance (ISO 27001, DSGVO, BSI), strategische Empfehlungen.{% else %}Security diagnosis, risk analysis, compliance (ISO 27001, GDPR, BSI), strategic recommendations.{% endif %}</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "Page non trouvée" %} — CYBERILL{% endblock %}
+{% block content %}
+<section class="section text-center" style="min-height: 60vh; display: flex; align-items: center;">
+    <div class="container">
+        <div style="font-size: 8rem; font-weight: 900; color: var(--accent); line-height: 1;">404</div>
+        <h1 class="section-title mt-3">{% if lang == 'fr' %}Page non trouvée{% elif lang == 'de' %}Seite nicht gefunden{% else %}Page not found{% endif %}</h1>
+        <p class="section-subtitle">
+            {% if lang == 'fr' %}Désolé, cette page n'existe pas ou a été déplacée.{% elif lang == 'de' %}Entschuldigung, diese Seite existiert nicht oder wurde verschoben.{% else %}Sorry, this page doesn't exist or has been moved.{% endif %}
+        </p>
+        <a href="{% url 'home' %}" class="btn btn-accent mt-3">
+            {% if lang == 'fr' %}Retour à l'accueil{% elif lang == 'de' %}Zurück zur Startseite{% else %}Back to home{% endif %}
+        </a>
+    </div>
+</section>
+{% endblock %}

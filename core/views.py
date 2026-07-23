@@ -40,3 +40,9 @@ def stats_cyber(request):
 # ===== CV =====
 def cv_page(request):
     return render(request, 'core/cv.html')
+
+# ===== 404 personnalisée =====
+def custom_404(request, exception=None):
+    from django.utils import translation
+    lang = translation.get_language()
+    return render(request, '404.html', {'lang': lang}, status=404)

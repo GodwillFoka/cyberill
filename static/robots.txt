@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cyberill.onrender.com/sitemap.xml
