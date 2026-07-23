@@ -98,7 +98,6 @@ def portfolio(request):
         repos = [
             {'name': 'cyberill', 'description': 'CYBERILL website — Django 5, Bootstrap 5, multilingual FR/EN/DE', 'url': 'https://github.com/GodwillFoka/cyberill', 'stars': 0, 'forks': 0, 'language': 'HTML', 'updated': '2026-07-23'},
             {'name': 'afrosec', 'description': 'AfroSec community platform', 'url': 'https://github.com/GodwillFoka/afrosec', 'stars': 0, 'forks': 0, 'language': 'HTML', 'updated': '2026-07-19'},
-            {'name': 'bnd-bewerbung', 'description': 'BND application dossier — LaTeX, XeLaTeX', 'url': 'https://github.com/GodwillFoka/bnd-bewerbung', 'stars': 0, 'forks': 0, 'language': 'TeX', 'updated': '2026-07-20'},
             {'name': 'Institut-Die-Suchenden_Website', 'description': 'Institutional website — IT solutions', 'url': 'https://github.com/GodwillFoka/Institut-Die-Suchenden_Website', 'stars': 0, 'forks': 0, 'language': 'HTML', 'updated': '2023-02-03'},
             {'name': 'Admin-Suchenden', 'description': 'Admin panel — management system', 'url': 'https://github.com/GodwillFoka/Admin-Suchenden', 'stars': 0, 'forks': 0, 'language': 'JavaScript', 'updated': '2023-01-04'},
             {'name': 'Women-Cyber-Go-Tour-2022', 'description': 'Women in Cyber event platform', 'url': 'https://github.com/GodwillFoka/Women-Cyber-Go-Tour-2022', 'stars': 0, 'forks': 0, 'language': 'PHP', 'updated': '2022-01-19'},
