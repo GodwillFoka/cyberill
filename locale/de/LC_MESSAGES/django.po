@@ -1,0 +1,49 @@
+# CYBERILL German translations
+msgid ""
+msgstr ""
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "CYBERILL"
+msgstr "CYBERILL"
+
+msgid "Accueil"
+msgstr "Startseite"
+
+msgid "À propos"
+msgstr "Über mich"
+
+msgid "Contact"
+msgstr "Kontakt"
+
+msgid "Parlons cyber →"
+msgstr "Kontakt aufnehmen →"
+
+msgid "Restez informé"
+msgstr "Bleiben Sie informiert"
+
+msgid "Recevez nos articles et actualités"
+msgstr "Erhalten Sie unsere neuesten Artikel zu Cybersicherheit, digitaler Transformation und Chancen."
+
+msgid "Votre email"
+msgstr "Ihre E-Mail"
+
+msgid "Tous les sujets"
+msgstr "Alle Themen"
+
+msgid "S'abonner"
+msgstr "Abonnieren"
+
+msgid "Tous droits réservés."
+msgstr "Alle Rechte vorbehalten."
+
+msgid "Initiative personnelle"
+msgstr "Persönliche Initiative"
+
+msgid "Liens"
+msgstr "Links"
+
+msgid "Message envoyé avec succès"
+msgstr "Nachricht erfolgreich gesendet! Ich werde mich so schnell wie möglich bei Ihnen melden."

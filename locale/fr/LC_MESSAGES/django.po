@@ -1,0 +1,49 @@
+# Messages CYBERILL — UI strings
+msgid ""
+msgstr ""
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "CYBERILL"
+msgstr "CYBERILL"
+
+msgid "Accueil"
+msgstr "Accueil"
+
+msgid "À propos"
+msgstr "À propos"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Parlons cyber →"
+msgstr "Parlons cyber →"
+
+msgid "Restez informé"
+msgstr "Restez informé"
+
+msgid "Recevez nos articles et actualités"
+msgstr "Recevez nos articles et actualités sur la cybersécurité, la transformation digitale et les opportunités."
+
+msgid "Votre email"
+msgstr "Votre email"
+
+msgid "Tous les sujets"
+msgstr "Tous les sujets"
+
+msgid "S'abonner"
+msgstr "S'abonner"
+
+msgid "Tous droits réservés."
+msgstr "Tous droits réservés."
+
+msgid "Initiative personnelle"
+msgstr "Initiative personnelle"
+
+msgid "Liens"
+msgstr "Liens"
+
+msgid "Message envoyé avec succès"
+msgstr "Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais."

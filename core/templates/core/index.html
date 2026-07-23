@@ -132,6 +132,55 @@
     </div>
 </section>
 
+<!-- ===== Images Gallery — Cyber en images ===== -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">{% if lang == 'fr' %}Galerie{% elif lang == 'de' %}Galerie{% else %}Gallery{% endif %}</span>
+            <h2 class="section-title">{% if lang == 'fr' %}La cybersécurité en images{% elif lang == 'de' %}Cybersicherheit in Bildern{% else %}Cybersecurity in pictures{% endif %}</h2>
+            <p class="section-subtitle">{% if lang == 'fr' %}Des visuels qui parlent — protection, innovation, transformation{% elif lang == 'de' %}Bilder, die sprechen — Schutz, Innovation, Transformation{% else %}Visuals that speak — protection, innovation, transformation{% endif %}</p>
+        </div>
+        <div class="row g-4 fade-in">
+            <div class="col-md-6 col-lg-3">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=300&fit=crop" alt="Cybersécurité" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h5>{% if lang == 'fr' %}Sécurité numérique{% elif lang == 'de' %}Digitale Sicherheit{% else %}Digital Security{% endif %}</h5>
+                        <p>{% if lang == 'fr' %}Protection des données et des systèmes{% elif lang == 'de' %}Datenschutz und Systemschutz{% else %}Data and systems protection{% endif %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop" alt="Protection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h5>{% if lang == 'fr' %}Cyberdéfense{% elif lang == 'de' %}Cyberverteidigung{% else %}Cyber Defense{% endif %}</h5>
+                        <p>{% if lang == 'fr' %}Audit et tests d'intrusion{% elif lang == 'de' %}Audit und Penetrationstests{% else %}Audit and penetration testing{% endif %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=300&fit=crop" alt="Transformation" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h5>{% if lang == 'fr' %}Transformation digitale{% elif lang == 'de' %}Digitale Transformation{% else %}Digital Transformation{% endif %}</h5>
+                        <p>{% if lang == 'fr' %}Accompagnement à l'innovation{% elif lang == 'de' %}Innovationsbegleitung{% else %}Innovation support{% endif %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=400&h=300&fit=crop" alt="Développement" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h5>{% if lang == 'fr' %}Développement sécurisé{% elif lang == 'de' %}Sichere Entwicklung{% else %}Secure Development{% endif %}</h5>
+                        <p>{% if lang == 'fr' %}Applications robustes et sécurisées{% elif lang == 'de' %}Robuste und sichere Anwendungen{% else %}Robust and secure applications{% endif %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ===== Tech Stack Carousel ===== -->
 <section class="carousel-section">
     <div class="container">
