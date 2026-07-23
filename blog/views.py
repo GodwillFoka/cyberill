@@ -3,80 +3,77 @@ from django.shortcuts import render
 # ===== Multilingual articles =====
 ARTICLES = {
     'fr': [
+        # --- Article 1 ---
         {
             'slug': 'bienvenue-cyberill',
             'title': 'Bienvenue sur CYBERILL — Sécuriser le numérique, transformer l\'avenir',
             'category': 'Cyber',
             'date': '01 juillet 2026',
             'image': 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop',
-            'content': """
-CYBERILL est né d'une conviction : la cybersécurité et la transformation digitale doivent être accessibles à tous.
-
-Mon objectif est simple — donner de la valeur à mes connaissances et compétences, aider les personnes autour de moi à mieux exprimer leur génie, et contribuer à un environnement numérique plus sûr pour tous.
-
-## Pourquoi CYBERILL ?
-
-Le monde numérique évolue à une vitesse vertigineuse. Chaque jour, des milliers de nouvelles menaces apparaissent. Mais en parallèle, des opportunités incroyables se créent.
-
-### Domaines d'intervention
-- **Cybersécurité** : Audit, conseil, sensibilisation, pentesting
-- **Transformation digitale** : Accompagnement à la digitalisation des processus
-- **Développement logiciel** : Applications sécurisées, audit de code
-- **Formation** : Workshops et sessions interactives
-
-## Prochains articles
-Je prépare une série sur les bases de la cybersécurité, le pentesting éthique, et la conformité DSGVO.
-
-Restez connecté ! 🚀
-""",
+            'content': "CYBERILL est né d'une conviction : la cybersécurité et la transformation digitale doivent être accessibles à tous.\n\nMon objectif est simple — donner de la valeur à mes connaissances et compétences, aider les personnes autour de moi à mieux exprimer leur génie, et contribuer à un environnement numérique plus sûr pour tous.\n\n## Pourquoi CYBERILL ?\nLe monde numérique évolue à une vitesse vertigineuse. Chaque jour, des milliers de nouvelles menaces apparaissent.\n\n### Domaines\n- **Cybersécurité** : Audit, conseil, pentesting\n- **Transformation digitale** : Digitalisation\n- **Développement logiciel** : Apps sécurisées\n- **Formation** : Workshops\n\nRestez connecté ! 🚀",
         },
+        # --- Article 2 ---
         {
             'slug': 'cybersecurite-pour-tous',
             'title': 'Pourquoi la cybersécurité est l\'affaire de tous',
             'category': 'Sensibilisation',
             'date': '10 juillet 2026',
             'image': 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop',
-            'content': """
-On entend souvent dire que la cybersécurité est réservée aux experts. C'est faux. Dans un monde hyperconnecté, la sécurité est l'affaire de chacun.
-
-## Les chiffres clés
-- **60%** des PME qui subissent une cyberattaque ferment dans les 6 mois
-- **95%** des failles de sécurité sont dues à des erreurs humaines
-- **4,45M$** : coût moyen d'une violation de données (IBM 2023)
-
-## Les gestes essentiels
-1. **Mots de passe forts** — utilisez un gestionnaire
-2. **2FA** — activez la double authentification
-3. **Mises à jour** — elles contiennent des correctifs critiques
-4. **Sauvegardes** — règle 3-2-1
-5. **Méfiez-vous des emails suspects** — phishing
-
-La cybersécurité commence par la sensibilisation. CYBERILL est là pour vous accompagner.
-""",
+            'content': "On entend souvent dire que la cybersécurité est réservée aux experts. C'est faux.\n\n## Chiffres clés\n- **60%** des PME ferment après une cyberattaque\n- **95%** des failles dues à l'erreur humaine\n- **4,45M$** : coût moyen d'une violation (IBM 2023)\n\n## Gestes essentiels\n1. Mots de passe forts — utilisez un gestionnaire\n2. 2FA — activez la double authentification\n3. Mises à jour — correctifs critiques\n4. Sauvegardes — règle 3-2-1\n5. Méfiez-vous des emails suspects\n\nLa cybersécurité commence par la sensibilisation.",
         },
+        # --- Article 3 ---
         {
             'slug': 'de-dschang-a-berlin',
-            'title': 'De Dschang à Berlin — Mon parcours dans la cybersécurité',
+            'title': 'De Dschang à Berlin — Mon parcours',
             'category': 'Parcours',
             'date': '15 juillet 2026',
             'image': 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop',
-            'content': """
-Mon parcours commence à l'Université de Dschang, au Cameroun, où j'ai obtenu mon B.Sc. en IT Engineering.
-
-## De l'IT à la cybersécurité
-Après mon Master 1 en Software Engineering & IA, j'ai travaillé comme IT Systems Manager, Cybersecurity Specialist, et IT Project Coordinator.
-
-C'est en voyant les défis de sécurité auxquels les organisations faisaient face que j'ai choisi la cybersécurité.
-
-## Pourquoi Berlin ?
-Berlin est devenu mon port d'attache — au cœur de l'innovation européenne, où la cybersécurité est un enjeu national. Mes certifications :
-- EC-Council C|CT
-- Cisco Junior Cybersecurity Analyst
-- ANSSI SecNumAcadémie
-- CSI Linux Certified Investigator
-
-De Dschang à Berlin, chaque étape m'a apporté des compétences uniques. CYBERILL est ma façon de donner en retour.
-""",
+            'content': "Mon parcours commence à l'Université de Dschang, Cameroun.\n\n## De l'IT à la cybersécurité\nAprès mon Master 1 en Software Engineering & IA, j'ai travaillé comme IT Systems Manager, Cybersecurity Specialist, et IT Project Coordinator.\n\n## Pourquoi Berlin ?\nBerlin est au cœur de l'innovation européenne. Mes certifications : EC-Council C|CT, Cisco, ANSSI, CSI Linux.\n\nDe Dschang à Berlin — chaque étape m'a apporté des compétences uniques.",
+        },
+        # --- Article 4 : Pentesting ---
+        {
+            'slug': 'introduction-pentesting-ethique',
+            'title': 'Introduction au Pentesting Éthique',
+            'category': 'Pentesting',
+            'date': '20 juillet 2026',
+            'image': 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=400&fit=crop',
+            'content': "Le pentesting (test d'intrusion) est une simulation d'attaque cyber menée par des experts autorisés.\n\n## Les phases\n1. **Reconnaissance** — Collecte d'infos (OSINT, scanning)\n2. **Scanning** — Ports ouverts, services, vulnérabilités\n3. **Exploitation** — Accès via les failles identifiées\n4. **Maintien d'accès** — Persistance\n5. **Rapport** — Documentation et recommandations\n\n## Outils\n- **Nmap** : Scan de ports\n- **Metasploit** : Framework d'exploitation\n- **Burp Suite** : Test web\n- **Wireshark** : Analyse réseau\n\nLe pentesting éthique est essentiel pour corriger ses failles avant les attaquants.",
+        },
+        # --- Article 5 : OSINT ---
+        {
+            'slug': 'osint-collecte-information',
+            'title': 'OSINT : L\'art de la collecte d\'information',
+            'category': 'OSINT',
+            'date': '25 juillet 2026',
+            'image': 'https://images.unsplash.com/photo-1560472355-536de3962603?w=600&h=400&fit=crop',
+            'content': "L'OSINT (Open Source Intelligence) désigne la collecte et l'analyse d'informations provenant de sources publiques.\n\n## Sources\n- **Moteurs de recherche** : Google dorking, Shodan\n- **Réseaux sociaux** : LinkedIn, Twitter\n- **Whois** : Domaines\n- **GitHub** : Code source exposé\n- **Registres publics** : Entreprises\n\n## Applications\n- Reconnaissance pré-pentest\n- Investigations numériques\n- Sécurité offensive\n- Veille stratégique\n\nL'OSINT est la première étape d'une attaque — donc la première à sécuriser.",
+        },
+        # --- Article 6 : Forensics ---
+        {
+            'slug': 'digital-forensics-enquete',
+            'title': 'Digital Forensics : Enquête numérique',
+            'category': 'Forensics',
+            'date': '30 juillet 2026',
+            'image': 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop',
+            'content': "La criminalistique numérique est la science de collecte, préservation et analyse de preuves électroniques.\n\n## Étapes clés\n1. **Préservation** — Copie forensique\n2. **Collecte** — Disques, RAM, logs\n3. **Analyse** — Fichiers supprimés, timeline\n4. **Rapport** — Chaîne de custody\n\n## Outils\n- **Autopsy / Sleuth Kit** : Analyse disque\n- **FTK Imager** : Acquisition\n- **Volatility** : Analyse RAM\n- **Wireshark** : Trafic réseau\n\nLa rigueur est la clé d'une enquête numérique réussie.",
+        },
+        # --- Article 7 : DSGVO ---
+        {
+            'slug': 'dsgvo-essentiel',
+            'title': 'DSGVO : Ce qu\'il faut savoir',
+            'category': 'Conformité',
+            'date': '5 août 2026',
+            'image': 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop',
+            'content': "Le RGPD (DSGVO) est la réglementation européenne sur la protection des données personnelles.\n\n## Principes\n- Licéité, loyauté, transparence\n- Limitation des finalités\n- Minimisation des données\n- Exactitude\n- Limitation de conservation\n- Intégrité et confidentialité\n\n## Sanctions\nJusqu'à **20M€** ou **4% du CA mondial**.\n\n## Actions clés\n1. Registre des traitements\n2. Consentement explicite\n3. Chiffrement des données\n4. DPO si nécessaire\n5. Notification des violations sous 72h\n\nLa conformité DSGVO est un processus continu.",
+        },
+        # --- Article 8 : Linux ---
+        {
+            'slug': 'securiser-linux',
+            'title': 'Sécuriser son infrastructure Linux',
+            'category': 'Sécurité',
+            'date': '10 août 2026',
+            'image': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop',
+            'content': "Linux est réputé pour sa sécurité, mais une config par défaut ne suffit pas.\n\n## Hardening\n1. **Mises à jour** — apt update && apt upgrade\n2. **SSH** — Désactiver root, utiliser clés\n3. **Firewall** — iptables/ufw\n4. **SELinux / AppArmor** — Contrôle d'accès\n5. **Audit logs** — Fail2ban, auditd\n\n## Commandes\n```bash\nss -tuln  # ports ouverts\nfind / -perm -4000  # fichiers SUID\njournalctl -xe -n 50  # logs\n```\n\nUn serveur bien configuré est la base de toute infrastructure sécurisée.",
         },
     ],
     'en': [
@@ -86,26 +83,7 @@ De Dschang à Berlin, chaque étape m'a apporté des compétences uniques. CYBER
             'category': 'Cyber',
             'date': 'July 1, 2026',
             'image': 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop',
-            'content': """
-CYBERILL was born from a conviction: cybersecurity and digital transformation must be accessible to everyone.
-
-My goal is simple — to bring value through my knowledge and skills, help people around me express their genius, and contribute to a safer digital environment for all.
-
-## Why CYBERILL?
-
-The digital world is evolving at breakneck speed. Every day, thousands of new threats emerge. But at the same time, incredible opportunities arise.
-
-### Areas of expertise
-- **Cybersecurity** : Audit, consulting, awareness, pentesting
-- **Digital Transformation** : Process digitalization support
-- **Software Development** : Secure applications, code audit
-- **Training** : Workshops and interactive sessions
-
-## Coming soon
-A series on cybersecurity basics, ethical pentesting, and GDPR compliance.
-
-Stay tuned! 🚀
-""",
+            'content': "CYBERILL was born from a conviction: cybersecurity and digital transformation must be accessible to everyone.\n\n## Why CYBERILL?\nThe digital world is evolving at breakneck speed.\n\n### Areas\n- **Cybersecurity** : Audit, consulting, pentesting\n- **Digital Transformation** : Process digitalization\n- **Software Development** : Secure apps\n- **Training** : Workshops\n\nStay tuned! 🚀",
         },
         {
             'slug': 'cybersecurity-for-all',
@@ -113,47 +91,55 @@ Stay tuned! 🚀
             'category': 'Awareness',
             'date': 'July 10, 2026',
             'image': 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop',
-            'content': """
-Many think cybersecurity is only for experts. That's wrong. In a hyper-connected world, security is everyone's concern.
-
-## Key figures
-- **60%** of SMBs that suffer a cyberattack close within 6 months
-- **95%** of security breaches are due to human error
-- **$4.45M** : average cost of a data breach (IBM 2023)
-
-## Essential practices
-1. **Strong passwords** — use a password manager
-2. **2FA** — enable two-factor authentication
-3. **Updates** — they contain critical security patches
-4. **Backups** — 3-2-1 rule
-5. **Watch suspicious emails** — phishing awareness
-
-Cybersecurity starts with awareness. CYBERILL is here to guide you.
-""",
+            'content': "Many think cybersecurity is only for experts. That's wrong.\n\n## Key figures\n- **60%** of SMBs close after a cyberattack\n- **95%** of breaches due to human error\n- **$4.45M** : average breach cost (IBM 2023)\n\n## Essential practices\n1. Strong passwords\n2. 2FA\n3. Updates\n4. Backups — 3-2-1 rule\n5. Watch suspicious emails\n\nCybersecurity starts with awareness.",
         },
         {
             'slug': 'from-dschang-to-berlin',
-            'title': 'From Dschang to Berlin — My journey in cybersecurity',
+            'title': 'From Dschang to Berlin — My journey',
             'category': 'Journey',
             'date': 'July 15, 2026',
             'image': 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop',
-            'content': """
-My journey began at the University of Dschang, Cameroon, where I earned my B.Sc. in IT Engineering.
-
-## From IT to cybersecurity
-After my M.Sc. in Software Engineering & AI, I worked as IT Systems Manager, Cybersecurity Specialist, and IT Project Coordinator.
-
-Seeing the security challenges organizations faced, I chose cybersecurity as my path.
-
-## Why Berlin?
-Berlin became my home — at the heart of European innovation, where cybersecurity is a national priority. My certifications:
-- EC-Council C|CT
-- Cisco Junior Cybersecurity Analyst
-- ANSSI SecNumAcadémie
-- CSI Linux Certified Investigator
-
-From Dschang to Berlin, every step brought unique skills. CYBERILL is my way of giving back.
-""",
+            'content': "My journey began at the University of Dschang, Cameroon.\n\n## From IT to cybersecurity\nAfter my M.Sc. in Software Engineering & AI, I worked as IT Systems Manager, Cybersecurity Specialist.\n\n## Why Berlin?\nBerlin became my home. My certifications: EC-Council C|CT, Cisco, ANSSI, CSI Linux.\n\nFrom Dschang to Berlin — every step brought unique skills.",
+        },
+        {
+            'slug': 'introduction-ethical-pentesting',
+            'title': 'Introduction to Ethical Pentesting',
+            'category': 'Pentesting',
+            'date': 'July 20, 2026',
+            'image': 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=400&fit=crop',
+            'content': "Penetration testing is a simulated cyber attack conducted by authorized experts.\n\n## Phases\n1. **Reconnaissance** — Information gathering\n2. **Scanning** — Open ports, services\n3. **Exploitation** — Unauthorized access\n4. **Maintaining Access** — Persistence\n5. **Reporting** — Documentation\n\n## Tools\n- **Nmap**: Port scanning\n- **Metasploit**: Exploitation framework\n- **Burp Suite**: Web testing\n- **Wireshark**: Traffic analysis\n\nEthical pentesting helps find and fix vulnerabilities before attackers do.",
+        },
+        {
+            'slug': 'osint-information-gathering',
+            'title': 'OSINT: The Art of Information Gathering',
+            'category': 'OSINT',
+            'date': 'July 25, 2026',
+            'image': 'https://images.unsplash.com/photo-1560472355-536de3962603?w=600&h=400&fit=crop',
+            'content': "OSINT (Open Source Intelligence) refers to collecting information from public sources.\n\n## Sources\n- **Search Engines**: Google dorking, Shodan\n- **Social Media**: LinkedIn, Twitter\n- **Whois**: Domain info\n- **GitHub**: Exposed code\n- **Public Registries**: Companies\n\n## Applications\n- Pre-pentest reconnaissance\n- Digital investigations\n- Offensive security\n- Threat monitoring\n\nOSINT is often the first step of an attack — secure it first.",
+        },
+        {
+            'slug': 'digital-forensics-investigation',
+            'title': 'Digital Forensics: Cyber Investigation',
+            'category': 'Forensics',
+            'date': 'July 30, 2026',
+            'image': 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop',
+            'content': "Digital forensics is the science of collecting and analyzing electronic evidence.\n\n## Key Steps\n1. **Preservation** — Forensic copy\n2. **Collection** — Disks, RAM, logs\n3. **Analysis** — Deleted files, timeline\n4. **Reporting** — Chain of custody\n\n## Tools\n- **Autopsy / Sleuth Kit**: Disk analysis\n- **FTK Imager**: Acquisition\n- **Volatility**: RAM analysis\n- **Wireshark**: Network traffic\n\nRigor is key to a successful digital investigation.",
+        },
+        {
+            'slug': 'gdpr-essentials',
+            'title': 'GDPR: What You Need to Know',
+            'category': 'Compliance',
+            'date': 'August 5, 2026',
+            'image': 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop',
+            'content': "GDPR is the European regulation governing personal data processing.\n\n## Core Principles\n- Lawfulness, fairness, transparency\n- Purpose limitation\n- Data minimization\n- Accuracy\n- Storage limitation\n- Integrity and confidentiality\n\n## Penalties\nUp to **€20M** or **4% of global turnover**.\n\n## Key Actions\n1. Processing register\n2. Explicit consent\n3. Data encryption\n4. DPO appointment\n5. Breach notification within 72h\n\nGDPR compliance is a continuous process.",
+        },
+        {
+            'slug': 'linux-security-hardening',
+            'title': 'Securing Your Linux Infrastructure',
+            'category': 'Security',
+            'date': 'August 10, 2026',
+            'image': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop',
+            'content': "Linux is renowned for security, but default configurations aren't enough.\n\n## Hardening\n1. **Updates** — apt update && apt upgrade\n2. **SSH** — Disable root, use keys\n3. **Firewall** — iptables/ufw\n4. **SELinux / AppArmor** — Access control\n5. **Log auditing** — Fail2ban\n\n## Commands\n```bash\nss -tuln\nfind / -perm -4000\njournalctl -xe -n 50\n```\n\nA well-configured server is the foundation of secure infrastructure.",
         },
     ],
     'de': [
@@ -163,26 +149,7 @@ From Dschang to Berlin, every step brought unique skills. CYBERILL is my way of 
             'category': 'Cyber',
             'date': '1. Juli 2026',
             'image': 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop',
-            'content': """
-CYBERILL entstand aus der Überzeugung: Cybersicherheit und digitale Transformation müssen für alle zugänglich sein.
-
-Mein Ziel ist einfach — Mehrwert durch mein Wissen und meine Fähigkeiten zu schaffen, Menschen dabei zu helfen, ihr Potenzial zu entfalten, und zu einer sichereren digitalen Umgebung beizutragen.
-
-## Warum CYBERILL?
-
-Die digitale Welt entwickelt sich rasant. Täglich tauchen Tausende neuer Bedrohungen auf. Doch gleichzeitig entstehen unglaubliche Chancen.
-
-### Fachbereiche
-- **Cybersicherheit** : Audit, Beratung, Sensibilisierung, Pentesting
-- **Digitale Transformation** : Begleitung bei der Digitalisierung
-- **Softwareentwicklung** : Sichere Anwendungen, Code-Audit
-- **Schulungen** : Workshops und interaktive Sessions
-
-## Demnächst
-Eine Serie zu den Grundlagen der Cybersicherheit, ethischem Pentesting und DSGVO-Compliance.
-
-Bleiben Sie dran! 🚀
-""",
+            'content': "CYBERILL entstand aus der Überzeugung: Cybersicherheit und digitale Transformation müssen für alle zugänglich sein.\n\n## Warum CYBERILL?\nDie digitale Welt entwickelt sich rasant.\n\n### Bereiche\n- **Cybersicherheit** : Audit, Beratung, Pentesting\n- **Digitale Transformation** : Digitalisierung\n- **Softwareentwicklung** : Sichere Anwendungen\n- **Schulungen** : Workshops\n\nBleiben Sie dran! 🚀",
         },
         {
             'slug': 'cybersicherheit-fuer-alle',
@@ -190,72 +157,76 @@ Bleiben Sie dran! 🚀
             'category': 'Sensibilisierung',
             'date': '10. Juli 2026',
             'image': 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop',
-            'content': """
-Viele denken, Cybersicherheit sei nur etwas für Experten. Das stimmt nicht. In einer hypervernetzten Welt geht Sicherheit alle an.
-
-## Wichtige Zahlen
-- **60%** der KMU, die einen Cyberangriff erleiden, schließen innerhalb von 6 Monaten
-- **95%** der Sicherheitsverletzungen sind auf menschliches Versagen zurückzuführen
-- **4,45 Mio. $** : Durchschnittskosten einer Datenschutzverletzung (IBM 2023)
-
-## Wichtige Maßnahmen
-1. **Starke Passwörter** — verwenden Sie einen Passwort-Manager
-2. **2FA** — aktivieren Sie die Zwei-Faktor-Authentifizierung
-3. **Updates** — sie enthalten kritische Sicherheitspatches
-4. **Backups** — 3-2-1-Regel
-5. **Vorsicht bei E-Mails** — Phishing erkennen
-
-Cybersicherheit beginnt mit Bewusstsein. CYBERILL begleitet Sie dabei.
-""",
+            'content': "Viele denken, Cybersicherheit sei nur etwas für Experten. Das stimmt nicht.\n\n## Wichtige Zahlen\n- **60%** der KMU schließen nach einem Cyberangriff\n- **95%** der Verstöße durch menschliches Versagen\n- **4,45 Mio. $** : Durchschnittskosten (IBM 2023)\n\n## Wichtige Maßnahmen\n1. Starke Passwörter\n2. 2FA aktivieren\n3. Updates installieren\n4. Backups — 3-2-1-Regel\n5. Vorsicht bei E-Mails\n\nCybersicherheit beginnt mit Bewusstsein.",
         },
         {
             'slug': 'von-dschang-nach-berlin',
-            'title': 'Von Dschang nach Berlin — Mein Weg in die Cybersicherheit',
+            'title': 'Von Dschang nach Berlin — Mein Weg',
             'category': 'Werdegang',
             'date': '15. Juli 2026',
             'image': 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop',
-            'content': """
-Mein Weg begann an der Universität von Dschang, Kamerun, wo ich meinen B.Sc. in IT Engineering erwarb.
-
-## Von der IT zur Cybersicherheit
-Nach meinem M.Sc. in Software Engineering & KI arbeitete ich als IT-Systemmanager, Cybersicherheitsspezialist und IT-Projektkoordinator.
-
-Als ich die Sicherheitsherausforderungen von Organisationen sah, entschied ich mich für die Cybersicherheit.
-
-## Warum Berlin?
-Berlin wurde meine Heimat — im Herzen der europäischen Innovation, wo Cybersicherheit eine nationale Priorität ist. Meine Zertifizierungen:
-- EC-Council C|CT
-- Cisco Junior Cybersecurity Analyst
-- ANSSI SecNumAcadémie
-- CSI Linux Certified Investigator
-
-Von Dschang nach Berlin — jeder Schritt brachte einzigartige Erfahrungen. CYBERILL ist meine Art, etwas zurückzugeben.
-""",
+            'content': "Mein Weg begann an der Universität von Dschang, Kamerun.\n\n## Von der IT zur Cybersicherheit\nNach meinem M.Sc. in Software Engineering & KI arbeitete ich als IT-Systemmanager und Cybersicherheitsspezialist.\n\n## Warum Berlin?\nBerlin wurde meine Heimat. Meine Zertifizierungen: EC-Council C|CT, Cisco, ANSSI, CSI Linux.\n\nJeder Schritt brachte einzigartige Erfahrungen.",
+        },
+        {
+            'slug': 'einfuhrung-ethisches-pentesting',
+            'title': 'Einführung in ethisches Pentesting',
+            'category': 'Pentesting',
+            'date': '20. Juli 2026',
+            'image': 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=400&fit=crop',
+            'content': "Pentesting ist eine simulierte Cyberattacke durch autorisierte Experten.\n\n## Phasen\n1. **Aufklärung** — Informationssammlung\n2. **Scanning** — Offene Ports, Dienste\n3. **Ausnutzung** — Unbefugter Zugriff\n4. **Zugriff halten** — Persistenz\n5. **Bericht** — Dokumentation\n\n## Werkzeuge\n- **Nmap**: Port-Scan\n- **Metasploit**: Exploitation-Framework\n- **Burp Suite**: Web-Testing\n- **Wireshark**: Netzwerkanalyse\n\nEthisches Pentesting findet Schwachstellen bevor Angreifer es tun.",
+        },
+        {
+            'slug': 'osint-informationssammlung',
+            'title': 'OSINT: Die Kunst der Informationssammlung',
+            'category': 'OSINT',
+            'date': '25. Juli 2026',
+            'image': 'https://images.unsplash.com/photo-1560472355-536de3962603?w=600&h=400&fit=crop',
+            'content': "OSINT (Open Source Intelligence) bezeichnet die Sammlung von Informationen aus öffentlichen Quellen.\n\n## Quellen\n- **Suchmaschinen**: Google dorking, Shodan\n- **Soziale Medien**: LinkedIn, Twitter\n- **Whois**: Domain-Informationen\n- **GitHub**: Quellcode\n- **Öffentliche Register**: Unternehmen\n\n## Anwendungen\n- Pre-Pentest-Aufklärung\n- Digitale Ermittlungen\n- Offensive Sicherheit\n- Bedrohungsüberwachung\n\nOSINT ist oft der erste Schritt eines Angriffs.",
+        },
+        {
+            'slug': 'digital-forensics-ermittlung',
+            'title': 'Digital Forensics: Digitale Ermittlung',
+            'category': 'Forensik',
+            'date': '30. Juli 2026',
+            'image': 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop',
+            'content': "Digital Forensics ist die Wissenschaft der Sammlung und Analyse elektronischer Beweise.\n\n## Schritte\n1. **Sicherung** — Forensische Kopie\n2. **Sammlung** — Datenträger, RAM, Logs\n3. **Analyse** — Gelöschte Dateien, Timeline\n4. **Bericht** — Chain of Custody\n\n## Werkzeuge\n- **Autopsy / Sleuth Kit**: Festplattenanalyse\n- **FTK Imager**: Forensische Erfassung\n- **Volatility**: RAM-Analyse\n- **Wireshark**: Netzwerkverkehr\n\nGründlichkeit ist der Schlüssel zu erfolgreichen digitalen Ermittlungen.",
+        },
+        {
+            'slug': 'dsgvo-grundlagen',
+            'title': 'DSGVO: Was Sie wissen müssen',
+            'category': 'Compliance',
+            'date': '5. August 2026',
+            'image': 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop',
+            'content': "Die DSGVO ist die europäische Verordnung zum Schutz personenbezogener Daten.\n\n## Grundsätze\n- Rechtmäßigkeit, Transparenz\n- Zweckbindung\n- Datenminimierung\n- Richtigkeit\n- Speicherbegrenzung\n- Integrität und Vertraulichkeit\n\n## Strafen\nBis zu **20 Mio. €** oder **4% des weltweiten Umsatzes**.\n\n## Maßnahmen\n1. Verarbeitungsverzeichnis\n2. Ausdrückliche Einwilligung\n3. Datenverschlüsselung\n4. DSB-Bestellung\n5. Verletzungsmeldung in 72h\n\nDSGVO-Compliance ist ein kontinuierlicher Prozess.",
+        },
+        {
+            'slug': 'linux-infrastruktur-sichern',
+            'title': 'Linux-Infrastruktur sichern',
+            'category': 'Sicherheit',
+            'date': '10. August 2026',
+            'image': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop',
+            'content': "Linux ist für Sicherheit bekannt, aber Standardkonfigurationen reichen nicht.\n\n## Härtung\n1. **Updates** — apt update && apt upgrade\n2. **SSH** — Root-Login deaktivieren, Schlüssel\n3. **Firewall** — iptables/ufw\n4. **SELinux / AppArmor** — Zugriffskontrolle\n5. **Log-Überwachung** — Fail2ban\n\n## Befehle\n```bash\nss -tuln\nfind / -perm -4000\njournalctl -xe -n 50\n```\n\nEin gut konfigurierter Server ist die Basis sicherer Infrastruktur.",
         },
     ],
 }
 
 def blog_list(request):
-    lang = request.GET.get('lang', 'fr')
-    # Get language from URL prefix via session
     from django.utils import translation
     lang = translation.get_language()
-    articles = ARTICLES.get(lang, ARTICLES['fr'])
+    articles = ARTICLES.get(lang, ARTICLES['en'])
     return render(request, 'blog/list.html', {'articles': articles})
 
 def blog_detail(request, slug):
     from django.utils import translation
     from django.http import Http404
     lang = translation.get_language()
-    articles = ARTICLES.get(lang, ARTICLES['fr'])
-    # Also try other languages if slug not found in current language
+    articles = ARTICLES.get(lang, ARTICLES['en'])
     article = None
     for a in articles:
         if a['slug'] == slug:
             article = a
             break
     if not article:
-        # Fallback: check all languages
         for lang_code, arts in ARTICLES.items():
             for a in arts:
                 if a['slug'] == slug:
