@@ -7,166 +7,236 @@
 {% block content %}
 <div class="about-header">
     <div class="container">
-        <img src="{% static 'images/photo-about.jpg' %}" alt="Godwill FOKA" 
-             style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent); margin-bottom: 20px;">
+        <img src="{% static 'images/photo-about.jpg' %}" alt="Godwill FOKA"
+             style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent); box-shadow: var(--shadow-lg);">
         <h1>Godwill FOKA</h1>
-        <p class="lead text-muted">Cybersecurity Engineer | IT-Sicherheitsspezialist | Initiator der CYBERILL-Initiative</p>
-        <p class="text-muted">Berlin, Deutschland 🇩🇪 — Originaire du Cameroun 🇨🇲</p>
+        <p class="lead">Cybersecurity Engineer · IT-Sicherheitsspezialist · Initiator CYBERILL</p>
+        <p style="color: var(--text-muted);">Berlin, Deutschland 🇩🇪 — Originaire du Cameroun 🇨🇲</p>
     </div>
 </div>
 
+<!-- ===== Parcours ===== -->
 <section class="section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="section-title">Mon Parcours</h2>
-                <p class="lead">
-                    De Dschang à Berlin — un parcours construit sur la passion de la technologie
-                    et la conviction que la cybersécurité est l'affaire de tous.
+            <div class="col-lg-8 mx-auto fade-in">
+                <span class="section-tag">Parcours</span>
+                <h2 class="section-title">De Dschang à Berlin</h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 40px;">
+                    Un parcours construit sur la passion de la technologie et la conviction que la cybersécurité est l'affaire de tous.
                 </p>
 
-                <div class="mt-5">
-                    <h4 style="color: var(--accent);">🎓 Formation</h4>
-                    <ul class="list-unstyled mt-3">
-                        <li class="mb-3">
-                            <strong>B.Sc. IT Engineering (Informatique fondamentale)</strong><br>
-                            <span class="text-muted">Université de Dschang, Cameroun — 180 ECTS | 2018–2021</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong>M.Sc. Software Engineering & Intelligence Artificielle</strong><br>
-                            <span class="text-muted">Université de Dschang, Cameroun — 2021–2022</span>
-                        </li>
-                    </ul>
+                <div class="mt-4">
+                    <h4 style="color: var(--accent); font-weight: 700;">🎓 Formation</h4>
+                    <div class="row mt-3 g-3">
+                        <div class="col-md-6">
+                            <div class="cert-card" style="text-align: left;">
+                                <strong>B.Sc. IT Engineering</strong><br>
+                                <small class="text-muted">Informatique fondamentale — 180 ECTS</small><br>
+                                <small class="text-muted">Université de Dschang, Cameroun | 2018–2021</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="cert-card" style="text-align: left;">
+                                <strong>M.Sc. Software Engineering & IA</strong><br>
+                                <small class="text-muted">Intelligence Artificielle — 60 ECTS</small><br>
+                                <small class="text-muted">Université de Dschang, Cameroun | 2021–2022</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="mt-5">
-                    <h4 style="color: var(--accent);">💼 Expérience Professionnelle</h4>
-                    <ul class="list-unstyled mt-3">
-                        <li class="mb-3">
-                            <strong>Initiator & Tech Ambassador</strong> — CYBERILL<br>
-                            <span class="text-muted">12/2024 – Aujourd'hui | Berlin</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong>IT Systems & Maintenance Manager</strong> — Institut Die Suchenden<br>
-                            <span class="text-muted">02/2023 – 09/2025 | Yaoundé</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong>IT & Cybersecurity Specialist</strong> — ENIX SARL<br>
-                            <span class="text-muted">06/2024 – 01/2025 | Yaoundé</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong>IT Project Coordinator & System Administrator</strong> — VisibilityCAM<br>
-                            <span class="text-muted">07/2020 – 08/2022 | Cameroun</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="mt-5">
-                    <h4 style="color: var(--accent);">🎯 Pourquoi CYBERILL ?</h4>
-                    <p>
-                        J'ai créé CYBERILL pour donner de la valeur à mes connaissances et compétences,
-                        aider les personnes autour de moi à mieux exprimer leur génie, et contribuer
-                        à un environnement numérique plus sûr pour tous. Cybersécurité et transformation
-                        digitale sont les deux piliers d'un avenir où la technologie sert l'humain.
-                    </p>
+                    <h4 style="color: var(--accent); font-weight: 700;">💼 Expérience</h4>
+                    <div class="mt-3">
+                        <div class="d-flex mb-4">
+                            <div style="min-width: 4px; background: var(--accent); border-radius: 4px; margin-right: 20px;"></div>
+                            <div>
+                                <strong>Initiator & Tech Ambassador</strong> — CYBERILL<br>
+                                <small class="text-muted">12/2024 – Aujourd'hui | Berlin</small>
+                                <p class="text-muted mt-1" style="font-size: 0.9rem;">Cybersécurité, conseil, formation, community management</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div style="min-width: 4px; background: var(--border); border-radius: 4px; margin-right: 20px;"></div>
+                            <div>
+                                <strong>IT Systems & Maintenance Manager</strong> — Institut Die Suchenden<br>
+                                <small class="text-muted">02/2023 – 09/2025 | Yaoundé</small>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div style="min-width: 4px; background: var(--border); border-radius: 4px; margin-right: 20px;"></div>
+                            <div>
+                                <strong>IT & Cybersecurity Specialist</strong> — ENIX SARL<br>
+                                <small class="text-muted">06/2024 – 01/2025 | Yaoundé</small>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div style="min-width: 4px; background: var(--border); border-radius: 4px; margin-right: 20px;"></div>
+                            <div>
+                                <strong>IT Project Coordinator & SysAdmin</strong> — VisibilityCAM<br>
+                                <small class="text-muted">07/2020 – 08/2022 | Cameroun</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Certifications -->
+<!-- ===== Certifications ===== -->
 <section class="section section-alt">
     <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="section-title">Certifications</h2>
+        <div class="section-header fade-in">
+            <span class="section-tag">Certifications</span>
+            <h2 class="section-title">Mes certifications</h2>
+            <p class="section-subtitle">Des compétences validées par les plus grands organismes</p>
         </div>
-        <div class="row g-3 justify-content-center">
-            <div class="col-md-4">
-                <div class="service-card text-center">
-                    <div class="service-icon mx-auto">📜</div>
-                    <h4>EC-Council C|CT</h4>
-                    <p class="text-muted">Certified Cybersecurity Technician<br><small>En préparation</small></p>
-                </div>
+        <div class="cert-grid fade-in">
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <h5>EC-Council C|CT</h5>
+                <p>Certified Cybersecurity Technician</p>
+                <span class="cert-badge pending">En préparation</span>
             </div>
-            <div class="col-md-4">
-                <div class="service-card text-center">
-                    <div class="service-icon mx-auto">📜</div>
-                    <h4>Junior Cybersecurity Analyst</h4>
-                    <p class="text-muted">Cisco Networking Academy<br><small>✅ Complété</small></p>
-                </div>
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <h5>Junior Cybersecurity Analyst</h5>
+                <p>Cisco Networking Academy</p>
+                <span class="cert-badge completed">✅ Complété</span>
             </div>
-            <div class="col-md-4">
-                <div class="service-card text-center">
-                    <div class="service-icon mx-auto">📜</div>
-                    <h4>SecNumAcadémie</h4>
-                    <p class="text-muted">ANSSI (France)<br><small>✅ Complété</small></p>
-                </div>
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <h5>SecNumAcadémie</h5>
+                <p>ANSSI (France)</p>
+                <span class="cert-badge completed">✅ Complété</span>
             </div>
-            <div class="col-md-4">
-                <div class="service-card text-center">
-                    <div class="service-icon mx-auto">📜</div>
-                    <h4>CSI Linux Certified Investigator</h4>
-                    <p class="text-muted">Digital Forensics & Investigation<br><small>En cours</small></p>
-                </div>
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <h5>CSI Linux Investigator</h5>
+                <p>Digital Forensics & Investigation</p>
+                <span class="cert-badge inprogress">En cours</span>
             </div>
-            <div class="col-md-4">
-                <div class="service-card text-center">
-                    <div class="service-icon mx-auto">📜</div>
-                    <h4>Introduction to Cybersecurity</h4>
-                    <p class="text-muted">Cisco Networking Academy<br><small>✅ Complété</small></p>
-                </div>
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <h5>Introduction to Cybersecurity</h5>
+                <p>Cisco Networking Academy</p>
+                <span class="cert-badge completed">✅ Complété</span>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Skills -->
+<!-- ===== Compétences avec barres ===== -->
 <section class="section">
     <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="section-title">Compétences</h2>
+        <div class="section-header fade-in">
+            <span class="section-tag">Compétences</span>
+            <h2 class="section-title">Savoir-faire</h2>
+            <p class="section-subtitle">Des compétences techniques solides pour répondre à vos besoins</p>
         </div>
-        <div class="row g-4">
+        <div class="row g-4 fade-in">
             <div class="col-md-6">
-                <div class="service-card">
-                    <div class="service-icon">🛡️</div>
-                    <h4>Cybersécurité</h4>
-                    <p class="text-muted">Network Defense, Ethical Hacking, Incident Response, Digital Forensics, Vulnerability Assessment, SOC/SIEM</p>
+                <h4 style="color: var(--primary); font-size: 1rem; font-weight: 700; margin-bottom: 20px;">🛡️ Cybersécurité</h4>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Network Defense</span><span>90%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Ethical Hacking</span><span>85%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Incident Response</span><span>80%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Digital Forensics</span><span>75%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h4>Systèmes & Réseaux</h4>
-                    <p class="text-muted">Linux (Ubuntu, Debian), Windows Server, TCP/IP, Firewalls, IDS/IPS, Cisco</p>
+                <h4 style="color: var(--primary); font-size: 1rem; font-weight: 700; margin-bottom: 20px;">💻 Systèmes & Outils</h4>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Linux (Ubuntu, Debian, Kali)</span><span>95%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="95"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Réseaux TCP/IP, Firewalls</span><span>85%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>Python, Django, Scripting</span><span>80%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>SIEM, Wireshark, Burp Suite</span><span>80%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mt-4 fade-in">
+            <div class="col-md-6">
+                <h4 style="color: var(--primary); font-size: 1rem; font-weight: 700; margin-bottom: 20px;">🔧 Conformité & Normes</h4>
+                <div class="skill-item">
+                    <div class="skill-header"><span>ISO 27001</span><span>80%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>DSGVO / GDPR</span><span>85%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>BSI-Grundschutz</span><span>70%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="70"></div></div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h4>Outils</h4>
-                    <p class="text-muted">Wireshark, Nmap, Kali Linux, Metasploit, SIEM, Burp Suite, Git, Docker</p>
+                <h4 style="color: var(--primary); font-size: 1rem; font-weight: 700; margin-bottom: 20px;">🌐 Langues</h4>
+                <div class="skill-item">
+                    <div class="skill-header"><span>🇩🇪 Allemand (C1)</span><span>80%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="service-card">
-                    <div class="service-icon">📋</div>
-                    <h4>Conformité</h4>
-                    <p class="text-muted">ISO 27001, DSGVO, BSI-Grundschutz, Risikomanagement</p>
+                <div class="skill-item">
+                    <div class="skill-header"><span>🇬🇧 Anglais (B2/C1)</span><span>75%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header"><span>🇫🇷 Français (Natif)</span><span>100%</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="100"></div></div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CV Download -->
-<section class="section section-alt text-center">
+<!-- ===== Pourquoi CYBERILL ===== -->
+<section class="section section-alt">
     <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center fade-in">
+                <span class="section-tag">Vision</span>
+                <h2 class="section-title">Pourquoi CYBERILL ?</h2>
+                <p style="font-size: 1.1rem; color: var(--text); line-height: 1.8;">
+                    J'ai créé CYBERILL pour donner de la valeur à mes connaissances et compétences,
+                    aider les personnes autour de moi à mieux exprimer leur génie, et contribuer
+                    à un environnement numérique plus sûr pour tous. Cybersécurité et transformation
+                    digitale sont les deux piliers d'un avenir où la technologie sert l'humain.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CV ===== -->
+<section class="section text-center">
+    <div class="container fade-in">
+        <span class="section-tag">Curriculum</span>
         <h2 class="section-title">Mon CV</h2>
-        <p class="section-subtitle">Téléchargez mon CV complet (PDF — Deutsch)</p>
-        <p class="text-muted mb-4">Cybersecurity Engineer — Berlin, Deutschland</p>
-        <a href="mailto:fokagodwill@gmail.com" class="btn btn-accent">Demander mon CV →</a>
+        <p class="section-subtitle">Cybersecurity Engineer — Berlin, Deutschland</p>
+        <a href="mailto:fokagodwill@gmail.com" class="btn btn-accent">Demander mon CV PDF →</a>
     </div>
 </section>
 {% endblock %}

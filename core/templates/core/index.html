@@ -2,52 +2,70 @@
 {% load static %}
 
 {% block content %}
-<!-- Hero Section -->
-<section class="hero">
+<!-- ===== Hero Section ===== -->
+<section class="hero" id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow-2"></div>
+    <div class="particles-container"></div>
+
     <div class="container hero-content">
         <div class="row align-items-center g-5">
             <div class="col-lg-7">
-                <div class="hero-badge">Cybersecurity Engineer &bull; Berlin &bull; 🇩🇪</div>
-                <h1>
-                    Godwill <span class="highlight">FOKA</span>
-                </h1>
-                <p class="hero-tagline">
-                    Sécuriser le numérique,<br>
-                    <span style="color: var(--accent); font-weight: 600;">transformer l'avenir</span>
-                </p>
-                <p>
-                    CYBERILL est mon initiative dédiée à la cybersécurité et à la transformation digitale.
-                    Conseil, sensibilisation, audit, formation — je mets mes compétences au service
-                    de votre sécurité numérique.
-                </p>
-                <div class="d-flex gap-3 flex-wrap mt-4">
-                    <a href="{% url 'about' %}" class="btn btn-accent">Découvrir CYBERILL →</a>
-                    <a href="{% url 'contact' %}" class="btn btn-outline">Me contacter</a>
+                <div class="hero-badge fade-in">Cybersecurity Engineer &bull; Berlin &bull; 🇩🇪</div>
+
+                <div class="hero-slider-wrapper fade-in">
+                    <!-- Slide 1 -->
+                    <div class="hero-slide active">
+                        <h1>Sécuriser le<br><span class="highlight">numérique</span></h1>
+                        <p>CYBERILL est mon initiative dédiée à la cybersécurité et à la transformation digitale. Conseil, audit, formation — je mets mes compétences au service de votre sécurité.</p>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="hero-slide">
+                        <h1>Former &<br><span class="highlight">sensibiliser</span></h1>
+                        <p>La cybersécurité commence par la connaissance. Workshops, formations interactives et sessions de sensibilisation pour tous les niveaux.</p>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="hero-slide">
+                        <h1>Innover &<br><span class="highlight">transformer</span></h1>
+                        <p>Accompagnement à la transformation digitale, développement d'applications sécurisées et veille stratégique pour rester à la pointe.</p>
+                    </div>
+
+                    <div class="hero-dots">
+                        <button class="hero-dot active" aria-label="Slide 1"></button>
+                        <button class="hero-dot" aria-label="Slide 2"></button>
+                        <button class="hero-dot" aria-label="Slide 3"></button>
+                    </div>
                 </div>
-                <div class="hero-stats">
+
+                <div class="d-flex gap-3 flex-wrap mt-4 fade-in">
+                    <a href="{% url 'contact' %}" class="btn btn-accent">Démarrer un projet →</a>
+                    <a href="{% url 'about' %}" class="btn btn-outline">En savoir plus</a>
+                </div>
+
+                <div class="hero-stats fade-in">
                     <div class="stat-item">
-                        <h3>4+</h3>
+                        <h3><span class="count-up" data-target="4" data-suffix="+">0</span></h3>
                         <p>Années d'expérience IT</p>
                     </div>
                     <div class="stat-item">
-                        <h3>4</h3>
+                        <h3><span class="count-up" data-target="4" data-suffix="">0</span></h3>
                         <p>Certifications cyber</p>
                     </div>
                     <div class="stat-item">
-                        <h3>3</h3>
+                        <h3><span class="count-up" data-target="3" data-suffix="">0</span></h3>
                         <p>Langues parlées</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5 text-center">
+
+            <div class="col-lg-5 text-center fade-in-right">
                 <div class="hero-visual">
-                    <!-- Photo avec effet halo -->
                     <div class="hero-photo-wrapper">
                         <div class="hero-photo-ring"></div>
                         <div class="hero-photo-ring-2"></div>
                         <img src="{% static 'images/photo-profile.jpg' %}" alt="Godwill FOKA" class="hero-photo">
                     </div>
-                    <!-- Badge CYBERILL -->
                     <div class="hero-logo-badge">
                         <img src="{% static 'images/cyberill-logo-200.png' %}" alt="CYBERILL" height="28">
                     </div>
@@ -57,43 +75,43 @@
     </div>
 </section>
 
-<!-- Mission Section -->
+<!-- ===== Mission Section ===== -->
 <section class="section">
-    <div class="container text-center">
-        <h2 class="section-title">Ma Mission</h2>
-        <p class="section-subtitle">Donner de la valeur à mes connaissances et compétences</p>
+    <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <p class="lead" style="color: #D0D0E0; font-size: 1.1rem;">
-                    CYBERILL est né d'une conviction : la cybersécurité et la transformation digitale
-                    doivent être accessibles à tous. Mon objectif est d'aider les personnes et les organisations
-                    à mieux exprimer leur génie tout en rendant notre entourage plus sûr et plus heureux.
+            <div class="col-lg-8 text-center fade-in">
+                <span class="section-tag">Mission</span>
+                <h2 class="section-title">Ma Mission</h2>
+                <p class="section-subtitle" style="font-size: 1.15rem; color: var(--text);">
+                    Donner de la valeur à mes connaissances et compétences, aider les personnes et les organisations
+                    à mieux exprimer leur génie tout en rendant notre entourage numérique plus sûr et plus heureux.
                 </p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Services -->
+<!-- ===== Services Section ===== -->
 <section class="section section-alt">
     <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="section-title">Mes Services</h2>
+        <div class="section-header fade-in">
+            <span class="section-tag">Services</span>
+            <h2 class="section-title">Ce que je propose</h2>
             <p class="section-subtitle">Un accompagnement complet en cybersécurité et transformation digitale</p>
         </div>
-        <div class="row g-4">
+        <div class="row g-4 stagger-children">
             <div class="col-md-6 col-lg-3">
                 <div class="service-card">
                     <div class="service-icon">🛡️</div>
                     <h4>Conseil & Audit</h4>
-                    <p>Diagnostic de sécurité, analyse des risques, conformité (ISO 27001, DSGVO), recommandations stratégiques.</p>
+                    <p>Diagnostic de sécurité, analyse des risques, conformité (ISO 27001, DSGVO, BSI), recommandations stratégiques.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
                 <div class="service-card">
                     <div class="service-icon">🎓</div>
                     <h4>Formation & Sensibilisation</h4>
-                    <p>Workshops, formations interactives et sessions de sensibilisation aux bonnes pratiques de sécurité.</p>
+                    <p>Workshops interactifs, formations certifiantes et sensibilisation aux bonnes pratiques de sécurité pour tous les niveaux.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
@@ -106,7 +124,7 @@
             <div class="col-md-6 col-lg-3">
                 <div class="service-card">
                     <div class="service-icon">🌐</div>
-                    <h4>Community Management</h4>
+                    <h4>Community & Veille</h4>
                     <p>Animation de communautés tech, veille stratégique, contenu éducatif et gestion de présence digitale.</p>
                 </div>
             </div>
@@ -114,14 +132,74 @@
     </div>
 </section>
 
-<!-- Values -->
+<!-- ===== Tech Stack Carousel ===== -->
+<section class="carousel-section">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">Tech Stack</span>
+            <h2 class="section-title">Outils & Technologies</h2>
+            <p class="section-subtitle">Les outils que j'utilise au quotidien pour sécuriser et innover</p>
+        </div>
+        <div class="position-relative fade-in">
+            <div class="carousel-track-wrapper">
+                <div class="carousel-track">
+                    <div class="carousel-card">
+                        <div class="carousel-icon">🐧</div>
+                        <h4>Kali Linux</h4>
+                        <p>Pentesting & security auditing</p>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-icon">🔍</div>
+                        <h4>Wireshark</h4>
+                        <p>Network analysis & forensics</p>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-icon">🗺️</div>
+                        <h4>Nmap</h4>
+                        <p>Network discovery & mapping</p>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-icon">💥</div>
+                        <h4>Metasploit</h4>
+                        <p>Exploitation & vulnerability testing</p>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-icon">🛡️</div>
+                        <h4>Burp Suite</h4>
+                        <p>Web application security testing</p>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-icon">📊</div>
+                        <h4>SIEM</h4>
+                        <p>Security monitoring & log analysis</p>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-icon">🐳</div>
+                        <h4>Docker</h4>
+                        <p>Containerization & DevOps</p>
+                    </div>
+                    <div class="carousel-card">
+                        <div class="carousel-icon">🐙</div>
+                        <h4>Git</h4>
+                        <p>Version control & collaboration</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn prev">‹</button>
+            <button class="carousel-btn next">›</button>
+        </div>
+    </div>
+</section>
+
+<!-- ===== Values Section ===== -->
 <section class="section">
     <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="section-title">Nos Valeurs</h2>
-            <p class="section-subtitle">Ce qui guide chaque action CYBERILL</p>
+        <div class="section-header fade-in">
+            <span class="section-tag">Valeurs</span>
+            <h2 class="section-title">Ce qui me guide</h2>
+            <p class="section-subtitle">Des principes solides pour une cybersécurité qui a du sens</p>
         </div>
-        <div class="row g-4 justify-content-center">
+        <div class="row g-4 justify-content-center stagger-children">
             <div class="col-md-6 col-lg-3">
                 <div class="value-card">
                     <span class="value-icon">🔐</span>
@@ -154,11 +232,49 @@
     </div>
 </section>
 
-<!-- CTA -->
-<section class="section section-alt text-center">
+<!-- ===== Cyber Stats Section ===== -->
+<section class="section section-alt">
     <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">Le saviez-vous ?</span>
+            <h2 class="section-title">Cyber en chiffres</h2>
+            <p class="section-subtitle">Des données clés pour comprendre l'urgence de la cybersécurité</p>
+        </div>
+        <div class="row g-4 fade-in">
+            <div class="col-md-4">
+                <div class="service-card text-center">
+                    <div style="font-size: 3rem; font-weight: 900; color: var(--accent);">60%</div>
+                    <h4 class="mt-2">des PME ferment</h4>
+                    <p class="text-muted">dans les 6 mois suivant une cyberattaque majeure</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card text-center">
+                    <div style="font-size: 3rem; font-weight: 900; color: var(--accent);">95%</div>
+                    <h4 class="mt-2">des failles</h4>
+                    <p class="text-muted">sont dues à des erreurs humaines — la sensibilisation est clé</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card text-center">
+                    <div style="font-size: 3rem; font-weight: 900; color: var(--accent);">4,45M$</div>
+                    <h4 class="mt-2">Coût moyen</h4>
+                    <p class="text-muted">d'une violation de données (IBM 2023)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section text-center">
+    <div class="container fade-in">
+        <span class="section-tag">Contact</span>
         <h2 class="section-title">Travaillons ensemble</h2>
-        <p class="section-subtitle">Vous avez un projet ou besoin de conseils ? Parlons-en.</p>
+        <p class="section-subtitle" style="margin-bottom: 30px;">
+            Vous avez un projet, besoin d'un audit ou simplement une question ?<br>
+            Je suis à votre disposition pour en discuter.
+        </p>
         <a href="{% url 'contact' %}" class="btn btn-accent btn-lg">Me contacter →</a>
     </div>
 </section>
