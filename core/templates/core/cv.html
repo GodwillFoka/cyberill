@@ -137,8 +137,8 @@
 
                     <!-- Bouton téléchargement -->
                     <div class="cv-download text-center mt-4">
-                        <p class="text-muted mb-3">{% if lang == 'fr' %}Version PDF complète disponible sur demande{% elif lang == 'de' %}Vollständige PDF-Version auf Anfrage erhältlich{% else %}Full PDF version available upon request{% endif %}</p>
-                        <a href="mailto:fokagodwill@gmail.com?subject=Demande%20de%20CV%20-%20Godwill%20FOKA" class="btn btn-accent">📥 {% if lang == 'fr' %}Demander le CV PDF{% elif lang == 'de' %}PDF anfordern{% else %}Request PDF CV{% endif %}</a>
+                        <p class="text-muted mb-3">{% if lang == 'fr' %}Téléchargez mon CV au format PDF{% elif lang == 'de' %}Laden Sie meinen Lebenslauf als PDF herunter{% else %}Download my CV as PDF{% endif %}</p>
+                        <a href="{% url 'cv_download' %}" class="btn btn-accent">📥 {% if lang == 'fr' %}Télécharger le CV PDF{% elif lang == 'de' %}Lebenslauf PDF herunterladen{% else %}Download CV PDF{% endif %}</a>
                     </div>
                 </div>
             </div>

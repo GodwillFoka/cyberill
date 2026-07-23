@@ -47,6 +47,22 @@ def custom_404(request, exception=None):
     lang = translation.get_language()
     return render(request, '404.html', {'lang': lang}, status=404)
 
+# ===== CV PDF Download =====
+def cv_download(request):
+    from django.http import HttpResponse
+    from django.template.loader import render_to_string
+    try:
+        from weasyprint import HTML
+        html_string = render_to_string('core/cv_pdf.html')
+        pdf_file = HTML(string=html_string).write_pdf()
+        response = HttpResponse(pdf_file, content_type='application/pdf')
+        response['Content-Disposition'] = 'attachment; filename="CV_Godwill_FOKA.pdf"'
+        return response
+    except Exception as e:
+        # Fallback: return HTML version
+        html_string = render_to_string('core/cv_pdf.html')
+        return HttpResponse(html_string, content_type='text/html')
+
 # ===== Portfolio =====
 def portfolio(request):
     import json
