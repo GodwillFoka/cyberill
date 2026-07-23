@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{% if lang == 'fr' %}Portfolio — CYBERILL{% elif lang == 'de' %}Portfolio — CYBERILL{% else %}Portfolio — CYBERILL{% endif %}{% endblock %}
+{% block meta_desc %}{% if lang == 'fr' %}Projets et réalisations en cybersécurité, développement logiciel et transformation digitale par Godwill FOKA.{% elif lang == 'de' %}Projekte und Arbeiten in Cybersicherheit, Softwareentwicklung und digitaler Transformation von Godwill FOKA.{% else %}Projects and work in cybersecurity, software development, and digital transformation by Godwill FOKA.{% endif %}{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">{% if lang == 'fr' %}Portfolio{% elif lang == 'de' %}Portfolio{% else %}Portfolio{% endif %}</span>
+            <h1 class="section-title">{% if lang == 'fr' %}Mes Projets{% elif lang == 'de' %}Meine Projekte{% else %}My Projects{% endif %}</h1>
+            <p class="section-subtitle">{% if lang == 'fr' %}Des réalisations concrètes en cybersécurité, développement et transformation digitale{% elif lang == 'de' %}Konkrete Projekte in Cybersicherheit, Entwicklung und digitaler Transformation{% else %}Concrete achievements in cybersecurity, development, and digital transformation{% endif %}</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GitHub Repos ===== -->
+<section class="section section-alt pt-0">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">🐙 GitHub</span>
+            <h2 class="section-title">{% if lang == 'fr' %}Dépôts Open Source{% elif lang == 'de' %}Open-Source-Repositories{% else %}Open Source Repositories{% endif %}</h2>
+            <p class="section-subtitle">{% if lang == 'fr' %}Mes projets disponibles sur github.com/GodwillFoka{% elif lang == 'de' %}Meine Projekte auf github.com/GodwillFoka{% else %}My projects on github.com/GodwillFoka{% endif %}</p>
+        </div>
+
+        {% if repos %}
+        <div class="row g-4 stagger-children">
+            {% for repo in repos %}
+            <div class="col-md-6 col-lg-4">
+                <a href="{{ repo.url }}" target="_blank" class="repo-card-link">
+                    <div class="repo-card">
+                        <div class="repo-header">
+                            <span class="repo-icon">📁</span>
+                            <h4>{{ repo.name }}</h4>
+                        </div>
+                        <p class="repo-desc">{{ repo.description|default:_("Aucune description") }}</p>
+                        <div class="repo-footer">
+                            {% if repo.language %}
+                            <span class="repo-lang">
+                                <span class="lang-dot" style="background: {% if repo.language == 'Python' %}#3572A5{% elif repo.language == 'TeX' %}#3D6117{% elif repo.language == 'JavaScript' %}#F1E05A{% elif repo.language == 'HTML' %}#E34F26{% elif repo.language == 'CSS' %}#563D7C{% else %}#6B7280{% endif %};"></span>
+                                {{ repo.language }}
+                            </span>
+                            {% endif %}
+                            <span class="repo-stars">⭐ {{ repo.stars }}</span>
+                            <span class="repo-forks">⑂ {{ repo.forks }}</span>
+                            <span class="repo-updated">{{ repo.updated }}</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-center py-5 fade-in">
+            <div style="font-size: 4rem; margin-bottom: 20px;">📁</div>
+            <h3>{% if lang == 'fr' %}Chargement en cours…{% elif lang == 'de' %}Wird geladen…{% else %}Loading…{% endif %}</h3>
+            <p class="text-muted">{% if lang == 'fr' %}Les projets GitHub seront bientôt affichés ici.{% elif lang == 'de' %}GitHub-Projekte werden bald hier angezeigt.{% else %}GitHub projects will be displayed here soon.{% endif %}</p>
+        </div>
+        {% endif %}
+
+        <div class="text-center mt-4 fade-in">
+            <a href="https://github.com/GodwillFoka" target="_blank" class="btn btn-outline">
+                🐙 {% if lang == 'fr' %}Voir tout sur GitHub →{% elif lang == 'de' %}Alle auf GitHub anzeigen →{% else %}View all on GitHub →{% endif %}
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== Projets phares ===== -->
+<section class="section">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">{% if lang == 'fr' %}Réalisations{% elif lang == 'de' %}Projekte{% else %}Highlights{% endif %}</span>
+            <h2 class="section-title">{% if lang == 'fr' %}Projets clés{% elif lang == 'de' %}Schlüsselprojekte{% else %}Key Projects{% endif %}</h2>
+            <p class="section-subtitle">{% if lang == 'fr' %}Ce sur quoi j'ai travaillé récemment{% elif lang == 'de' %}Woran ich kürzlich gearbeitet habe{% else %}What I've been working on recently{% endif %}</p>
+        </div>
+        <div class="row g-4 stagger-children">
+            <div class="col-lg-6">
+                <div class="project-featured">
+                    <div class="project-featured-icon">🛡️</div>
+                    <h3>CYBERILL</h3>
+                    <p class="project-tag">{% if lang == 'fr' %}Plateforme web — 2026{% elif lang == 'de' %}Web-Plattform — 2026{% else %}Web Platform — 2026{% endif %}</p>
+                    <p>{% if lang == 'fr' %}Site vitrine complet pour l'initiative CYBERILL : design responsive, multilingue (FR/EN/DE), animations, carrousels, blog, portfolio, stats cyber et glossaire intégré. Django 5, Bootstrap 5, déploiement Render.{% elif lang == 'de' %}Vollständige Website für die CYBERILL-Initiative: responsives Design, mehrsprachig (FR/EN/DE), Animationen, Karussells, Blog, Portfolio, Cyber-Statistiken und integriertes Glossar. Django 5, Bootstrap 5, Render-Deployment.{% else %}Full-featured website for the CYBERILL initiative: responsive design, multilingual (FR/EN/DE), animations, carousels, blog, portfolio, cyber stats and integrated glossary. Django 5, Bootstrap 5, Render deployment.{% endif %}</p>
+                    <div class="project-techs">
+                        <span class="project-tech">Python</span>
+                        <span class="project-tech">Django</span>
+                        <span class="project-tech">Bootstrap 5</span>
+                        <span class="project-tech">JavaScript</span>
+                        <span class="project-tech">Render</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="project-featured">
+                    <div class="project-featured-icon">📄</div>
+                    <h3>BND Bewerbungsdossier</h3>
+                    <p class="project-tag">{% if lang == 'fr' %}Document LaTeX — 2026{% elif lang == 'de' %}LaTeX-Dokument — 2026{% else %}LaTeX Document — 2026{% endif %}</p>
+                    <p>{% if lang == 'fr' %}Dossier de candidature complet pour le Bundesnachrichtendienst (BND) au format thèse universitaire. XeLaTeX, DejaVu Sans, mise en page professionnelle avec logo BND et photo.{% elif lang == 'de' %}Vollständige Bewerbungsmappe für den Bundesnachrichtendienst (BND) im Uni-Thesen-Format. XeLaTeX, DejaVu Sans, professionelles Layout mit BND-Logo und Foto.{% else %}Complete application dossier for the Bundesnachrichtendienst (BND) in university thesis format. XeLaTeX, DejaVu Sans, professional layout with BND logo and photo.{% endif %}</p>
+                    <div class="project-techs">
+                        <span class="project-tech">LaTeX</span>
+                        <span class="project-tech">XeLaTeX</span>
+                        <span class="project-tech">GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GitHub Stats ===== -->
+<section class="section section-alt text-center">
+    <div class="container fade-in">
+        <span class="section-tag">{% if lang == 'fr' %}Stats{% elif lang == 'de' %}Stats{% else %}Stats{% endif %}</span>
+        <h2 class="section-title">{% if lang == 'fr' %}Activité GitHub{% elif lang == 'de' %}GitHub-Aktivität{% else %}GitHub Activity{% endif %}</h2>
+        <p class="section-subtitle">{% if lang == 'fr' %}Ma présence open-source en chiffres{% elif lang == 'de' %}Meine Open-Source-Präsenz in Zahlen{% else %}My open-source presence in numbers{% endif %}</p>
+        <div class="row justify-content-center g-4 mt-3">
+            <div class="col-md-3">
+                <div class="stat-big-card">
+                    <div class="stat-big-number">{{ repos|length|default:"0" }}</div>
+                    <h4>{% if lang == 'fr' %}Dépôts publics{% elif lang == 'de' %}Öffentliche Repos{% else %}Public Repos{% endif %}</h4>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-big-card">
+                    <div class="stat-big-number">{{ repos|length|default:"0" }}</div>
+                    <h4>{% if lang == 'fr' %}Projets actifs{% elif lang == 'de' %}Aktive Projekte{% else %}Active Projects{% endif %}</h4>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-big-card">
+                    <a href="https://github.com/GodwillFoka" target="_blank" style="color: inherit; text-decoration: none;">
+                        <div style="font-size: 3rem; font-weight: 900; color: var(--accent);">🐙</div>
+                        <h4>{% if lang == 'fr' %}Voir le profil{% elif lang == 'de' %}Profil anzeigen{% else %}View Profile{% endif %}</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

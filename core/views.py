@@ -46,3 +46,39 @@ def custom_404(request, exception=None):
     from django.utils import translation
     lang = translation.get_language()
     return render(request, '404.html', {'lang': lang}, status=404)
+
+# ===== Portfolio =====
+def portfolio(request):
+    import requests as http_requests
+    from django.utils import translation
+    lang = translation.get_language()
+    
+    repos = []
+    try:
+        r = http_requests.get(
+            'https://api.github.com/users/GodwillFoka/repos?per_page=20&sort=updated',
+            timeout=10
+        )
+        if r.status_code == 200:
+            for repo in r.json():
+                if not repo.get('fork', True):
+                    repos.append({
+                        'name': repo['name'],
+                        'description': repo['description'] or '',
+                        'url': repo['html_url'],
+                        'stars': repo['stargazers_count'],
+                        'forks': repo['forks_count'],
+                        'language': repo['language'] or '',
+                        'updated': repo['updated_at'][:10],
+                    })
+    except Exception:
+        pass
+    
+    # Fallback projects if API fails
+    if not repos:
+        repos = [
+            {'name': 'cyberill', 'description': 'Site vitrine CYBERILL — Django, Bootstrap 5', 'url': 'https://github.com/GodwillFoka/cyberill', 'stars': 0, 'forks': 0, 'language': 'Python', 'updated': '2026-07-23'},
+            {'name': 'bnd-bewerbung', 'description': 'Bewerbungsdossier BND — LaTeX, XeLaTeX', 'url': 'https://github.com/GodwillFoka/bnd-bewerbung', 'stars': 0, 'forks': 0, 'language': 'TeX', 'updated': '2026-07-20'},
+        ]
+    
+    return render(request, 'core/portfolio.html', {'repos': repos})

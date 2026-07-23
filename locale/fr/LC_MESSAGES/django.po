@@ -25,7 +25,9 @@ msgid "Restez informé"
 msgstr "Restez informé"
 
 msgid "Recevez nos articles et actualités"
-msgstr "Recevez nos articles et actualités sur la cybersécurité, la transformation digitale et les opportunités."
+msgstr ""
+"Recevez nos articles et actualités sur la cybersécurité, la transformation "
+"digitale et les opportunités."
 
 msgid "Votre email"
 msgstr "Votre email"
@@ -46,7 +48,9 @@ msgid "Liens"
 msgstr "Liens"
 
 msgid "Message envoyé avec succès"
-msgstr "Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais."
+msgstr ""
+"Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais."
+
 msgid "Ressources"
 msgstr "Ressources"
 
@@ -59,3 +63,5 @@ msgstr "Curriculum"
 msgid "CV"
 msgstr "CV"
 
+msgid "Portfolio"
+msgstr "Portfolio"
