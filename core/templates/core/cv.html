@@ -15,7 +15,6 @@
 
         <div class="row justify-content-center fade-in">
             <div class="col-lg-10">
-                <!-- Carte CV -->
                 <div class="cv-card">
                     <!-- Entête -->
                     <div class="cv-header">
@@ -25,9 +24,10 @@
                             </div>
                             <div class="col-md-10">
                                 <h2 class="cv-name">Godwill FOKA</h2>
-                                <p class="cv-title">{% if lang == 'fr' %}Cybersecurity Engineer | IT-Sicherheitsspezialist{% elif lang == 'de' %}Cybersecurity Engineer | IT-Sicherheitsspezialist{% else %}Cybersecurity Engineer | IT Security Specialist{% endif %}</p>
+                                <p class="cv-title">{% if lang == 'fr' %}Cybersecurity Engineer | IT-Sicherheitsspezialist | Initiator CYBERILL{% elif lang == 'de' %}Cybersecurity Engineer | IT-Sicherheitsspezialist | Initiator CYBERILL{% else %}Cybersecurity Engineer | IT Security Specialist | CYBERILL Initiator{% endif %}</p>
                                 <div class="cv-contact-bar">
                                     <span>📧 fokagodwill@gmail.com</span>
+                                    <span>📞 +49 15565 880501</span>
                                     <span>📍 Berlin, Deutschland</span>
                                     <span>🔗 github.com/GodwillFoka</span>
                                     <span>💼 linkedin.com/in/godwillfoka</span>
@@ -39,7 +39,7 @@
                     <!-- Profil -->
                     <div class="cv-section">
                         <h3 class="cv-section-title">{% if lang == 'fr' %}Profil{% elif lang == 'de' %}Profil{% else %}Profile{% endif %}</h3>
-                        <p>{% if lang == 'fr' %}Cybersecurity Engineer passionné, spécialisé en sécurité offensive et défensive, conformité et transformation digitale. Fort de 4+ années d'expérience en IT et cybersécurité, je maîtrise l'audit de sécurité, le pentesting, la gestion d'incidents et la sensibilisation. Actuellement basé à Berlin, je cherche à mettre mes compétences au service d'une organisation où la sécurité est une priorité stratégique.{% elif lang == 'de' %}Leidenschaftlicher Cybersecurity Engineer, spezialisiert auf offensive und defensive Sicherheit, Compliance und digitale Transformation. Mit über 4 Jahren Erfahrung in IT und Cybersicherheit beherrsche ich Sicherheitsaudits, Pentesting, Incident Response und Sensibilisierung. Derzeit in Berlin ansässig, möchte ich meine Fähigkeiten in einer Organisation einsetzen, in der Sicherheit eine strategische Priorität ist.{% else %}Passionate Cybersecurity Engineer specialized in offensive and defensive security, compliance, and digital transformation. With 4+ years of experience in IT and cybersecurity, I master security audits, pentesting, incident response, and awareness training. Currently based in Berlin, I aim to bring my skills to an organization where security is a strategic priority.{% endif %}</p>
+                        <p>{% if lang == 'fr' %}IT- und Cybersecurity-Profi avec des connaissances approfondies en sécurité réseau, endpoint security et infrastructure IT. Initiator de l'initiative CYBERILL pour la promotion de la sensibilisation à la cybersécurité et à la transformation digitale. Actuellement en préparation de la certification EC-Council C|CT. Autodidacte structuré avec une grande capacité d'apprentissage — Objectif : ISB / CISO.{% elif lang == 'de' %}IT- und Cybersecurity-Profi mit fundierten Kenntnissen in Netzwerksicherheit, Endpoint Security und IT-Infrastruktur. Initiator der CYBERILL-Initiative zur Förderung von Cybersicherheitsbewusstsein und digitaler Transformation. Aktuell in der EC-Council C|CT-Zertifizierung. Strukturierter Autodidakt mit hoher Lernbereitschaft — Ziel: ISB / CISO.{% else %}IT and Cybersecurity professional with solid knowledge in network security, endpoint security, and IT infrastructure. Initiator of the CYBERILL initiative promoting cybersecurity awareness and digital transformation. Currently pursuing EC-Council C|CT certification. Structured self-learner with high learning capacity — Goal: ISB / CISO.{% endif %}</p>
                     </div>
 
                     <!-- Formation -->
@@ -55,7 +55,7 @@
                         <div class="cv-item">
                             <div class="cv-item-date">2021–2022</div>
                             <div class="cv-item-content">
-                                <h4>{% if lang == 'fr' %}Master 1 — Software Engineering & IA{% elif lang == 'de' %}Master 1 — Software Engineering & KI{% else %}Master 1 — Software Engineering & AI{% endif %}</h4>
+                                <h4>{% if lang == 'fr' %}Master 1 — Software Engineering & IA (sans diplôme){% elif lang == 'de' %}Master 1 — Software Engineering & KI (ohne Abschluss){% else %}Master 1 — Software Engineering & AI (without degree){% endif %}</h4>
                                 <p>{% if lang == 'fr' %}Université de Dschang, Cameroun — 60 ECTS{% elif lang == 'de' %}Universität Dschang, Kamerun — 60 ECTS{% else %}University of Dschang, Cameroon — 60 ECTS{% endif %}</p>
                             </div>
                         </div>
@@ -64,30 +64,70 @@
                     <!-- Expérience -->
                     <div class="cv-section">
                         <h3 class="cv-section-title"><span style="color: var(--accent);">💼</span> {% if lang == 'fr' %}Expérience{% elif lang == 'de' %}Erfahrung{% else %}Experience{% endif %}</h3>
+
                         <div class="cv-item">
-                            <div class="cv-item-date">2024–Auj.</div>
+                            <div class="cv-item-date">12/2024 – Auj.</div>
                             <div class="cv-item-content">
-                                <h4>{% if lang == 'fr' %}Initiator & Tech Ambassador{% elif lang == 'de' %}Initiator & Tech Ambassador{% else %}Initiator & Tech Ambassador{% endif %} — CYBERILL</h4>
+                                <h4>{% if lang == 'fr' %}Initiator & Tech Ambassador{% elif lang == 'de' %}Initiator & Tech-Botschafter{% else %}Initiator & Tech Ambassador{% endif %} — CYBERILL</h4>
                                 <p>Berlin, Deutschland</p>
                                 <ul>
-                                    <li>{% if lang == 'fr' %}Conseil en cybersécurité et transformation digitale{% elif lang == 'de' %}Beratung zu Cybersicherheit und digitaler Transformation{% else %}Cybersecurity and digital transformation consulting{% endif %}</li>
-                                    <li>{% if lang == 'fr' %}Sensibilisation et formation aux bonnes pratiques{% elif lang == 'de' %}Sensibilisierung und Schulung zu bewährten Verfahren{% else %}Awareness and training on best practices{% endif %}</li>
-                                    <li>{% if lang == 'fr' %}Développement d'applications sécurisées{% elif lang == 'de' %}Entwicklung sicherer Anwendungen{% else %}Secure application development{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Création d'une marque tech pour la sensibilisation à la cybersécurité et la transformation digitale{% elif lang == 'de' %}Aufbau einer Tech-Marke zur Förderung von Cybersecurity-Bewusstsein und digitaler Transformation{% else %}Building a tech brand to promote cybersecurity awareness and digital transformation{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Conseil en sécurité IT, solutions digitales et stratégies technologiques{% elif lang == 'de' %}Beratung zu IT-Sicherheitspraktiken, digitalen Lösungen und Technologiestrategien{% else %}Consulting on IT security practices, digital solutions, and technology strategies{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Développement de supports de formation et ateliers de sensibilisation pour PME{% elif lang == 'de' %}Entwicklung von Schulungsmaterialien und Durchführung von Awareness-Workshops für KMU{% else %}Development of training materials and awareness workshops for SMEs{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Bonnes pratiques en sécurité réseau, protection des données et intégrité des systèmes{% elif lang == 'de' %}Vermittlung von Best Practices in Netzwerksicherheit, Datenschutz und Systemintegrität{% else %}Teaching best practices in network security, data protection, and system integrity{% endif %}</li>
                                 </ul>
                             </div>
                         </div>
+
                         <div class="cv-item">
-                            <div class="cv-item-date">2023–2025</div>
+                            <div class="cv-item-date">02/2023 – 09/2025</div>
                             <div class="cv-item-content">
                                 <h4>{% if lang == 'fr' %}IT Systems & Maintenance Manager{% elif lang == 'de' %}IT-System- & Wartungsmanager{% else %}IT Systems & Maintenance Manager{% endif %} — Inst. Die Suchenden</h4>
-                                <p>Yaoundé</p>
+                                <p>Yaoundé, Cameroun</p>
+                                <ul>
+                                    <li>{% if lang == 'fr' %}Administration et maintenance de systèmes IT Linux et infrastructure serveur{% elif lang == 'de' %}Administration und Wartung von Linux-basierten IT-Systemen und Serverinfrastruktur{% else %}Administration and maintenance of Linux-based IT systems and server infrastructure{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Support technique pour 20+ utilisateurs{% elif lang == 'de' %}Systemadministration und technischer Support für 20+ Nutzer{% else %}System administration and technical support for 20+ users{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Analyse d'erreurs, diagnostic hardware/software, mesures de sécurité IT{% elif lang == 'de' %}Fehleranalyse, Hardware/Software-Diagnose und IT-Sicherheitsmaßnahmen{% else %}Error analysis, hardware/software diagnostics, and IT security measures{% endif %}</li>
+                                </ul>
                             </div>
                         </div>
+
                         <div class="cv-item">
-                            <div class="cv-item-date">2024–2025</div>
+                            <div class="cv-item-date">06/2024 – 01/2025</div>
                             <div class="cv-item-content">
                                 <h4>{% if lang == 'fr' %}IT & Cybersecurity Specialist{% elif lang == 'de' %}IT- & Cybersicherheitsspezialist{% else %}IT & Cybersecurity Specialist{% endif %} — ENIX SARL</h4>
-                                <p>Yaoundé</p>
+                                <p>Yaoundé, Cameroun</p>
+                                <ul>
+                                    <li>{% if lang == 'fr' %}Support IT Helpdesk (Windows, Linux), diagnostic réseau (TCP/IP, OSI){% elif lang == 'de' %}IT-Helpdesk-Support in Windows- und Linux-Umgebungen, Netzwerkdiagnose{% else %}IT Helpdesk support in Windows and Linux environments, network diagnostics{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Projets cybersécurité : formations sensibilisation et évaluation des risques{% elif lang == 'de' %}Mitarbeit an Cybersecurity-Projekten: Security-Awareness-Schulungen und Risikobewertung{% else %}Cybersecurity projects: security awareness training and risk assessment{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Encadrement d'équipe, gestion budgétaire et livraison de projets IT{% elif lang == 'de' %}Teamleitung, Budgetmanagement und IT-Projektlieferung{% else %}Team leadership, budget management, and IT project delivery{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Développement web (JavaScript, PHP) avec focus sur la programmation sécurisée{% elif lang == 'de' %}Webentwicklung (JavaScript, PHP) mit Fokus auf sichere Programmierung{% else %}Web development (JavaScript, PHP) with focus on secure programming{% endif %}</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-date">07/2020 – 08/2022</div>
+                            <div class="cv-item-content">
+                                <h4>{% if lang == 'fr' %}IT Project Coordinator & SysAdmin{% elif lang == 'de' %}IT-Projektkoordinator & Systemadministrator{% else %}IT Project Coordinator & System Administrator{% endif %} — VisibilityCAM</h4>
+                                <p>Cameroun</p>
+                                <ul>
+                                    <li>{% if lang == 'fr' %}Coordination de projets IT et logiciels en environnement Linux{% elif lang == 'de' %}Koordination von IT- und Softwareprojekten in Linux-Umgebungen{% else %}Coordination of IT and software projects in Linux environments{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Analyse technique, implémentation de projets et support pour 50+ utilisateurs{% elif lang == 'de' %}Analyse technischer Anforderungen, Projektumsetzung und Support für 50+ Anwender{% else %}Technical requirements analysis, project implementation, and support for 50+ users{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Maintenance système et support IT{% elif lang == 'de' %}Systemwartung und IT-Support{% else %}System maintenance and IT support{% endif %}</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-date">09/2020 – 08/2022</div>
+                            <div class="cv-item-content">
+                                <h4>{% if lang == 'fr' %}Président du Club Informatique{% elif lang == 'de' %}Präsident des Informatik-Clubs{% else %}President of the Computer Science Club{% endif %} — Université de Dschang</h4>
+                                <p>Dschang, Cameroun</p>
+                                <ul>
+                                    <li>{% if lang == 'fr' %}Organisation d'ateliers techniques et formations en IT et cybersécurité{% elif lang == 'de' %}Organisation technischer Workshops und Schulungen zu IT- & Cybersicherheitsthemen{% else %}Organization of technical workshops and training on IT and cybersecurity topics{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Encadrement étudiant, planification d'événements et conférences publiques{% elif lang == 'de' %}Studentische Führung, Eventplanung und öffentliche Vorträge{% else %}Student leadership, event planning, and public speaking{% endif %}</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -96,30 +136,100 @@
                     <div class="cv-section">
                         <h3 class="cv-section-title"><span style="color: var(--accent);">📜</span> {% if lang == 'fr' %}Certifications{% elif lang == 'de' %}Zertifizierungen{% else %}Certifications{% endif %}</h3>
                         <div class="cv-cert-grid">
-                            <span class="cv-cert-badge">EC-Council C|CT <small>{% if lang == 'fr' %}En préparation{% elif lang == 'de' %}In Vorbereitung{% else %}In preparation{% endif %}</small></span>
-                            <span class="cv-cert-badge done">Cisco Junior Cybersecurity Analyst ✅</span>
-                            <span class="cv-cert-badge done">ANSSI SecNumAcadémie ✅</span>
-                            <span class="cv-cert-badge">CSI Linux Investigator <small>{% if lang == 'fr' %}En cours{% elif lang == 'de' %}Laufend{% else %}In progress{% endif %}</small></span>
-                            <span class="cv-cert-badge done">Cisco Intro to Cybersecurity ✅</span>
+                            <span class="cv-cert-badge">EC-Council C|CT (Certified Cybersecurity Technician) <small>{% if lang == 'fr' %}En préparation{% elif lang == 'de' %}In Vorbereitung{% else %}In preparation{% endif %}</small></span>
+                            <span class="cv-cert-badge done">Junior Cybersecurity Analyst — Cisco ✅</span>
+                            <span class="cv-cert-badge done">Introduction to Cybersecurity — Cisco ✅</span>
+                            <span class="cv-cert-badge done">Python Essentials 1 — Cisco ✅</span>
+                            <span class="cv-cert-badge done">Premiers pas Cisco Packet Tracer ✅</span>
+                            <span class="cv-cert-badge done">Introduction à l'IoT — Cisco ✅</span>
+                            <span class="cv-cert-badge done">SecNumAcadémie — ANSSI ✅</span>
+                            <span class="cv-cert-badge">CSI Linux Certified Investigator <small>{% if lang == 'fr' %}En cours{% elif lang == 'de' %}In Bearbeitung{% else %}In progress{% endif %}</small></span>
                         </div>
                     </div>
 
-                    <!-- Compétences -->
+                    <!-- Compétences techniques -->
                     <div class="cv-section">
-                        <h3 class="cv-section-title"><span style="color: var(--accent);">🔧</span> {% if lang == 'fr' %}Compétences clés{% elif lang == 'de' %}Schlüsselkompetenzen{% else %}Key Skills{% endif %}</h3>
+                        <h3 class="cv-section-title"><span style="color: var(--accent);">🔧</span> {% if lang == 'fr' %}Compétences techniques{% elif lang == 'de' %}Technische Kompetenzen{% else %}Technical Skills{% endif %}</h3>
                         <div class="row">
                             <div class="col-md-6">
+                                <h5 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 10px;">🛡️ Cybersécurité</h5>
                                 <ul class="cv-skill-list">
-                                    <li>{% if lang == 'fr' %}Network Defense & Security{% elif lang == 'de' %}Netzwerkverteidigung & -sicherheit{% else %}Network Defense & Security{% endif %}</li>
-                                    <li>{% if lang == 'fr' %}Ethical Hacking & Pentesting{% elif lang == 'de' %}Ethisches Hacking & Pentesting{% else %}Ethical Hacking & Pentesting{% endif %}</li>
-                                    <li>{% if lang == 'fr' %}Incident Response & Forensics{% elif lang == 'de' %}Incident Response & Forensik{% else %}Incident Response & Forensics{% endif %}</li>
+                                    <li>Network Defense & Security</li>
+                                    <li>Ethical Hacking & Pentesting</li>
+                                    <li>Incident Response & Forensics</li>
+                                    <li>Vulnerability Assessment</li>
+                                    <li>Endpoint Security</li>
+                                    <li>SOC / SIEM</li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
+                                <h5 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 10px;">💻 Programmation</h5>
                                 <ul class="cv-skill-list">
-                                    <li>{% if lang == 'fr' %}ISO 27001, DSGVO, BSI-Grundschutz{% elif lang == 'de' %}ISO 27001, DSGVO, BSI-Grundschutz{% else %}ISO 27001, GDPR, BSI Baseline{% endif %}</li>
-                                    <li>{% if lang == 'fr' %}Python, Django, Bash, Docker{% elif lang == 'de' %}Python, Django, Bash, Docker{% else %}Python, Django, Bash, Docker{% endif %}</li>
-                                    <li>{% if lang == 'fr' %}SIEM, Wireshark, Nmap, Burp Suite{% elif lang == 'de' %}SIEM, Wireshark, Nmap, Burp Suite{% else %}SIEM, Wireshark, Nmap, Burp Suite{% endif %}</li>
+                                    <li>Fullstack Web (Django, JS, PHP)</li>
+                                    <li>Backend / API</li>
+                                    <li>Python, Bash, PowerShell</li>
+                                    <li>DevOps & Docker</li>
+                                    <li>Bases de données</li>
+                                    <li>Cybersécurité & Data Science</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <h5 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 10px;">🔌 Réseaux & Outils</h5>
+                                <ul class="cv-skill-list">
+                                    <li>TCP/IP, OSI, Cisco Packet Tracer</li>
+                                    <li>Wireshark, Nmap, Kali Linux</li>
+                                    <li>Firewalls, IDS/IPS</li>
+                                    <li>SIEM, Schwachstellenanalyse</li>
+                                    <li>IT-Dokumentation</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <h5 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 10px;">📋 Conformité & OS</h5>
+                                <ul class="cv-skill-list">
+                                    <li>ISO 27001 (Grundkenntnisse)</li>
+                                    <li>DSGVO / Datenschutz</li>
+                                    <li>BSI-Grundschutz (Grundlagen)</li>
+                                    <li>Risikomanagement</li>
+                                    <li>Linux (Ubuntu, Debian), Windows</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Auto-didacte -->
+                    <div class="cv-section">
+                        <h3 class="cv-section-title"><span style="color: var(--accent);">📚</span> {% if lang == 'fr' %}Formation autodidacte{% elif lang == 'de' %}Autodidaktische Weiterbildung{% else %}Self-directed Learning{% endif %}</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">
+                            {% if lang == 'fr' %}Passionné par l'apprentissage continu, je me forme en autonomie en cybersécurité, sécurité IT et technologies réseau. Mon auto-formation comprend :{% elif lang == 'de' %}Als leidenschaftlicher Autodidakt bilde ich mich kontinuierlich eigenständig in den Bereichen Cybersecurity, IT-Sicherheit und Netzwerktechnologien weiter:{% else %}As a passionate self-learner, I continuously train myself in cybersecurity, IT security, and network technologies:{% endif %}
+                        </p>
+                        <ul style="font-size: 0.9rem; color: var(--text-muted);">
+                            <li>{% if lang == 'fr' %}EC-Council C|CT — 7 domaines : Network Security, Application Security, Digital Forensics, Incident Handling, Vulnerability Assessment, Cryptography, SOC/SIEM{% elif lang == 'de' %}EC-Council C|CT — 7 Domänen: Network Security, Application Security, Digital Forensics, Incident Handling, Vulnerability Assessment, Cryptography, SOC/SIEM{% else %}EC-Council C|CT — 7 domains: Network Security, Application Security, Digital Forensics, Incident Handling, Vulnerability Assessment, Cryptography, SOC/SIEM{% endif %}</li>
+                            <li>{% if lang == 'fr' %}Pentesting en laboratoire (Kali Linux, TryHackMe){% elif lang == 'de' %}Eigenständiges Penetration-Testing-Training (Kali Linux, TryHackMe){% else %}Independent penetration testing training (Kali Linux, TryHackMe){% endif %}</li>
+                            <li>{% if lang == 'fr' %}Auto-formation en sécurité réseau, cryptographie et réponse aux incidents{% elif lang == 'de' %}Selbststudium von Netzwerksicherheit, Kryptographie und Incident-Response-Konzepten{% else %}Self-study of network security, cryptography, and incident response concepts{% endif %}</li>
+                            <li>{% if lang == 'fr' %}Veille continue via livres spécialisés, cours en ligne et communautés cyber{% elif lang == 'de' %}Kontinuierliche Weiterbildung durch Fachbücher, Online-Kurse und Cybersecurity-Communities{% else %}Continuous learning through specialized books, online courses, and cybersecurity communities{% endif %}</li>
+                        </ul>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="cv-section">
+                        <h3 class="cv-section-title"><span style="color: var(--accent);">💪</span> {% if lang == 'fr' %}Soft Skills{% elif lang == 'de' %}Soft Skills{% else %}Soft Skills{% endif %}</h3>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <ul class="cv-skill-list">
+                                    <li>{% if lang == 'fr' %}Leadership d'équipe{% elif lang == 'de' %}Teamführung{% else %}Team leadership{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Communication & collaboration{% elif lang == 'de' %}Teamfähigkeit & Kommunikation{% else %}Teamwork & communication{% endif %}</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul class="cv-skill-list">
+                                    <li>{% if lang == 'fr' %}Analyse structurée & résolution de problèmes{% elif lang == 'de' %}Strukturierte & analytische Arbeitsweise{% else %}Structured analysis & problem-solving{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Initiative & responsabilité{% elif lang == 'de' %}Initiative & Eigenverantwortung{% else %}Initiative & accountability{% endif %}</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul class="cv-skill-list">
+                                    <li>{% if lang == 'fr' %}Prise de parole en public & plaidoyer STEM{% elif lang == 'de' %}Öffentliches Reden & STEM Advocacy{% else %}Public speaking & STEM advocacy{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Capacité d'apprentissage autodidacte{% elif lang == 'de' %}Ausgeprägte Eigeninitiative & Lernfähigkeit{% else %}Strong self-learning ability{% endif %}</li>
                                 </ul>
                             </div>
                         </div>
@@ -131,13 +241,13 @@
                         <div class="row">
                             <div class="col-md-4"><strong>{% if lang == 'fr' %}Français{% elif lang == 'de' %}Französisch{% else %}French{% endif %}</strong> — {% if lang == 'fr' %}Natif{% elif lang == 'de' %}Muttersprache{% else %}Native{% endif %}</div>
                             <div class="col-md-4"><strong>{% if lang == 'fr' %}Allemand{% elif lang == 'de' %}Deutsch{% else %}German{% endif %}</strong> — C1 {% if lang == 'fr' %}(Courant){% elif lang == 'de' %}(Fließend){% else %}(Fluent){% endif %}</div>
-                            <div class="col-md-4"><strong>{% if lang == 'fr' %}Anglais{% elif lang == 'de' %}Englisch{% else %}English{% endif %}</strong> — B2/C1 {% if lang == 'fr' %}(Professionnel){% elif lang == 'de' %}(Geschäftsniveau){% else %}(Professional){% endif %}</div>
+                            <div class="col-md-4"><strong>{% if lang == 'fr' %}Anglais{% elif lang == 'de' %}Englisch{% else %}English{% endif %}</strong> — B2 {% if lang == 'fr' %}(Professionnel){% elif lang == 'de' %}(Beruflich){% else %}(Professional){% endif %}</div>
                         </div>
                     </div>
 
                     <!-- Bouton téléchargement -->
                     <div class="cv-download text-center mt-4">
-                        <p class="text-muted mb-3">{% if lang == 'fr' %}Téléchargez mon CV au format PDF{% elif lang == 'de' %}Laden Sie meinen Lebenslauf als PDF herunter{% else %}Download my CV as PDF{% endif %}</p>
+                        <p class="text-muted mb-3">{% if lang == 'fr' %}Téléchargez mon CV complet au format PDF{% elif lang == 'de' %}Laden Sie meinen vollständigen Lebenslauf als PDF herunter{% else %}Download my complete CV as PDF{% endif %}</p>
                         <a href="{% url 'cv_download' %}" class="btn btn-accent">📥 {% if lang == 'fr' %}Télécharger le CV PDF{% elif lang == 'de' %}Lebenslauf PDF herunterladen{% else %}Download CV PDF{% endif %}</a>
                     </div>
                 </div>

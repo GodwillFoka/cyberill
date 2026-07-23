@@ -10,8 +10,8 @@
         <img src="{% static 'images/photo-about.jpg' %}" alt="Godwill FOKA"
              style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent); box-shadow: var(--shadow-lg);">
         <h1>Godwill FOKA</h1>
-        <p class="lead">Cybersecurity Engineer · IT-Sicherheitsspezialist · Initiator CYBERILL</p>
-        <p style="color: var(--text-muted);">Berlin, Deutschland 🇩🇪 — Originaire du Cameroun 🇨🇲</p>
+        <p class="lead">{% if lang == 'fr' %}Cybersecurity Engineer · IT-Sicherheitsspezialist · Initiator CYBERILL{% elif lang == 'de' %}Cybersecurity Engineer · IT-Sicherheitsspezialist · Initiator CYBERILL{% else %}Cybersecurity Engineer · IT Security Specialist · CYBERILL Initiator{% endif %}</p>
+        <p style="color: var(--text-muted);">Berlin, Deutschland 🇩🇪 — {% if lang == 'fr' %}Originaire du Cameroun{% elif lang == 'de' %}Ursprünglich aus Kamerun{% else %}Originally from Cameroon{% endif %} 🇨🇲</p>
     </div>
 </div>
 
@@ -62,6 +62,9 @@
                             <div>
                                 <strong>IT Systems & Maintenance Manager</strong> — Institut Die Suchenden<br>
                                 <small class="text-muted">02/2023 – 09/2025 | Yaoundé</small>
+                                <ul class="mt-1" style="font-size: 0.85rem; color: var(--text-muted); padding-left: 20px;">
+                                    <li>Administration Linux, support 20+ utilisateurs, sécurité IT</li>
+                                </ul>
                             </div>
                         </div>
                         <div class="d-flex mb-4">
@@ -69,6 +72,9 @@
                             <div>
                                 <strong>IT & Cybersecurity Specialist</strong> — ENIX SARL<br>
                                 <small class="text-muted">06/2024 – 01/2025 | Yaoundé</small>
+                                <ul class="mt-1" style="font-size: 0.85rem; color: var(--text-muted); padding-left: 20px;">
+                                    <li>Support IT, sécurité, management d'équipe, web dev</li>
+                                </ul>
                             </div>
                         </div>
                         <div class="d-flex mb-4">
@@ -76,6 +82,14 @@
                             <div>
                                 <strong>IT Project Coordinator & SysAdmin</strong> — VisibilityCAM<br>
                                 <small class="text-muted">07/2020 – 08/2022 | Cameroun</small>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div style="min-width: 4px; background: var(--accent); border-radius: 4px; margin-right: 20px;"></div>
+                            <div>
+                                <strong>{% if lang == 'fr' %}Président du Club Informatique{% elif lang == 'de' %}Präsident des Informatik-Clubs{% else %}CS Club President{% endif %}</strong> — {% if lang == 'fr' %}Université de Dschang{% elif lang == 'de' %}Universität Dschang{% else %}University of Dschang{% endif %}<br>
+                                <small class="text-muted">09/2020 – 08/2022 | Dschang</small>
+                                <p class="text-muted mt-1" style="font-size: 0.9rem;">{% if lang == 'fr' %}Ateliers techniques, leadership étudiant, conférences{% elif lang == 'de' %}Technische Workshops, studentische Führung, Vorträge{% else %}Technical workshops, student leadership, public speaking{% endif %}</p>
                             </div>
                         </div>
                     </div>
@@ -98,31 +112,49 @@
                 <div class="cert-icon">📜</div>
                 <h5>EC-Council C|CT</h5>
                 <p>Certified Cybersecurity Technician</p>
-                <span class="cert-badge pending">En préparation</span>
+                <span class="cert-badge pending">{% if lang == 'fr' %}En préparation{% elif lang == 'de' %}In Vorbereitung{% else %}In preparation{% endif %}</span>
             </div>
             <div class="cert-card">
                 <div class="cert-icon">📜</div>
                 <h5>Junior Cybersecurity Analyst</h5>
                 <p>Cisco Networking Academy</p>
-                <span class="cert-badge completed">✅ Complété</span>
+                <span class="cert-badge completed">✅ {% if lang == 'fr' %}Complété{% elif lang == 'de' %}Abgeschlossen{% else %}Completed{% endif %}</span>
             </div>
             <div class="cert-card">
                 <div class="cert-icon">📜</div>
                 <h5>SecNumAcadémie</h5>
                 <p>ANSSI (France)</p>
-                <span class="cert-badge completed">✅ Complété</span>
+                <span class="cert-badge completed">✅ {% if lang == 'fr' %}Complété{% elif lang == 'de' %}Abgeschlossen{% else %}Completed{% endif %}</span>
             </div>
             <div class="cert-card">
                 <div class="cert-icon">📜</div>
                 <h5>CSI Linux Investigator</h5>
                 <p>Digital Forensics & Investigation</p>
-                <span class="cert-badge inprogress">En cours</span>
+                <span class="cert-badge inprogress">{% if lang == 'fr' %}En cours{% elif lang == 'de' %}In Bearbeitung{% else %}In progress{% endif %}</span>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <h5>Python Essentials 1</h5>
+                <p>Cisco Networking Academy</p>
+                <span class="cert-badge completed">✅ {% if lang == 'fr' %}Complété{% elif lang == 'de' %}Abgeschlossen{% else %}Completed{% endif %}</span>
             </div>
             <div class="cert-card">
                 <div class="cert-icon">📜</div>
                 <h5>Introduction to Cybersecurity</h5>
                 <p>Cisco Networking Academy</p>
-                <span class="cert-badge completed">✅ Complété</span>
+                <span class="cert-badge completed">✅ {% if lang == 'fr' %}Complété{% elif lang == 'de' %}Abgeschlossen{% else %}Completed{% endif %}</span>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <h5>Premiers pas Cisco Packet Tracer</h5>
+                <p>Cisco</p>
+                <span class="cert-badge completed">✅ {% if lang == 'fr' %}Complété{% elif lang == 'de' %}Abgeschlossen{% else %}Completed{% endif %}</span>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <h5>Introduction à l'IoT</h5>
+                <p>Cisco — Transformation digitale</p>
+                <span class="cert-badge completed">✅ {% if lang == 'fr' %}Complété{% elif lang == 'de' %}Abgeschlossen{% else %}Completed{% endif %}</span>
             </div>
         </div>
     </div>
