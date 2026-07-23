@@ -5,18 +5,22 @@
 <!-- Hero Section -->
 <section class="hero">
     <div class="container hero-content">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <div class="hero-badge">Cybersecurity Engineer &bull; Berlin &bull; 🇩🇪</div>
                 <h1>
-                    Sécuriser le numérique,<br>
-                    <span class="highlight">transformer l'avenir</span>
+                    Godwill <span class="highlight">FOKA</span>
                 </h1>
+                <p class="hero-tagline">
+                    Sécuriser le numérique,<br>
+                    <span style="color: var(--accent); font-weight: 600;">transformer l'avenir</span>
+                </p>
                 <p>
-                    CYBERILL est une initiative dédiée à la cybersécurité et à la transformation digitale.
+                    CYBERILL est mon initiative dédiée à la cybersécurité et à la transformation digitale.
                     Conseil, sensibilisation, audit, formation — je mets mes compétences au service
                     de votre sécurité numérique.
                 </p>
-                <div class="d-flex gap-3 flex-wrap">
+                <div class="d-flex gap-3 flex-wrap mt-4">
                     <a href="{% url 'about' %}" class="btn btn-accent">Découvrir CYBERILL →</a>
                     <a href="{% url 'contact' %}" class="btn btn-outline">Me contacter</a>
                 </div>
@@ -35,11 +39,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 text-center mt-4 mt-lg-0">
-                <div class="position-relative d-inline-block">
-                    <img src="{% static 'images/cyberill-banner-800.png' %}" alt="CYBERILL" class="hero-banner img-fluid">
-                    <img src="{% static 'images/photo-profile.jpg' %}" alt="Godwill FOKA" 
-                         style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); position: absolute; bottom: -10px; right: -10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <div class="col-lg-5 text-center">
+                <div class="hero-visual">
+                    <!-- Photo avec effet halo -->
+                    <div class="hero-photo-wrapper">
+                        <div class="hero-photo-ring"></div>
+                        <div class="hero-photo-ring-2"></div>
+                        <img src="{% static 'images/photo-profile.jpg' %}" alt="Godwill FOKA" class="hero-photo">
+                    </div>
+                    <!-- Badge CYBERILL -->
+                    <div class="hero-logo-badge">
+                        <img src="{% static 'images/cyberill-logo-200.png' %}" alt="CYBERILL" height="28">
+                    </div>
                 </div>
             </div>
         </div>
