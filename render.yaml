@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: cyberill
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn config.wsgi:application --workers=2 --threads=2 --timeout=120 --access-logfile=-"
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DJANGO_DEBUG
+        value: "False"
+      - key: DJANGO_ALLOWED_HOSTS
+        value: ".onrender.com,localhost,127.0.0.1"
+    healthCheckPath: /

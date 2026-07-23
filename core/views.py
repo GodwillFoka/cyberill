@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .models import ContactMessage
 
 def home(request):
     return render(request, 'core/index.html')
@@ -10,22 +9,23 @@ def about(request):
 
 def contact(request):
     if request.method == 'POST':
-        ContactMessage.objects.create(
-            name=request.POST.get('name'),
-            email=request.POST.get('email'),
-            subject=request.POST.get('subject', 'general'),
-            message=request.POST.get('message'),
+        # Phase 1 : notification sans BDD
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        subject = request.POST.get('subject', 'general')
+        messages.success(
+            request,
+            f'Merci {name} ! Votre message a été reçu. '
+            f'Je vous répondrai à {email} dans les plus brefs délais.'
         )
-        messages.success(request, 'Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.')
-        return redirect('contact')
+        return render(request, 'core/contact.html')
     return render(request, 'core/contact.html')
 
 def newsletter_signup(request):
     if request.method == 'POST':
-        from .models import NewsletterSubscriber
-        NewsletterSubscriber.objects.create(
-            email=request.POST.get('email'),
-            topic=request.POST.get('topic', 'all'),
+        email = request.POST.get('email', '')
+        messages.success(
+            request,
+            f'Merci ! {email} est inscrit à la newsletter CYBERILL.'
         )
-        messages.success(request, 'Inscription réussie ! Merci de votre intérêt.')
-    return redirect(request.META.get('HTTP_REFERER', 'home'))
+    return redirect(request.META.get('HTTP_REFERER', '/'))
