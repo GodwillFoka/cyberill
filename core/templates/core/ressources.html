@@ -1,0 +1,290 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{% if lang == 'fr' %}Ressources — CYBERILL{% elif lang == 'de' %}Ressourcen — CYBERILL{% else %}Resources — CYBERILL{% endif %}{% endblock %}
+{% block meta_desc %}{% if lang == 'fr' %}Guides, checklists et ressources éducatives en cybersécurité, transformation digitale et développement logiciel.{% elif lang == 'de' %}Leitfäden, Checklisten und Bildungsressourcen zu Cybersicherheit, digitaler Transformation und Softwareentwicklung.{% else %}Guides, checklists and educational resources on cybersecurity, digital transformation and software development.{% endif %}{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">{% if lang == 'fr' %}Ressources{% elif lang == 'de' %}Ressourcen{% else %}Resources{% endif %}</span>
+            <h1 class="section-title">{% if lang == 'fr' %}Guides & Ressources Éducatives{% elif lang == 'de' %}Leitfäden & Bildungsressourcen{% else %}Guides & Educational Resources{% endif %}</h1>
+            <p class="section-subtitle">{% if lang == 'fr' %}Des ressources pour comprendre, apprendre et agir en cybersécurité{% elif lang == 'de' %}Ressourcen zum Verstehen, Lernen und Handeln in der Cybersicherheit{% else %}Resources to understand, learn and act in cybersecurity{% endif %}</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== Glossaire Cyber ===== -->
+<section class="section section-alt pt-0">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">{% if lang == 'fr' %}Glossaire{% elif lang == 'de' %}Glossar{% else %}Glossary{% endif %}</span>
+            <h2 class="section-title">{% if lang == 'fr' %}Lexique de la Cybersécurité{% elif lang == 'de' %}Cybersicherheits-Lexikon{% else %}Cybersecurity Lexicon{% endif %}</h2>
+            <p class="section-subtitle">{% if lang == 'fr' %}Les termes essentiels à connaître{% elif lang == 'de' %}Die wichtigsten Begriffe{% else %}Key terms to know{% endif %}</p>
+        </div>
+        <div class="row g-4 stagger-children">
+            {% with terms=lang|default:'fr' %}
+            {% if lang == 'fr' %}
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🔓 Phishing</h4>
+                    <p>Tentative d'obtenir des informations sensibles (mots de passe, données bancaires) en se faisant passer pour une entité de confiance.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🛡️ Ransomware</h4>
+                    <p>Logiciel malveillant qui chiffre vos données et exige une rançon pour les déchiffrer.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🔍 Pentesting</h4>
+                    <p>Test d'intrusion éthique : simulation d'une cyberattaque pour identifier les vulnérabilités d'un système.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🌐 Firewall</h4>
+                    <p>Système de sécurité réseau qui filtre le trafic entrant et sortant selon des règles prédéfinies.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🔐 2FA / MFA</h4>
+                    <p>Authentification à plusieurs facteurs : une couche de sécurité supplémentaire au-delà du mot de passe.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>📋 ISO 27001</h4>
+                    <p>Norme internationale pour la gestion de la sécurité de l'information (SMSI).</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🕵️ OSINT</h4>
+                    <p>Open Source Intelligence : collecte et analyse d'informations provenant de sources publiques.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>⚡ SOC / SIEM</h4>
+                    <p>Security Operations Center : centre de surveillance et de réponse aux incidents de sécurité.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🔒 Chiffrement</h4>
+                    <p>Processus de conversion de données en code secret pour empêcher l'accès non autorisé.</p>
+                </div>
+            </div>
+            {% elif lang == 'de' %}
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🔓 Phishing</h4>
+                    <p>Versuch, an sensible Informationen zu gelangen, indem man sich als vertrauenswürdige Instanz ausgibt.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🛡️ Ransomware</h4>
+                    <p>Schadsoftware, die Daten verschlüsselt und Lösegeld für die Entschlüsselung fordert.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🔍 Pentesting</h4>
+                    <p>Ethischer Penetrationstest: Simulation eines Cyberangriffs zur Identifizierung von Schwachstellen.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🌐 Firewall</h4>
+                    <p>Netzwerksicherheitssystem, das den ein- und ausgehenden Verkehr filtert.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🔐 2FA / MFA</h4>
+                    <p>Multi-Faktor-Authentifizierung: zusätzliche Sicherheitsebene über das Passwort hinaus.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>📋 ISO 27001</h4>
+                    <p>Internationale Norm für Informationssicherheits-Managementsysteme (ISMS).</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🕵️ OSINT</h4>
+                    <p>Open Source Intelligence: Sammlung und Analyse von Informationen aus öffentlichen Quellen.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>⚡ SOC / SIEM</h4>
+                    <p>Security Operations Center: Überwachungs- und Reaktionszentrum für Sicherheitsvorfälle.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🔒 Verschlüsselung</h4>
+                    <p>Umwandlung von Daten in Geheimcode, um unbefugten Zugriff zu verhindern.</p>
+                </div>
+            </div>
+            {% else %}
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🔓 Phishing</h4>
+                    <p>Fraudulent attempt to obtain sensitive information by impersonating a trustworthy entity.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🛡️ Ransomware</h4>
+                    <p>Malware that encrypts your data and demands payment for decryption.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🔍 Pentesting</h4>
+                    <p>Ethical penetration testing: simulating cyberattacks to identify system vulnerabilities.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🌐 Firewall</h4>
+                    <p>Network security system that monitors and filters incoming and outgoing traffic.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🔐 2FA / MFA</h4>
+                    <p>Multi-Factor Authentication: additional security layer beyond passwords.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>📋 ISO 27001</h4>
+                    <p>International standard for information security management systems (ISMS).</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🕵️ OSINT</h4>
+                    <p>Open Source Intelligence: gathering and analyzing information from public sources.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>⚡ SOC / SIEM</h4>
+                    <p>Security Operations Center: centralized security monitoring and incident response.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="glossaire-card">
+                    <h4>🔒 Encryption</h4>
+                    <p>Process of converting data into secret code to prevent unauthorized access.</p>
+                </div>
+            </div>
+            {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+</section>
+
+<!-- ===== Guides Pratiques ===== -->
+<section class="section">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">{% if lang == 'fr' %}Guides{% elif lang == 'de' %}Leitfäden{% else %}Guides{% endif %}</span>
+            <h2 class="section-title">{% if lang == 'fr' %}Guides Pratiques{% elif lang == 'de' %}Praktische Leitfäden{% else %}Practical Guides{% endif %}</h2>
+            <p class="section-subtitle">{% if lang == 'fr' %}Des ressources téléchargeables pour passer à l'action{% elif lang == 'de' %}Herunterladbare Ressourcen zum Handeln{% else %}Downloadable resources to take action{% endif %}</p>
+        </div>
+        <div class="row g-4 stagger-children">
+            <div class="col-md-6 col-lg-4">
+                <div class="resource-card">
+                    <div class="resource-icon">📋</div>
+                    <h4>{% if lang == 'fr' %}Checklist Sécurité{% elif lang == 'de' %}Sicherheits-Checkliste{% else %}Security Checklist{% endif %}</h4>
+                    <p>{% if lang == 'fr' %}Les 10 gestes essentiels pour sécuriser votre entreprise.{% elif lang == 'de' %}Die 10 wichtigsten Maßnahmen zur Sicherung Ihres Unternehmens.{% else %}10 essential steps to secure your business.{% endif %}</p>
+                    <span class="resource-meta">{% if lang == 'fr' %}PDF • Bientôt disponible{% elif lang == 'de' %}PDF • Bald verfügbar{% else %}PDF • Coming soon{% endif %}</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="resource-card">
+                    <div class="resource-icon">🛡️</div>
+                    <h4>{% if lang == 'fr' %}Guide Anti-Phishing{% elif lang == 'de' %}Anti-Phishing-Leitfaden{% else %}Anti-Phishing Guide{% endif %}</h4>
+                    <p>{% if lang == 'fr' %}Comment repérer et se protéger des attaques de phishing.{% elif lang == 'de' %}Wie man Phishing-Angriffe erkennt und sich schützt.{% else %}How to spot and protect against phishing attacks.{% endif %}</p>
+                    <span class="resource-meta">{% if lang == 'fr' %}PDF • Bientôt disponible{% elif lang == 'de' %}PDF • Bald verfügbar{% else %}PDF • Coming soon{% endif %}</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="resource-card">
+                    <div class="resource-icon">🔐</div>
+                    <h4>{% if lang == 'fr' %}Guide Mots de Passe{% elif lang == 'de' %}Passwort-Leitfaden{% else %}Password Guide{% endif %}</h4>
+                    <p>{% if lang == 'fr' %}Bonnes pratiques pour des mots de passe robustes et leur gestion.{% elif lang == 'de' %}Bewährte Methoden für sichere Passwörter und deren Verwaltung.{% else %}Best practices for strong passwords and their management.{% endif %}</p>
+                    <span class="resource-meta">{% if lang == 'fr' %}PDF • Bientôt disponible{% elif lang == 'de' %}PDF • Bald verfügbar{% else %}PDF • Coming soon{% endif %}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== Liens Utiles ===== -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">{% if lang == 'fr' %}Liens{% elif lang == 'de' %}Links{% else %}Links{% endif %}</span>
+            <h2 class="section-title">{% if lang == 'fr' %}Ressources Externes{% elif lang == 'de' %}Externe Ressourcen{% else %}External Resources{% endif %}</h2>
+            <p class="section-subtitle">{% if lang == 'fr' %}Des sites et outils de référence en cybersécurité{% elif lang == 'de' %}Wichtige Websites und Tools für Cybersicherheit{% else %}Key websites and tools for cybersecurity{% endif %}</p>
+        </div>
+        <div class="row g-4 fade-in">
+            <div class="col-md-4">
+                <div class="link-card">
+                    <h4>🇪🇺 ENISA</h4>
+                    <p>{% if lang == 'fr' %}Agence de l'UE pour la cybersécurité{% elif lang == 'de' %}EU-Agentur für Cybersicherheit{% else %}EU Agency for Cybersecurity{% endif %}</p>
+                    <a href="https://www.enisa.europa.eu" target="_blank">enisa.europa.eu →</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="link-card">
+                    <h4>🇩🇪 BSI</h4>
+                    <p>{% if lang == 'fr' %}Bundesamt für Sicherheit in der Informationstechnik{% elif lang == 'de' %}Bundesamt für Sicherheit in der Informationstechnik{% else %}German Federal Office for Information Security{% endif %}</p>
+                    <a href="https://www.bsi.bund.de" target="_blank">bsi.bund.de →</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="link-card">
+                    <h4>🇫🇷 ANSSI</h4>
+                    <p>{% if lang == 'fr' %}Agence nationale de la sécurité des systèmes d'information{% elif lang == 'de' %}Französische Agentur für Informationssystemsicherheit{% else %}French National Cybersecurity Agency{% endif %}</p>
+                    <a href="https://www.ssi.gouv.fr" target="_blank">ssi.gouv.fr →</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="link-card">
+                    <h4>📘 OWASP</h4>
+                    <p>{% if lang == 'fr' %}Open Web Application Security Project{% elif lang == 'de' %}Open Web Application Security Project{% else %}Open Web Application Security Project{% endif %}</p>
+                    <a href="https://owasp.org" target="_blank">owasp.org →</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="link-card">
+                    <h4>🔓 MITRE ATT&CK</h4>
+                    <p>{% if lang == 'fr' %}Base de connaissances des tactiques et techniques adverses{% elif lang == 'de' %}Wissensdatenbank zu Taktiken und Techniken von Angreifern{% else %}Knowledge base of adversary tactics and techniques{% endif %}</p>
+                    <a href="https://attack.mitre.org" target="_blank">attack.mitre.org →</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="link-card">
+                    <h4>🐙 GitHub</h4>
+                    <p>{% if lang == 'fr' %}Mes projets et contributions open-source{% elif lang == 'de' %}Meine Open-Source-Projekte{% else %}My open-source projects{% endif %}</p>
+                    <a href="https://github.com/GodwillFoka" target="_blank">github.com/GodwillFoka →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

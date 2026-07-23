@@ -47,3 +47,15 @@ msgstr "Liens"
 
 msgid "Message envoyé avec succès"
 msgstr "Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais."
+msgid "Ressources"
+msgstr "Ressources"
+
+msgid "Stats"
+msgstr "Stats"
+
+msgid "Curriculum"
+msgstr "Curriculum"
+
+msgid "CV"
+msgstr "CV"
+

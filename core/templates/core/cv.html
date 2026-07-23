@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% if lang == 'fr' %}CV — Godwill FOKA{% elif lang == 'de' %}Lebenslauf — Godwill FOKA{% else %}CV — Godwill FOKA{% endif %}{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">{% trans "Curriculum" %}</span>
+            <h1 class="section-title">{% if lang == 'fr' %}Mon CV{% elif lang == 'de' %}Mein Lebenslauf{% else %}My CV{% endif %}</h1>
+            <p class="section-subtitle">{% if lang == 'fr' %}Cybersecurity Engineer — Berlin, Deutschland{% elif lang == 'de' %}Cybersecurity Engineer — Berlin, Deutschland{% else %}Cybersecurity Engineer — Berlin, Germany{% endif %}</p>
+        </div>
+
+        <div class="row justify-content-center fade-in">
+            <div class="col-lg-10">
+                <!-- Carte CV -->
+                <div class="cv-card">
+                    <!-- Entête -->
+                    <div class="cv-header">
+                        <div class="row align-items-center">
+                            <div class="col-md-2 text-center mb-3 mb-md-0">
+                                <img src="{% static 'images/photo-profile.jpg' %}" alt="Godwill FOKA" class="cv-photo">
+                            </div>
+                            <div class="col-md-10">
+                                <h2 class="cv-name">Godwill FOKA</h2>
+                                <p class="cv-title">{% if lang == 'fr' %}Cybersecurity Engineer | IT-Sicherheitsspezialist{% elif lang == 'de' %}Cybersecurity Engineer | IT-Sicherheitsspezialist{% else %}Cybersecurity Engineer | IT Security Specialist{% endif %}</p>
+                                <div class="cv-contact-bar">
+                                    <span>📧 fokagodwill@gmail.com</span>
+                                    <span>📍 Berlin, Deutschland</span>
+                                    <span>🔗 github.com/GodwillFoka</span>
+                                    <span>💼 linkedin.com/in/godwillfoka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profil -->
+                    <div class="cv-section">
+                        <h3 class="cv-section-title">{% if lang == 'fr' %}Profil{% elif lang == 'de' %}Profil{% else %}Profile{% endif %}</h3>
+                        <p>{% if lang == 'fr' %}Cybersecurity Engineer passionné, spécialisé en sécurité offensive et défensive, conformité et transformation digitale. Fort de 4+ années d'expérience en IT et cybersécurité, je maîtrise l'audit de sécurité, le pentesting, la gestion d'incidents et la sensibilisation. Actuellement basé à Berlin, je cherche à mettre mes compétences au service d'une organisation où la sécurité est une priorité stratégique.{% elif lang == 'de' %}Leidenschaftlicher Cybersecurity Engineer, spezialisiert auf offensive und defensive Sicherheit, Compliance und digitale Transformation. Mit über 4 Jahren Erfahrung in IT und Cybersicherheit beherrsche ich Sicherheitsaudits, Pentesting, Incident Response und Sensibilisierung. Derzeit in Berlin ansässig, möchte ich meine Fähigkeiten in einer Organisation einsetzen, in der Sicherheit eine strategische Priorität ist.{% else %}Passionate Cybersecurity Engineer specialized in offensive and defensive security, compliance, and digital transformation. With 4+ years of experience in IT and cybersecurity, I master security audits, pentesting, incident response, and awareness training. Currently based in Berlin, I aim to bring my skills to an organization where security is a strategic priority.{% endif %}</p>
+                    </div>
+
+                    <!-- Formation -->
+                    <div class="cv-section">
+                        <h3 class="cv-section-title"><span style="color: var(--accent);">🎓</span> {% if lang == 'fr' %}Formation{% elif lang == 'de' %}Ausbildung{% else %}Education{% endif %}</h3>
+                        <div class="cv-item">
+                            <div class="cv-item-date">2018–2021</div>
+                            <div class="cv-item-content">
+                                <h4>{% if lang == 'fr' %}B.Sc. IT Engineering (Informatique fondamentale){% elif lang == 'de' %}B.Sc. IT Engineering (Grundlagen der Informatik){% else %}B.Sc. IT Engineering (Fundamental Computer Science){% endif %}</h4>
+                                <p>{% if lang == 'fr' %}Université de Dschang, Cameroun — 180 ECTS{% elif lang == 'de' %}Universität Dschang, Kamerun — 180 ECTS{% else %}University of Dschang, Cameroon — 180 ECTS{% endif %}</p>
+                            </div>
+                        </div>
+                        <div class="cv-item">
+                            <div class="cv-item-date">2021–2022</div>
+                            <div class="cv-item-content">
+                                <h4>{% if lang == 'fr' %}Master 1 — Software Engineering & IA{% elif lang == 'de' %}Master 1 — Software Engineering & KI{% else %}Master 1 — Software Engineering & AI{% endif %}</h4>
+                                <p>{% if lang == 'fr' %}Université de Dschang, Cameroun — 60 ECTS{% elif lang == 'de' %}Universität Dschang, Kamerun — 60 ECTS{% else %}University of Dschang, Cameroon — 60 ECTS{% endif %}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Expérience -->
+                    <div class="cv-section">
+                        <h3 class="cv-section-title"><span style="color: var(--accent);">💼</span> {% if lang == 'fr' %}Expérience{% elif lang == 'de' %}Erfahrung{% else %}Experience{% endif %}</h3>
+                        <div class="cv-item">
+                            <div class="cv-item-date">2024–Auj.</div>
+                            <div class="cv-item-content">
+                                <h4>{% if lang == 'fr' %}Initiator & Tech Ambassador{% elif lang == 'de' %}Initiator & Tech Ambassador{% else %}Initiator & Tech Ambassador{% endif %} — CYBERILL</h4>
+                                <p>Berlin, Deutschland</p>
+                                <ul>
+                                    <li>{% if lang == 'fr' %}Conseil en cybersécurité et transformation digitale{% elif lang == 'de' %}Beratung zu Cybersicherheit und digitaler Transformation{% else %}Cybersecurity and digital transformation consulting{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Sensibilisation et formation aux bonnes pratiques{% elif lang == 'de' %}Sensibilisierung und Schulung zu bewährten Verfahren{% else %}Awareness and training on best practices{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Développement d'applications sécurisées{% elif lang == 'de' %}Entwicklung sicherer Anwendungen{% else %}Secure application development{% endif %}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cv-item">
+                            <div class="cv-item-date">2023–2025</div>
+                            <div class="cv-item-content">
+                                <h4>{% if lang == 'fr' %}IT Systems & Maintenance Manager{% elif lang == 'de' %}IT-System- & Wartungsmanager{% else %}IT Systems & Maintenance Manager{% endif %} — Inst. Die Suchenden</h4>
+                                <p>Yaoundé</p>
+                            </div>
+                        </div>
+                        <div class="cv-item">
+                            <div class="cv-item-date">2024–2025</div>
+                            <div class="cv-item-content">
+                                <h4>{% if lang == 'fr' %}IT & Cybersecurity Specialist{% elif lang == 'de' %}IT- & Cybersicherheitsspezialist{% else %}IT & Cybersecurity Specialist{% endif %} — ENIX SARL</h4>
+                                <p>Yaoundé</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div class="cv-section">
+                        <h3 class="cv-section-title"><span style="color: var(--accent);">📜</span> {% if lang == 'fr' %}Certifications{% elif lang == 'de' %}Zertifizierungen{% else %}Certifications{% endif %}</h3>
+                        <div class="cv-cert-grid">
+                            <span class="cv-cert-badge">EC-Council C|CT <small>{% if lang == 'fr' %}En préparation{% elif lang == 'de' %}In Vorbereitung{% else %}In preparation{% endif %}</small></span>
+                            <span class="cv-cert-badge done">Cisco Junior Cybersecurity Analyst ✅</span>
+                            <span class="cv-cert-badge done">ANSSI SecNumAcadémie ✅</span>
+                            <span class="cv-cert-badge">CSI Linux Investigator <small>{% if lang == 'fr' %}En cours{% elif lang == 'de' %}Laufend{% else %}In progress{% endif %}</small></span>
+                            <span class="cv-cert-badge done">Cisco Intro to Cybersecurity ✅</span>
+                        </div>
+                    </div>
+
+                    <!-- Compétences -->
+                    <div class="cv-section">
+                        <h3 class="cv-section-title"><span style="color: var(--accent);">🔧</span> {% if lang == 'fr' %}Compétences clés{% elif lang == 'de' %}Schlüsselkompetenzen{% else %}Key Skills{% endif %}</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="cv-skill-list">
+                                    <li>{% if lang == 'fr' %}Network Defense & Security{% elif lang == 'de' %}Netzwerkverteidigung & -sicherheit{% else %}Network Defense & Security{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Ethical Hacking & Pentesting{% elif lang == 'de' %}Ethisches Hacking & Pentesting{% else %}Ethical Hacking & Pentesting{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Incident Response & Forensics{% elif lang == 'de' %}Incident Response & Forensik{% else %}Incident Response & Forensics{% endif %}</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="cv-skill-list">
+                                    <li>{% if lang == 'fr' %}ISO 27001, DSGVO, BSI-Grundschutz{% elif lang == 'de' %}ISO 27001, DSGVO, BSI-Grundschutz{% else %}ISO 27001, GDPR, BSI Baseline{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}Python, Django, Bash, Docker{% elif lang == 'de' %}Python, Django, Bash, Docker{% else %}Python, Django, Bash, Docker{% endif %}</li>
+                                    <li>{% if lang == 'fr' %}SIEM, Wireshark, Nmap, Burp Suite{% elif lang == 'de' %}SIEM, Wireshark, Nmap, Burp Suite{% else %}SIEM, Wireshark, Nmap, Burp Suite{% endif %}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Langues -->
+                    <div class="cv-section">
+                        <h3 class="cv-section-title"><span style="color: var(--accent);">🌐</span> {% if lang == 'fr' %}Langues{% elif lang == 'de' %}Sprachen{% else %}Languages{% endif %}</h3>
+                        <div class="row">
+                            <div class="col-md-4"><strong>{% if lang == 'fr' %}Français{% elif lang == 'de' %}Französisch{% else %}French{% endif %}</strong> — {% if lang == 'fr' %}Natif{% elif lang == 'de' %}Muttersprache{% else %}Native{% endif %}</div>
+                            <div class="col-md-4"><strong>{% if lang == 'fr' %}Allemand{% elif lang == 'de' %}Deutsch{% else %}German{% endif %}</strong> — C1 {% if lang == 'fr' %}(Courant){% elif lang == 'de' %}(Fließend){% else %}(Fluent){% endif %}</div>
+                            <div class="col-md-4"><strong>{% if lang == 'fr' %}Anglais{% elif lang == 'de' %}Englisch{% else %}English{% endif %}</strong> — B2/C1 {% if lang == 'fr' %}(Professionnel){% elif lang == 'de' %}(Geschäftsniveau){% else %}(Professional){% endif %}</div>
+                        </div>
+                    </div>
+
+                    <!-- Bouton téléchargement -->
+                    <div class="cv-download text-center mt-4">
+                        <p class="text-muted mb-3">{% if lang == 'fr' %}Version PDF complète disponible sur demande{% elif lang == 'de' %}Vollständige PDF-Version auf Anfrage erhältlich{% else %}Full PDF version available upon request{% endif %}</p>
+                        <a href="mailto:fokagodwill@gmail.com?subject=Demande%20de%20CV%20-%20Godwill%20FOKA" class="btn btn-accent">📥 {% if lang == 'fr' %}Demander le CV PDF{% elif lang == 'de' %}PDF anfordern{% else %}Request PDF CV{% endif %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

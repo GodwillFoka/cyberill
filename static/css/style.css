@@ -1031,3 +1031,371 @@ body {
     .hero-photo { width: 180px; height: 180px; }
     .carousel-card { min-width: 200px; }
 }
+
+/* ===== Glossaire Cards (Ressources) ===== */
+.glossaire-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 25px;
+    height: 100%;
+    transition: all 0.3s;
+    box-shadow: var(--shadow-sm);
+}
+
+.glossaire-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+.glossaire-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.glossaire-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* ===== Resource Cards (Ressources) ===== */
+.resource-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 35px 25px;
+    height: 100%;
+    transition: all 0.4s;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.resource-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+    border-color: transparent;
+}
+
+.resource-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.resource-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.resource-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.resource-meta {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    background: var(--bg-alt);
+    padding: 4px 12px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+/* ===== Link Cards ===== */
+.link-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 25px;
+    height: 100%;
+    transition: all 0.3s;
+    box-shadow: var(--shadow-sm);
+}
+
+.link-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+    border-color: var(--primary);
+}
+
+.link-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.link-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.link-card a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.link-card a:hover {
+    color: var(--accent-hover);
+}
+
+/* ===== Big Stat Cards ===== */
+.stat-big-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 40px 30px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.4s;
+    box-shadow: var(--shadow-sm);
+}
+
+.stat-big-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+}
+
+.stat-big-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.stat-big-number span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-big-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* ===== Threat Rows ===== */
+.threat-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+    transition: all 0.3s;
+    box-shadow: var(--shadow-sm);
+}
+
+.threat-row:hover {
+    box-shadow: var(--shadow);
+    border-color: var(--accent);
+}
+
+.threat-rank {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--accent);
+    min-width: 24px;
+}
+
+.threat-icon { font-size: 1.5rem; }
+
+.threat-name {
+    font-weight: 600;
+    color: var(--text);
+    min-width: 140px;
+}
+
+.threat-bar {
+    flex: 1;
+    height: 10px;
+    background: var(--bg-alt);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.threat-bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), #FF8A3C);
+    border-radius: 10px;
+    transition: width 1s ease;
+}
+
+.threat-pct {
+    font-weight: 700;
+    color: var(--text-muted);
+    min-width: 40px;
+    text-align: right;
+}
+
+/* ===== CV Card ===== */
+.cv-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+.cv-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+}
+
+.cv-name {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.cv-title {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.cv-contact-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.cv-section {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border);
+}
+
+.cv-section-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 18px;
+}
+
+.cv-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.cv-item-date {
+    min-width: 100px;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+.cv-item-content h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.cv-item-content p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+}
+
+.cv-item-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0;
+}
+
+.cv-item-content ul li {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    padding-left: 15px;
+    position: relative;
+    margin-bottom: 3px;
+}
+
+.cv-item-content ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.cv-cert-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cv-cert-badge {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.cv-cert-badge.done {
+    background: #D1FAE5;
+    border-color: transparent;
+    color: #065F46;
+}
+
+.cv-cert-badge small {
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.cv-skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cv-skill-list li {
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    background: var(--bg-alt);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--text);
+    border-left: 3px solid var(--accent);
+}
+
+.cv-download {
+    padding: 30px;
+    background: var(--bg-alt);
+    border-radius: var(--radius);
+}
+
+@media (max-width: 768px) {
+    .cv-contact-bar { flex-direction: column; gap: 5px; }
+    .cv-item { flex-direction: column; gap: 5px; }
+    .cv-item-date { min-width: auto; }
+    .threat-name { min-width: 100px; }
+    .cv-card { padding: 20px; }
+}

@@ -28,3 +28,15 @@ def newsletter_signup(request):
             f"Merci ! {email} — " + _("Message envoyé avec succès")
         )
     return redirect(request.META.get('HTTP_REFERER', '/'))
+
+# ===== Ressources Éducatives =====
+def ressources(request):
+    return render(request, 'core/ressources.html')
+
+# ===== Cyber en chiffres =====
+def stats_cyber(request):
+    return render(request, 'core/stats.html')
+
+# ===== CV =====
+def cv_page(request):
+    return render(request, 'core/cv.html')
