@@ -26,30 +26,32 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto align-items-center">
+                <ul class="navbar-nav mx-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">{% trans "Accueil" %}</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">{% trans "À propos" %}</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'blog_list' %}">{% trans "Blog" %}</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'ressources' %}">{% trans "Ressources" %}</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'stats' %}">{% trans "Stats" %}</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
-                    <li class="nav-item ms-lg-2"><a class="nav-link nav-cta-btn" href="{% url 'contact' %}">{% trans "Parlons cyber →" %}</a></li>
-                    <!-- Language Switcher -->
-                    <li class="nav-item dropdown ms-lg-2">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <!-- Language Switcher — Flags only -->
+                    <div class="dropdown">
+                        <button class="btn lang-dropdown" type="button" data-bs-toggle="dropdown">
                             {% if lang == 'fr' %}🇫🇷{% elif lang == 'de' %}🇩🇪{% else %}🇬🇧{% endif %}
-                        </a>
+                        </button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             {% for code, name in LANGUAGES %}
                             <li>
-                                <a class="dropdown-item {% if lang == code %}active{% endif %}" href="/{{ code }}/{{ current_path|cut:'/'|cut:lang }}">
-                                    {% if code == 'fr' %}🇫🇷 {{ name }}{% elif code == 'de' %}🇩🇪 {{ name }}{% else %}🇬🇧 {{ name }}{% endif %}
+                                <a class="dropdown-item lang-flag-item {% if lang == code %}active{% endif %}" href="/{{ code }}/{{ current_path|cut:'/'|cut:lang }}">
+                                    {% if code == 'en' %}🇬🇧{% elif code == 'fr' %}🇫🇷{% else %}🇩🇪{% endif %}
                                 </a>
                             </li>
                             {% endfor %}
                         </ul>
-                    </li>
-                </ul>
+                    </div>
+                    <a class="btn btn-accent btn-sm nav-cta-btn" href="{% url 'contact' %}">{% trans "Parlons cyber →" %}</a>
+                </div>
             </div>
         </div>
     </nav>

@@ -108,6 +108,43 @@ body {
 
 .nav-cta-btn::after { display: none !important; }
 
+/* Language dropdown — flags only */
+.lang-dropdown {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.lang-dropdown:hover {
+    border-color: var(--accent);
+    background: rgba(230, 104, 27, 0.05);
+}
+
+.lang-dropdown::after { display: none !important; }
+
+.lang-flag-item {
+    font-size: 1.5rem !important;
+    text-align: center;
+    padding: 6px 12px !important;
+}
+
+.lang-flag-item.active {
+    background: rgba(230, 104, 27, 0.1) !important;
+}
+
+.dropdown-menu {
+    min-width: 50px !important;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    padding: 4px;
+}
+
 /* ===== Hero Section ===== */
 .hero {
     min-height: 92vh;

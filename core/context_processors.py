@@ -6,8 +6,8 @@ def site_language(request):
     return {
         'lang': lang,
         'LANGUAGES': [
-            ('fr', 'Français'),
             ('en', 'English'),
+            ('fr', 'Français'),
             ('de', 'Deutsch'),
         ],
         'current_path': request.path,
