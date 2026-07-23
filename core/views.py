@@ -80,7 +80,7 @@ def portfolio(request):
         )
         data = json.loads(r.read().decode())
         for repo in data:
-            if not repo.get('fork', True):
+            if not repo.get('fork', True) and 'bnd' not in repo['name'].lower():
                 repos.append({
                     'name': repo['name'],
                     'description': repo['description'] or 'No description',
