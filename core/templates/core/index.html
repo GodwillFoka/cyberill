@@ -19,17 +19,17 @@
                 <div class="hero-slider-wrapper fade-in">
                     <!-- Slide 1 -->
                     <div class="hero-slide active">
-                        <h1>{% if lang == 'fr' %}Sécuriser le<br><span class="highlight">numérique</span>{% elif lang == 'de' %}Digital<br><span class="highlight">sichern</span>{% else %}Securing<br><span class="highlight">digital</span>{% endif %}</h1>
+                        <h1>{% if lang == 'fr' %}Sécuriser le<br><span class="highlight gradient-text">numérique</span>{% elif lang == 'de' %}Digital<br><span class="highlight gradient-text">sichern</span>{% else %}Securing<br><span class="highlight gradient-text">digital</span>{% endif %}</h1>
                         <p>{% if lang == 'fr' %}CYBERILL est mon initiative dédiée à la cybersécurité et à la transformation digitale. Conseil, audit, formation — je mets mes compétences au service de votre sécurité.{% elif lang == 'de' %}CYBERILL ist meine Initiative für Cybersicherheit und digitale Transformation. Beratung, Audit, Schulung — ich stelle meine Fähigkeiten in den Dienst Ihrer Sicherheit.{% else %}CYBERILL is my initiative for cybersecurity and digital transformation. Consulting, audit, training — I put my skills at the service of your security.{% endif %}</p>
                     </div>
                     <!-- Slide 2 -->
                     <div class="hero-slide">
-                        <h1>{% if lang == 'fr' %}Former &<br><span class="highlight">sensibiliser</span>{% elif lang == 'de' %}Schulen &<br><span class="highlight">sensibilisieren</span>{% else %}Training &<br><span class="highlight">awareness</span>{% endif %}</h1>
+                        <h1>{% if lang == 'fr' %}Former &<br><span class="highlight gradient-text">sensibiliser</span>{% elif lang == 'de' %}Schulen &<br><span class="highlight gradient-text">sensibilisieren</span>{% else %}Training &<br><span class="highlight gradient-text">awareness</span>{% endif %}</h1>
                         <p>{% if lang == 'fr' %}La cybersécurité commence par la connaissance. Workshops, formations interactives et sessions de sensibilisation pour tous les niveaux.{% elif lang == 'de' %}Cybersicherheit beginnt mit Wissen. Workshops, interaktive Schulungen und Sensibilisierung für alle Niveaus.{% else %}Cybersecurity starts with knowledge. Workshops, interactive training and awareness sessions for all levels.{% endif %}</p>
                     </div>
                     <!-- Slide 3 -->
                     <div class="hero-slide">
-                        <h1>{% if lang == 'fr' %}Innover &<br><span class="highlight">transformer</span>{% elif lang == 'de' %}Innovieren &<br><span class="highlight">transformieren</span>{% else %}Innovate &<br><span class="highlight">transform</span>{% endif %}</h1>
+                        <h1>{% if lang == 'fr' %}Innover &<br><span class="highlight gradient-text">transformer</span>{% elif lang == 'de' %}Innovieren &<br><span class="highlight gradient-text">transformieren</span>{% else %}Innovate &<br><span class="highlight gradient-text">transform</span>{% endif %}</h1>
                         <p>{% if lang == 'fr' %}Accompagnement à la transformation digitale, développement d'applications sécurisées et veille stratégique.{% elif lang == 'de' %}Begleitung der digitalen Transformation, Entwicklung sicherer Anwendungen und strategische Beobachtung.{% else %}Digital transformation support, secure application development and strategic monitoring.{% endif %}</p>
                     </div>
 
@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="d-flex gap-3 flex-wrap mt-4 fade-in">
-                    <a href="{% url 'contact' %}" class="btn btn-accent">{% if lang == 'fr' %}Démarrer un projet →{% elif lang == 'de' %}Projekt starten →{% else %}Start a project →{% endif %}</a>
+                    <a href="{% url 'contact' %}" class="btn btn-accent ripple-btn">{% if lang == 'fr' %}Démarrer un projet →{% elif lang == 'de' %}Projekt starten →{% else %}Start a project →{% endif %}</a>
                     <a href="{% url 'about' %}" class="btn btn-outline">{% if lang == 'fr' %}En savoir plus{% elif lang == 'de' %}Mehr erfahren{% else %}Learn more{% endif %}</a>
                 </div>
 
@@ -102,28 +102,28 @@
         </div>
         <div class="row g-4 stagger-children">
             <div class="col-md-6 col-lg-3">
-                <div class="service-card">
+                <div class="service-card hover-lift">
                     <div class="service-icon">🛡️</div>
                     <h4>{% if lang == 'fr' %}Conseil & Audit{% elif lang == 'de' %}Beratung & Audit{% else %}Consulting & Audit{% endif %}</h4>
                     <p>{% if lang == 'fr' %}Diagnostic de sécurité, analyse des risques, conformité (ISO 27001, DSGVO, BSI), recommandations stratégiques.{% elif lang == 'de' %}Sicherheitsdiagnose, Risikoanalyse, Compliance (ISO 27001, DSGVO, BSI), strategische Empfehlungen.{% else %}Security diagnosis, risk analysis, compliance (ISO 27001, GDPR, BSI), strategic recommendations.{% endif %}</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="service-card">
+                <div class="service-card hover-lift">
                     <div class="service-icon">🎓</div>
                     <h4>Formation & Sensibilisation</h4>
                     <p>Workshops interactifs, formations certifiantes et sensibilisation aux bonnes pratiques de sécurité pour tous les niveaux.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="service-card">
+                <div class="service-card hover-lift">
                     <div class="service-icon">🔧</div>
                     <h4>Pentesting & Dev</h4>
                     <p>Tests d'intrusion, développement d'applications sécurisées, audit de code et correction de vulnérabilités.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="service-card">
+                <div class="service-card hover-lift">
                     <div class="service-icon">🌐</div>
                     <h4>Community & Veille</h4>
                     <p>Animation de communautés tech, veille stratégique, contenu éducatif et gestion de présence digitale.</p>

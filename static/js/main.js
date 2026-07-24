@@ -231,3 +231,92 @@ if (document.getElementById('cookieBanner')) {
         }, 1000);
     }
 }
+
+// ===== 12. Scroll Reveal Animations =====
+const revealElements = document.querySelectorAll('.fade-in, .slide-up, .slide-left, .slide-right, .scale-in');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15 });
+revealElements.forEach(el => observer.observe(el));
+
+// ===== 13. Stagger Children Animation =====
+const staggerContainers = document.querySelectorAll('.stagger-children');
+const staggerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+            staggerObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15 });
+staggerContainers.forEach(el => staggerObserver.observe(el));
+
+// ===== 14. Skill Bars Animation =====
+const skillBars = document.querySelectorAll('.skill-bar-fill');
+const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+            skillObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+skillBars.forEach(el => skillObserver.observe(el));
+
+// ===== 15. Ripple Effect on Buttons =====
+document.querySelectorAll('.ripple-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        const rect = this.getBoundingClientRect();
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        ripple.style.left = (e.clientX - rect.left - 10) + 'px';
+        ripple.style.top = (e.clientY - rect.top - 10) + 'px';
+        ripple.style.width = ripple.style.height = '20px';
+        this.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+    });
+});
+
+// ===== 16. Smooth Reveal on Load =====
+document.querySelectorAll('.hero-badge, .hero-slide, .btn-accent').forEach((el, i) => {
+    if (el.closest('.hero') || el.closest('.contact-section')) {
+        el.style.opacity = '0';
+        setTimeout(() => {
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            el.style.opacity = '1';
+        }, 200 + i * 150);
+    }
+});
+
+// ===== 17. Floating Animation on Hero Image =====
+const heroImage = document.querySelector('.hero-image');
+if (heroImage) heroImage.classList.add('float-anim');
+
+// ===== 18. Animated Counters (re-initialize for dynamically loaded) =====
+document.querySelectorAll('.count-up').forEach(counter => {
+    const target = parseInt(counter.dataset.target) || 0;
+    const suffix = counter.dataset.suffix || '';
+    const updateCount = () => {
+        const current = parseInt(counter.innerText) || 0;
+        const increment = Math.ceil(target / 30);
+        if (current < target) {
+            counter.innerText = Math.min(current + increment, target) + suffix;
+            requestAnimationFrame(updateCount);
+        } else {
+            counter.innerText = target + suffix;
+        }
+    };
+    const counterObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            counter.innerText = '0';
+            updateCount();
+            counterObserver.unobserve(counter);
+        }
+    }, { threshold: 0.5 });
+    counterObserver.observe(counter);
+});
