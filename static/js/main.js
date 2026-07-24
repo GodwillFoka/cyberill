@@ -320,3 +320,32 @@ document.querySelectorAll('.count-up').forEach(counter => {
     }, { threshold: 0.5 });
     counterObserver.observe(counter);
 });
+
+// ===== 19. Lightbox =====
+function openLightbox(imgSrc, caption) {
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbCap = document.getElementById('lightbox-caption');
+    lbImg.src = imgSrc;
+    lbCap.textContent = caption || '';
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e) {
+    if (e.target !== e.currentTarget && e.target.tagName !== 'BUTTON') return;
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+}
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+// Auto-bind all [data-lightbox] elements
+document.querySelectorAll('[data-lightbox]').forEach(el => {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => {
+        openLightbox(el.src || el.href, el.dataset.caption || '');
+    });
+});
