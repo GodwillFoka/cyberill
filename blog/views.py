@@ -75,6 +75,51 @@ ARTICLES = {
             'image': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop',
             'content': "Linux est réputé pour sa sécurité, mais une config par défaut ne suffit pas.\n\n## Hardening\n1. **Mises à jour** — apt update && apt upgrade\n2. **SSH** — Désactiver root, utiliser clés\n3. **Firewall** — iptables/ufw\n4. **SELinux / AppArmor** — Contrôle d'accès\n5. **Audit logs** — Fail2ban, auditd\n\n## Commandes\n```bash\nss -tuln  # ports ouverts\nfind / -perm -4000  # fichiers SUID\njournalctl -xe -n 50  # logs\n```\n\nUn serveur bien configuré est la base de toute infrastructure sécurisée.",
         },
+        # --- Article 9 : Cloud Security ---
+        {
+            'slug': 'securite-cloud',
+            'title': 'Sécurité Cloud : Protéger ses données dans le nuage',
+            'category': 'Cloud',
+            'date': '15 août 2026',
+            'image': 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop',
+            'content': "Le cloud computing transforme les entreprises, mais la sécurité reste clé.\n\n## Responsabilité partagée\nLe fournisseur sécurise l'infrastructure, vous sécurisez vos données.\n\n## Bonnes pratiques\n1. **IAM** — Moindre privilège\n2. **Chiffrement** — Au repos et en transit\n3. **Monitoring** — CloudTrail, GuardDuty\n4. **Backup** — Multi-régions\n5. **Security Groups** — Règles strictes\n\n## Pièges\n- Buckets S3 publics\n- Clés API exposées\n- Pas de MFA\n\nLe cloud est sécurisé… quand c'est bien configuré.",
+        },
+        # --- Article 10 : Social Engineering ---
+        {
+            'slug': 'ingenierie-sociale',
+            'title': 'Ingénierie Sociale : La menace humaine',
+            'category': 'Sensibilisation',
+            'date': '20 août 2026',
+            'image': 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=400&fit=crop',
+            'content': "L'art de manipuler les personnes pour obtenir des informations confidentielles.\n\n## Techniques\n1. **Phishing** — Emails frauduleux\n2. **Pretexting** — Faux scenario\n3. **Baiting** — Pièges physiques\n4. **Tailgating** — Accès non autorisé\n\n## Protection\n- Ne jamais divulguer d'infos sensibles\n- Vérifier l'identité\n- Former les équipes\n\nLa meilleure techno ne sert à rien si l'humain est la faille.",
+        },
+        # --- Article 11 : WiFi Security ---
+        {
+            'slug': 'securite-wifi',
+            'title': 'Sécuriser son réseau WiFi',
+            'category': 'Réseau',
+            'date': '25 août 2026',
+            'image': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop',
+            'content': "Le WiFi est une porte d'entrée prisée par les attaquants.\n\n## Bonnes pratiques\n1. Changer le mot de passe du routeur\n2. **WPA3** minimum\n3. Désactiver WPS\n4. SSID caché\n5. Filtrage MAC\n\n## Entreprise\n- Réseaux séparés (invités, IoT)\n- 802.1X + RADIUS\n- Guest network isolé\n\nUn WiFi bien configuré = première ligne de défense.",
+        },
+        # --- Article 12 : Python Cyber ---
+        {
+            'slug': 'python-cybersecurite',
+            'title': 'Python pour la Cybersécurité',
+            'category': 'Dev',
+            'date': '30 août 2026',
+            'image': 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=600&h=400&fit=crop',
+            'content': "Python est le langage le plus utilisé en cybersécurité.\n\n## Bibliothèques\n- **Scapy** — Paquets réseau\n- **Requests** — HTTP\n- **Paramiko** — SSH\n- **Socket** — Réseau bas niveau\n\n## Cas d'usage\n- Analyse de logs\n- Automatisation de scans\n- Outils de force brute\n- Analyse de malware\n\nPython transforme des lignes de code en cyberpuissance.",
+        },
+        # --- Article 13 : Bug Bounty ---
+        {
+            'slug': 'bug-bounty-introduction',
+            'title': 'Introduction au Bug Bounty',
+            'category': 'Pentesting',
+            'date': '5 septembre 2026',
+            'image': 'https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=600&h=400&fit=crop',
+            'content': "Programme récompensant les chercheurs pour la découverte de vulnérabilités.\n\n## Plateformes\n- **HackerOne**\n- **Bugcrowd**\n- **Intigriti** (Europe)\n- **YesWeHack** (France)\n\n## Vulnérabilités courantes\n- XSS, SQLi, CSRF, IDOR, SSRF\n\n## Comment commencer\n1. Apprendre l'OWASP Top 10\n2. Compte HackerOne/Bugcrowd\n3. Programmes avec bonne réputation\n4. Documenter chaque trouvaille\n\nLe Bug Bounty = monter en compétences ET se faire payer !",
+        },
     ],
     'en': [
         {
@@ -141,6 +186,51 @@ ARTICLES = {
             'image': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop',
             'content': "Linux is renowned for security, but default configurations aren't enough.\n\n## Hardening\n1. **Updates** — apt update && apt upgrade\n2. **SSH** — Disable root, use keys\n3. **Firewall** — iptables/ufw\n4. **SELinux / AppArmor** — Access control\n5. **Log auditing** — Fail2ban\n\n## Commands\n```bash\nss -tuln\nfind / -perm -4000\njournalctl -xe -n 50\n```\n\nA well-configured server is the foundation of secure infrastructure.",
         },
+        # --- Article 9 : Cloud Security ---
+        {
+            'slug': 'cloud-security',
+            'title': 'Cloud Security: Protecting Your Data',
+            'category': 'Cloud',
+            'date': 'August 15, 2026',
+            'image': 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop',
+            'content': "Cloud computing transforms businesses, but security remains key.\n\n## Shared Responsibility\nThe provider secures infrastructure, you secure your data.\n\n## Best Practices\n1. **IAM** — Least privilege\n2. **Encryption** — At rest and in transit\n3. **Monitoring** — CloudTrail, GuardDuty\n4. **Backup** — Multi-region\n5. **Security Groups** — Strict rules\n\n## Common pitfalls\n- Public S3 buckets\n- Exposed API keys\n- No MFA\n\nThe cloud is secure… when properly configured.",
+        },
+        # --- Article 10 : Social Engineering ---
+        {
+            'slug': 'social-engineering',
+            'title': 'Social Engineering: The Human Threat',
+            'category': 'Awareness',
+            'date': 'August 20, 2026',
+            'image': 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=400&fit=crop',
+            'content': "Social engineering is the art of manipulating people to obtain confidential information.\n\n## Techniques\n1. **Phishing** — Fraudulent emails\n2. **Pretexting** — Fake scenario\n3. **Baiting** — Physical traps\n4. **Tailgating** — Unauthorized access\n\n## Protection\n- Never disclose sensitive info\n- Verify identity\n- Train your teams\n\nThe best tech is useless if humans are the weak link.",
+        },
+        # --- Article 11 : WiFi Security ---
+        {
+            'slug': 'wifi-security',
+            'title': 'Securing Your WiFi Network',
+            'category': 'Network',
+            'date': 'August 25, 2026',
+            'image': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop',
+            'content': "WiFi is a favorite entry point for attackers.\n\n## Best Practices\n1. Change router default password\n2. **WPA3** minimum\n3. Disable WPS\n4. Hide SSID\n5. MAC filtering\n\n## Enterprise\n- Separate networks (guests, IoT)\n- 802.1X + RADIUS\n- Isolated guest network\n\nGood WiFi = first line of defense.",
+        },
+        # --- Article 12 : Python Cyber ---
+        {
+            'slug': 'python-cybersecurity',
+            'title': 'Python for Cybersecurity',
+            'category': 'Dev',
+            'date': 'August 30, 2026',
+            'image': 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=600&h=400&fit=crop',
+            'content': "Python is the most used language in cybersecurity.\n\n## Libraries\n- **Scapy** — Network packets\n- **Requests** — HTTP\n- **Paramiko** — SSH\n- **Socket** — Low-level network\n\n## Use cases\n- Log analysis\n- Scan automation\n- Brute force tools\n- Malware analysis\n\nPython turns code into cyberpower.",
+        },
+        # --- Article 13 : Bug Bounty ---
+        {
+            'slug': 'bug-bounty-intro',
+            'title': 'Introduction to Bug Bounty',
+            'category': 'Pentesting',
+            'date': 'September 5, 2026',
+            'image': 'https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=600&h=400&fit=crop',
+            'content': "Bug Bounty programs reward researchers for finding vulnerabilities.\n\n## Platforms\n- **HackerOne**\n- **Bugcrowd**\n- **Intigriti** (Europe)\n\n## Common vulns\n- XSS, SQLi, CSRF, IDOR, SSRF\n\n## Getting started\n1. Learn OWASP Top 10\n2. Create HackerOne/Bugcrowd account\n3. Target good reputation programs\n4. Document every finding\n\nBug Bounty = level up skills AND get paid!",
+        },
     ],
     'de': [
         {
@@ -206,6 +296,51 @@ ARTICLES = {
             'date': '10. August 2026',
             'image': 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop',
             'content': "Linux ist für Sicherheit bekannt, aber Standardkonfigurationen reichen nicht.\n\n## Härtung\n1. **Updates** — apt update && apt upgrade\n2. **SSH** — Root-Login deaktivieren, Schlüssel\n3. **Firewall** — iptables/ufw\n4. **SELinux / AppArmor** — Zugriffskontrolle\n5. **Log-Überwachung** — Fail2ban\n\n## Befehle\n```bash\nss -tuln\nfind / -perm -4000\njournalctl -xe -n 50\n```\n\nEin gut konfigurierter Server ist die Basis sicherer Infrastruktur.",
+        },
+        # --- Article 9 : Cloud Security ---
+        {
+            'slug': 'cloud-sicherheit',
+            'title': 'Cloud-Sicherheit: Daten in der Cloud schützen',
+            'category': 'Cloud',
+            'date': '15. August 2026',
+            'image': 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop',
+            'content': "Cloud-Computing verändert Unternehmen, aber Sicherheit bleibt entscheidend.\n\n## Geteilte Verantwortung\nDer Anbieter sichert die Infrastruktur, Sie sichern Ihre Daten.\n\n## Best Practices\n1. **IAM** — Wenigste Rechte\n2. **Verschlüsselung** — Ruhend und in Transit\n3. **Monitoring** — CloudTrail, GuardDuty\n4. **Backup** — Multi-Region\n5. **Security Groups** — Strenge Regeln\n\n## Häufige Fallstricke\n- Öffentliche S3-Buckets\n- Exponierte API-Keys\n- Kein MFA\n\nDie Cloud ist sicher… wenn richtig konfiguriert.",
+        },
+        # --- Article 10 : Social Engineering ---
+        {
+            'slug': 'social-engineering-mensch',
+            'title': 'Social Engineering: Die menschliche Bedrohung',
+            'category': 'Sensibilisierung',
+            'date': '20. August 2026',
+            'image': 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=400&fit=crop',
+            'content': "Social Engineering ist die Kunst, Menschen zu manipulieren, um vertrauliche Informationen zu erhalten.\n\n## Techniken\n1. **Phishing** — Betrügerische E-Mails\n2. **Pretexting** — Falsches Szenario\n3. **Baiting** — Physische Fallen\n4. **Tailgating** — Unbefugter Zutritt\n\n## Schutz\n- Niemals sensible Infos preisgeben\n- Identität prüfen\n- Teams schulen\n\nBeste Technik nützt nichts, wenn der Mensch die Schwachstelle ist.",
+        },
+        # --- Article 11 : WiFi Security ---
+        {
+            'slug': 'wifi-sicherheit',
+            'title': 'WLAN-Netzwerk sichern',
+            'category': 'Netzwerk',
+            'date': '25. August 2026',
+            'image': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop',
+            'content': "WLAN ist ein beliebter Einstiegspunkt für Angreifer.\n\n## Best Practices\n1. Router-Standardpasswort ändern\n2. **WPA3** minimum\n3. WPS deaktivieren\n4. SSID verstecken\n5. MAC-Filter\n\n## Unternehmen\n- Getrennte Netzwerke (Gäste, IoT)\n- 802.1X + RADIUS\n- Gästenetzwerk isoliert\n\nGutes WLAN = erste Verteidigungslinie.",
+        },
+        # --- Article 12 : Python Cyber ---
+        {
+            'slug': 'python-cybersicherheit',
+            'title': 'Python für Cybersicherheit',
+            'category': 'Dev',
+            'date': '30. August 2026',
+            'image': 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=600&h=400&fit=crop',
+            'content': "Python ist die meistgenutzte Sprache in der Cybersicherheit.\n\n## Bibliotheken\n- **Scapy** — Netzwerkpakete\n- **Requests** — HTTP\n- **Paramiko** — SSH\n- **Socket** — Niedriges Netzwerk\n\n## Anwendungsfälle\n- Log-Analyse\n- Scan-Automatisierung\n- Brute-Force-Tools\n- Malware-Analyse\n\nPython verwandelt Code in Cyberkraft.",
+        },
+        # --- Article 13 : Bug Bounty ---
+        {
+            'slug': 'bug-bounty-einfuhrung',
+            'title': 'Einführung in Bug Bounty',
+            'category': 'Pentesting',
+            'date': '5. September 2026',
+            'image': 'https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=600&h=400&fit=crop',
+            'content': "Bug-Bounty-Programme belohnen Forscher für das Finden von Schwachstellen.\n\n## Plattformen\n- **HackerOne**\n- **Bugcrowd**\n- **Intigriti** (Europa)\n\n## Häufige Schwachstellen\n- XSS, SQLi, CSRF, IDOR, SSRF\n\n## Einstieg\n1. OWASP Top 10 lernen\n2. HackerOne/Bugcrowd-Konto\n3. Programme mit gutem Ruf\n4. Jeden Fund dokumentieren\n\nBug Bounty = Fähigkeiten verbessern UND bezahlt werden!",
         },
     ],
 }
