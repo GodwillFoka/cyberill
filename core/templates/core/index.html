@@ -72,7 +72,10 @@
                         <img src="{% static 'images/cyberill-logo-200.png' %}" alt="CYBERILL" height="28">
                     </div>
                     <div class="hero-typewriter">
-                        <span class="type-writer" data-words='{% if lang == "fr" %}["Cybersecurity Engineer", "IT-Sicherheitsspezialist", "Initiator CYBERILL", "C|CT-Kandidat"]{% elif lang == "de" %}["Cybersecurity Engineer", "IT-Sicherheitsspezialist", "Initiator CYBERILL", "C|CT-Kandidat"]{% else %}["Cybersecurity Engineer", "IT-Sicherheitsspezialist", "Initiator CYBERILL", "C|CT Candidate"]{% endif %}'></span>
+                        <span class="type-writer" data-words='{% if lang == "fr" %}["Cybersecurity Engineer", "IT-Sicherheitsspezialist", "Initiator CYBERILL", "C|CT Candidate", "De Dschang à Berlin"]{% elif lang == "de" %}["Cybersecurity Engineer", "IT-Sicherheitsspezialist", "Initiator CYBERILL", "C|CT-Kandidat", "Von Dschang nach Berlin"]{% else %}["Cybersecurity Engineer", "IT Security Specialist", "CYBERILL Initiator", "C|CT Candidate", "From Dschang to Berlin"]{% endif %}'></span>
+                    </div>
+                    <div class="hero-motto" style="margin-top: 8px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">
+                        {% if lang == 'fr' %}"Sécuriser le numérique, transformer l'avenir"{% elif lang == 'de' %}"Digitale Sicherheit, Zukunft gestalten"{% else %}"Securing digital, transforming the future"{% endif %}
                     </div>
                 </div>
             </div>

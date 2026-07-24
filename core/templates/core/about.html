@@ -26,6 +26,43 @@
                     Un parcours construit sur la passion de la technologie et la conviction que la cybersécurité est l'affaire de tous.
                 </p>
 
+                <!-- Personal Motto -->
+                <div class="personal-motto" style="background: var(--bg-alt); border-left: 4px solid var(--accent); padding: 25px 30px; border-radius: 0 var(--radius) var(--radius) 0; margin-bottom: 40px;">
+                    <p style="font-size: 1.1rem; font-style: italic; color: var(--text); margin-bottom: 8px;">
+                        {% if lang == 'fr' %}"Sécuriser le numérique, transformer l'avenir"{% elif lang == 'de' %}"Digitale Sicherheit, Zukunft gestalten"{% else %}"Securing digital, transforming the future"{% endif %}
+                    </p>
+                    <small class="text-muted">— Godwill FOKA, {% if lang == 'fr' %}Fondateur CYBERILL{% elif lang == 'de' %}Gründer von CYBERILL{% else %}CYBERILL Founder{% endif %}</small>
+                </div>
+
+                <!-- Valeurs -->
+                <h4 style="color: var(--accent); font-weight: 700; margin-bottom: 20px;">⭐ {% if lang == 'fr' %}Mes valeurs{% elif lang == 'de' %}Meine Werte{% else %}My values{% endif %}</h4>
+                <div class="row g-3 mb-5">
+                    <div class="col-md-3 col-6">
+                        <div class="value-badge">
+                            <div style="font-size: 2rem;">🔐</div>
+                            <strong>{% if lang == 'fr' %}Intégrité{% elif lang == 'de' %}Integrität{% else %}Integrity{% endif %}</strong>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="value-badge">
+                            <div style="font-size: 2rem;">🌍</div>
+                            <strong>{% if lang == 'fr' %}Accessibilité{% elif lang == 'de' %}Zugänglichkeit{% else %}Accessibility{% endif %}</strong>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="value-badge">
+                            <div style="font-size: 2rem;">💡</div>
+                            <strong>{% if lang == 'fr' %}Innovation{% elif lang == 'de' %}Innovation{% else %}Innovation{% endif %}</strong>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="value-badge">
+                            <div style="font-size: 2rem;">🌱</div>
+                            <strong>{% if lang == 'fr' %}Impact{% elif lang == 'de' %}Wirkung{% else %}Impact{% endif %}</strong>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="mt-4">
                     <h4 style="color: var(--accent); font-weight: 700;">🎓 Formation</h4>
                     <div class="row mt-3 g-3">
