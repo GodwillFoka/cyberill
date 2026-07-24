@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{% if lang == 'fr' %}Services — CYBERILL{% elif lang == 'de' %}Leistungen — CYBERILL{% else %}Services — CYBERILL{% endif %}{% endblock %}
+{% block meta_desc %}{% if lang == 'fr' %}Conseil en cybersécurité, audit, formation, pentesting et transformation digitale par Godwill FOKA.{% elif lang == 'de' %}Cybersicherheitsberatung, Audit, Schulung, Pentesting und digitale Transformation von Godwill FOKA.{% else %}Cybersecurity consulting, audit, training, pentesting and digital transformation by Godwill FOKA.{% endif %}{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">{% if lang == 'fr' %}Services{% elif lang == 'de' %}Leistungen{% else %}Services{% endif %}</span>
+            <h1 class="section-title">{% if lang == 'fr' %}Ce que je vous propose{% elif lang == 'de' %}Was ich Ihnen biete{% else %}What I offer{% endif %}</h1>
+            <p class="section-subtitle">{% if lang == 'fr' %}Un accompagnement complet en cybersécurité et transformation digitale{% elif lang == 'de' %}Eine umfassende Begleitung in Cybersicherheit und digitaler Transformation{% else %}Comprehensive support in cybersecurity and digital transformation{% endif %}</p>
+        </div>
+    </div>
+</section>
+
+<!-- Service 1 : Conseil & Audit -->
+<section class="section section-alt pt-0" id="audit">
+    <div class="container">
+        <div class="row align-items-center g-5 fade-in">
+            <div class="col-lg-5">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop" alt="Audit" class="img-fluid rounded-4 shadow">
+            </div>
+            <div class="col-lg-7">
+                <span class="section-tag">{% if lang == 'fr' %}Service 1{% elif lang == 'de' %}Leistung 1{% else %}Service 1{% endif %}</span>
+                <h2 class="section-title" style="font-size: 2rem;">🛡️ {% if lang == 'fr' %}Conseil & Audit{% elif lang == 'de' %}Beratung & Audit{% else %}Consulting & Audit{% endif %}</h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem;">
+                    {% if lang == 'fr' %}Un diagnostic complet de votre sécurité informatique pour identifier les risques, les vulnérabilités et les axes d'amélioration.{% elif lang == 'de' %}Eine vollständige Diagnose Ihrer IT-Sicherheit zur Identifizierung von Risiken, Schwachstellen und Verbesserungspotenzialen.{% else %}A complete diagnosis of your IT security to identify risks, vulnerabilities, and areas for improvement.{% endif %}
+                </p>
+                <div class="mt-4">
+                    <h5 style="color: var(--accent); font-weight: 700;">{% if lang == 'fr' %}Processus{% elif lang == 'de' %}Prozess{% else %}Process{% endif %}</h5>
+                    <ol style="color: var(--text-muted);">
+                        <li>{% if lang == 'fr' %}Analyse des besoins et périmètre{% elif lang == 'de' %}Bedarfsanalyse und Umfang{% else %}Needs analysis and scope{% endif %}</li>
+                        <li>{% if lang == 'fr' %}Audit de sécurité (infrastructure, applicatif, organisationnel){% elif lang == 'de' %}Sicherheitsaudit (Infrastruktur, Anwendungen, Organisation){% else %}Security audit (infrastructure, applications, organizational){% endif %}</li>
+                        <li>{% if lang == 'fr' %}Analyse des risques et conformité (ISO 27001, DSGVO, BSI){% elif lang == 'de' %}Risikoanalyse und Compliance (ISO 27001, DSGVO, BSI){% else %}Risk analysis and compliance (ISO 27001, GDPR, BSI){% endif %}</li>
+                        <li>{% if lang == 'fr' %}Rapport détaillé avec recommandations prioritaires{% elif lang == 'de' %}Detaillierter Bericht mit prioritären Empfehlungen{% else %}Detailed report with prioritized recommendations{% endif %}</li>
+                        <li>{% if lang == 'fr' %}Accompagnement à la mise en œuvre{% elif lang == 'de' %}Begleitung bei der Umsetzung{% else %}Implementation support{% endif %}</li>
+                    </ol>
+                </div>
+                <div class="mt-3">
+                    <h5 style="color: var(--accent); font-weight: 700;">{% if lang == 'fr' %}Livrables{% elif lang == 'de' %}Leistungen{% else %}Deliverables{% endif %}</h5>
+                    <p style="color: var(--text-muted);">{% if lang == 'fr' %}Rapport d'audit, matrice des risques, plan d'action priorisé, certificat de conformité{% elif lang == 'de' %}Auditbericht, Risikomatrix, priorisierter Aktionsplan, Konformitätsbescheinigung{% else %}Audit report, risk matrix, prioritized action plan, compliance certificate{% endif %}</p>
+                </div>
+                <a href="{% url 'contact' %}" class="btn btn-accent mt-3">{% if lang == 'fr' %}Demander un audit →{% elif lang == 'de' %}Audit anfragen →{% else %}Request an audit →{% endif %}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service 2 : Formation -->
+<section class="section pt-0" id="formation">
+    <div class="container">
+        <div class="row align-items-center g-5 fade-in flex-row-reverse">
+            <div class="col-lg-5">
+                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop" alt="Formation" class="img-fluid rounded-4 shadow">
+            </div>
+            <div class="col-lg-7">
+                <span class="section-tag">{% if lang == 'fr' %}Service 2{% elif lang == 'de' %}Leistung 2{% else %}Service 2{% endif %}</span>
+                <h2 class="section-title" style="font-size: 2rem;">🎓 {% if lang == 'fr' %}Formation & Sensibilisation{% elif lang == 'de' %}Schulung & Sensibilisierung{% else %}Training & Awareness{% endif %}</h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem;">
+                    {% if lang == 'fr' %}Des formations interactives adaptées à tous les niveaux pour développer une culture de la sécurité dans votre organisation.{% elif lang == 'de' %}Interaktive Schulungen für alle Niveaus zur Entwicklung einer Sicherheitskultur in Ihrer Organisation.{% else %}Interactive training for all levels to build a security culture in your organization.{% endif %}
+                </p>
+                <div class="mt-4">
+                    <h5 style="color: var(--accent); font-weight: 700;">{% if lang == 'fr' %}Formats proposés{% elif lang == 'de' %}Angebotene Formate{% else %}Available formats{% endif %}</h5>
+                    <ul style="color: var(--text-muted);">
+                        <li><strong>{% if lang == 'fr' %}Ateliers interactifs{% elif lang == 'de' %}Interaktive Workshops{% else %}Interactive workshops{% endif %}</strong> — {% if lang == 'fr' %}Sessions pratiques en groupe{% elif lang == 'de' %}Praktische Gruppensitzungen{% else %}Hands-on group sessions{% endif %}</li>
+                        <li><strong>{% if lang == 'fr' %}E-learning{% elif lang == 'de' %}E-Learning{% else %}E-learning{% endif %}</strong> — {% if lang == 'fr' %}Modules en ligne à votre rythme{% elif lang == 'de' %}Online-Module in Ihrem Tempo{% else %}Self-paced online modules{% endif %}</li>
+                        <li><strong>{% if lang == 'fr' %}Sensibilisation continue{% elif lang == 'de' %}Kontinuierliche Sensibilisierung{% else %}Continuous awareness{% endif %}</strong> — {% if lang == 'fr' %}Campagnes de phishing simulé, newsletters sécurité{% elif lang == 'de' %}Simulierte Phishing-Kampagnen, Sicherheits-Newsletter{% else %}Simulated phishing campaigns, security newsletters{% endif %}</li>
+                    </ul>
+                </div>
+                <div class="mt-3">
+                    <h5 style="color: var(--accent); font-weight: 700;">{% if lang == 'fr' %}Thématiques{% elif lang == 'de' %}Themen{% else %}Topics{% endif %}</h5>
+                    <p style="color: var(--text-muted);">{% if lang == 'fr' %}Sécurité des mots de passe, phishing, protection des données, sécurité mobile, télétravail sécurisé, RGPD pour non-juristes{% elif lang == 'de' %}Passwortsicherheit, Phishing, Datenschutz, Mobilgerätesicherheit, sicheres Homeoffice, DSGVO für Nicht-Juristen{% else %}Password security, phishing, data protection, mobile security, secure remote work, GDPR for non-lawyers{% endif %}</p>
+                </div>
+                <a href="{% url 'contact' %}" class="btn btn-accent mt-3">{% if lang == 'fr' %}Réserver une formation →{% elif lang == 'de' %}Schulung buchen →{% else %}Book a training →{% endif %}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service 3 : Pentesting -->
+<section class="section section-alt pt-0" id="pentesting">
+    <div class="container">
+        <div class="row align-items-center g-5 fade-in">
+            <div class="col-lg-5">
+                <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=400&fit=crop" alt="Pentesting" class="img-fluid rounded-4 shadow">
+            </div>
+            <div class="col-lg-7">
+                <span class="section-tag">{% if lang == 'fr' %}Service 3{% elif lang == 'de' %}Leistung 3{% else %}Service 3{% endif %}</span>
+                <h2 class="section-title" style="font-size: 2rem;">🔧 {% if lang == 'fr' %}Pentesting & Développement{% elif lang == 'de' %}Pentesting & Entwicklung{% else %}Pentesting & Development{% endif %}</h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem;">
+                    {% if lang == 'fr' %}Tests d'intrusion éthiques et développement d'applications sécurisées pour protéger vos systèmes et données.{% elif lang == 'de' %}Ethische Penetrationstests und Entwicklung sicherer Anwendungen zum Schutz Ihrer Systeme und Daten.{% else %}Ethical penetration testing and secure application development to protect your systems and data.{% endif %}
+                </p>
+                <div class="mt-4">
+                    <h5 style="color: var(--accent); font-weight: 700;">{% if lang == 'fr' %}Tests d'intrusion{% elif lang == 'de' %}Penetrationstests{% else %}Penetration Testing{% endif %}</h5>
+                    <ul style="color: var(--text-muted);">
+                        <li>{% if lang == 'fr' %}Tests d'intrusion externes et internes{% elif lang == 'de' %}Externe und interne Penetrationstests{% else %}External and internal penetration tests{% endif %}</li>
+                        <li>{% if lang == 'fr' %}Tests d'applications web et mobiles{% elif lang == 'de' %}Web- und Mobilanwendungstests{% else %}Web and mobile application testing{% endif %}</li>
+                        <li>{% if lang == 'fr' %}Tests de sécurité réseau et sans fil{% elif lang == 'de' %}Netzwerk- und WLAN-Sicherheitstests{% else %}Network and wireless security testing{% endif %}</li>
+                        <li>{% if lang == 'fr' %}Social Engineering (phishing simulé){% elif lang == 'de' %}Social Engineering (simuliertes Phishing){% else %}Social engineering (simulated phishing){% endif %}</li>
+                    </ul>
+                </div>
+                <div class="mt-3">
+                    <h5 style="color: var(--accent); font-weight: 700;">💻 {% if lang == 'fr' %}Développement sécurisé{% elif lang == 'de' %}Sichere Entwicklung{% else %}Secure Development{% endif %}</h5>
+                    <p style="color: var(--text-muted);">{% if lang == 'fr' %}Applications web (Django, PHP), APIs sécurisées, audit de code, correction de vulnérabilités{% elif lang == 'de' %}Webanwendungen (Django, PHP), sichere APIs, Code-Audit, Schwachstellenbehebung{% else %}Web applications (Django, PHP), secure APIs, code audit, vulnerability remediation{% endif %}</p>
+                </div>
+                <a href="{% url 'contact' %}" class="btn btn-accent mt-3">{% if lang == 'fr' %}Planifier un test →{% elif lang == 'de' %}Test planen →{% else %}Schedule a test →{% endif %}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service 4 : Community -->
+<section class="section pt-0" id="community">
+    <div class="container">
+        <div class="row align-items-center g-5 fade-in flex-row-reverse">
+            <div class="col-lg-5">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop" alt="Community" class="img-fluid rounded-4 shadow">
+            </div>
+            <div class="col-lg-7">
+                <span class="section-tag">{% if lang == 'fr' %}Service 4{% elif lang == 'de' %}Leistung 4{% else %}Service 4{% endif %}</span>
+                <h2 class="section-title" style="font-size: 2rem;">🌐 {% if lang == 'fr' %}Community & Veille{% elif lang == 'de' %}Community & Monitoring{% else %}Community & Monitoring{% endif %}</h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem;">
+                    {% if lang == 'fr' %}Animation de communautés tech, veille stratégique et contenu éducatif pour renforcer votre présence digitale.{% elif lang == 'de' %}Community-Management, strategische Überwachung und Bildungsinhalte zur Stärkung Ihrer digitalen Präsenz.{% else %}Community management, strategic monitoring, and educational content to strengthen your digital presence.{% endif %}
+                </p>
+                <div class="mt-4">
+                    <h5 style="color: var(--accent); font-weight: 700;">{% if lang == 'fr' %}Ce que je propose{% elif lang == 'de' %}Was ich biete{% else %}What I offer{% endif %}</h5>
+                    <ul style="color: var(--text-muted);">
+                        <li><strong>{% if lang == 'fr' %}Veille stratégique{% elif lang == 'de' %}Strategische Überwachung{% else %}Strategic monitoring{% endif %}</strong> — {% if lang == 'fr' %}Surveillance des menaces, tendances, vulnérabilités émergentes{% elif lang == 'de' %}Überwachung von Bedrohungen, Trends, neuen Schwachstellen{% else %}Monitoring of threats, trends, emerging vulnerabilities{% endif %}</li>
+                        <li><strong>{% if lang == 'fr' %}Community management{% elif lang == 'de' %}Community-Management{% else %}Community management{% endif %}</strong> — {% if lang == 'fr' %}Animation LinkedIn, groupes tech, newsletters{% elif lang == 'de' %}LinkedIn-Management, Tech-Gruppen, Newsletter{% else %}LinkedIn management, tech groups, newsletters{% endif %}</li>
+                        <li><strong>{% if lang == 'fr' %}Contenu éducatif{% elif lang == 'de' %}Bildungsinhalte{% else %}Educational content{% endif %}</strong> — {% if lang == 'fr' %}Articles, guides, vidéos, infographies{% elif lang == 'de' %}Artikel, Leitfäden, Videos, Infografiken{% else %}Articles, guides, videos, infographics{% endif %}</li>
+                    </ul>
+                </div>
+                <a href="{% url 'contact' %}" class="btn btn-accent mt-3">{% if lang == 'fr' %}Discutons de votre projet →{% elif lang == 'de' %}Sprechen Sie über Ihr Projekt →{% else %}Let's discuss your project →{% endif %}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Final -->
+<section class="section section-alt text-center">
+    <div class="container fade-in">
+        <span class="section-tag">{% if lang == 'fr' %}Contact{% elif lang == 'de' %}Kontakt{% else %}Contact{% endif %}</span>
+        <h2 class="section-title">{% if lang == 'fr' %}Prêt à sécuriser votre organisation ?{% elif lang == 'de' %}Bereit, Ihre Organisation zu schützen?{% else %}Ready to secure your organization?{% endif %}</h2>
+        <p class="section-subtitle">
+            {% if lang == 'fr' %}Chaque projet commence par une conversation. Parlons de vos besoins.{% elif lang == 'de' %}Jedes Projekt beginnt mit einem Gespräch. Lassen Sie uns über Ihre Bedürfnisse sprechen.{% else %}Every project starts with a conversation. Let's talk about your needs.{% endif %}
+        </p>
+        <a href="{% url 'contact' %}" class="btn btn-accent btn-lg">{% if lang == 'fr' %}Me contacter →{% elif lang == 'de' %}Kontaktieren Sie mich →{% else %}Contact me →{% endif %}</a>
+    </div>
+</section>
+{% endblock %}

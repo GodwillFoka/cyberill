@@ -10,5 +10,6 @@ urlpatterns = [
     path('stats/', views.stats_cyber, name='stats'),
     path('cv/', views.cv_page, name='cv'),
     path('portfolio/', views.portfolio, name='portfolio'),
+    path('services/', views.services, name='services'),
     path('cv/download/', views.cv_download, name='cv_download'),
 ]

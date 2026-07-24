@@ -65,3 +65,6 @@ msgstr "CV"
 
 msgid "Portfolio"
 msgstr "Projects"
+
+msgid "Services"
+msgstr "Services"
