@@ -19,6 +19,13 @@
                     <span class="ms-3" style="color: var(--accent);">{{ article.category }}</span>
                     {% endif %}
                 </div>
+                <!-- Social sharing -->
+                <div class="share-bar mb-4">
+                    <span style="font-size: 0.85rem; color: var(--text-muted); margin-right: 10px;">{% if lang == 'fr' %}Partager{% elif lang == 'de' %}Teilen{% else %}Share{% endif %} :</span>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://cyberill.onrender.com{{ request.path }}" target="_blank" class="share-btn" aria-label="LinkedIn">💼</a>
+                    <a href="https://twitter.com/intent/tweet?text={{ article.title }}&url=https://cyberill.onrender.com{{ request.path }}" target="_blank" class="share-btn" aria-label="Twitter">𝕏</a>
+                    <a href="mailto:?subject={{ article.title }}&body=https://cyberill.onrender.com{{ request.path }}" class="share-btn" aria-label="Email">📧</a>
+                </div>
                 <div style="line-height: 1.8; font-size: 1.05rem;">
                     {{ article.content|linebreaks }}
                 </div>

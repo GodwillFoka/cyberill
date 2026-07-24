@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from django.template.loader import render_to_string
 
 # ===== Multilingual articles =====
 ARTICLES = {
@@ -372,3 +374,32 @@ def blog_detail(request, slug):
     if not article:
         raise Http404("Article not found")
     return render(request, 'blog/detail.html', {'article': article})
+
+# ===== RSS Feed =====
+def blog_rss(request):
+    from django.utils import translation
+    lang = translation.get_language()
+    articles = ARTICLES.get(lang, ARTICLES['en'])
+    
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml += '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
+    xml += '<channel>\n'
+    xml += '<title>CYBERILL Blog</title>\n'
+    xml += '<link>https://cyberill.onrender.com/</link>\n'
+    xml += '<description>Cybersecurity, digital transformation & technology</description>\n'
+    xml += '<language>' + lang + '</language>\n'
+    xml += '<atom:link href="https://cyberill.onrender.com/' + lang + '/blog/rss/" rel="self" type="application/rss+xml"/>\n'
+    
+    for a in articles:
+        title = a['title'].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+        desc = a['content'][:200].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+        xml += '<item>\n'
+        xml += '<title>' + title + '</title>\n'
+        xml += '<link>https://cyberill.onrender.com/' + lang + '/blog/' + a['slug'] + '/</link>\n'
+        xml += '<description>' + desc + '...</description>\n'
+        xml += '<category>' + a['category'] + '</category>\n'
+        xml += '<pubDate>' + a['date'] + '</pubDate>\n'
+        xml += '</item>\n'
+    
+    xml += '</channel>\n</rss>'
+    return HttpResponse(xml, content_type='application/rss+xml')
