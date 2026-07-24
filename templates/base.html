@@ -197,3 +197,12 @@
     <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+<!-- Cookie Consent Banner -->
+<div id="cookieBanner" class="cookie-banner">
+    <p>{% if lang == 'fr' %}Ce site utilise Plausible Analytics (sans cookie) pour mesurer les visites.{% elif lang == 'de' %}Diese Seite nutzt Plausible Analytics (cookie-frei) zur Besuchermessung.{% else %}This site uses Plausible Analytics (cookie-free) to measure visits.{% endif %}</p>
+    <button onclick="acceptCookies()" class="btn btn-accent btn-sm">{% if lang == 'fr' %}Accepter{% elif lang == 'de' %}Akzeptieren{% else %}Accept{% endif %}</button>
+</div>

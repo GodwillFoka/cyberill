@@ -207,3 +207,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+// ===== 10. Back to Top Button =====
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+    window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('show', window.scrollY > 400);
+    });
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+// ===== 11. Cookie Consent Banner =====
+function acceptCookies() {
+    localStorage.setItem('cyberill-cookies', 'accepted');
+    document.getElementById('cookieBanner').classList.remove('show');
+}
+if (document.getElementById('cookieBanner')) {
+    if (!localStorage.getItem('cyberill-cookies')) {
+        setTimeout(() => {
+            document.getElementById('cookieBanner').classList.add('show');
+        }, 1000);
+    }
+}

@@ -15,3 +15,14 @@
 .contact-card-link{color:var(--text);text-decoration:none;font-weight:600;font-size:0.95rem;transition:color 0.3s;word-break:break-all}
 .contact-card-link:hover{color:var(--accent)}
 .contact-card-text{color:var(--text-muted);font-weight:500;margin-bottom:0}
+
+/* Back to Top */
+.back-to-top{position:fixed;bottom:30px;right:30px;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:1.3rem;cursor:pointer;box-shadow:0 4px 15px rgba(230,104,27,0.3);transition:all 0.3s;display:none;z-index:999;line-height:1}
+.back-to-top:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(230,104,27,0.4);background:var(--accent-hover)}
+.back-to-top.show{display:flex;align-items:center;justify-content:center}
+
+/* Cookie Banner */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;background:var(--primary);color:#fff;padding:14px 20px;display:none;align-items:center;justify-content:center;gap:15px;z-index:1000;font-size:0.85rem;box-shadow:0 -4px 20px rgba(0,0,0,0.15)}
+.cookie-banner.show{display:flex}
+.cookie-banner p{margin:0;max-width:600px}
+.cookie-banner .btn-accent{padding:6px 18px;font-size:0.8rem;white-space:nowrap}
