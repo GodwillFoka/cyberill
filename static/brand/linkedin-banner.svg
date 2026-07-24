@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#20155C"/>
+      <stop offset="100%" style="stop-color:#2D1F7A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E6681B"/>
+      <stop offset="100%" style="stop-color:#FF8A3C"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1584" height="396" fill="url(#bg)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.05">
+    <line x1="0" y1="0" x2="1584" y2="396" stroke="#fff" stroke-width="1"/>
+    <line x1="396" y1="0" x2="1188" y2="396" stroke="#fff" stroke-width="1"/>
+    <line x1="792" y1="0" x2="1584" y2="396" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="396" x2="1584" y2="0" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="198" x2="1584" y2="198" stroke="#fff" stroke-width="1"/>
+  </g>
+  <!-- Accent bar -->
+  <rect x="0" y="380" width="1584" height="16" fill="url(#accent)"/>
+  <!-- Shield icon -->
+  <g transform="translate(80, 60)">
+    <path d="M60 0L120 30V150C120 240 60 280 60 280C60 280 0 240 0 150V30Z" fill="#E6681B" opacity="0.15"/>
+    <path d="M60 20L110 45V145C110 220 60 255 60 255C60 255 10 220 10 145V45Z" fill="none" stroke="#E6681B" stroke-width="3" opacity="0.4"/>
+    <path d="M60 10L115 37V140C115 222 60 260 60 260C60 260 5 222 5 140V37Z" fill="#E6681B" opacity="0.08"/>
+  </g>
+  <!-- Text -->
+  <text x="200" y="140" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="900" fill="#FFFFFF">CYBERILL</text>
+  <text x="200" y="190" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600" fill="#FFB347">Securing digital, transforming the future</text>
+  <text x="200" y="240" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="400" fill="rgba(255,255,255,0.7)">Cybersecurity · Consulting · Audit · Training</text>
+  <!-- URL -->
+  <text x="200" y="300" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500" fill="#E6681B">cyberill.onrender.com</text>
+  <!-- Profile photo placeholder circle -->
+  <circle cx="1400" cy="200" r="90" fill="none" stroke="#E6681B" stroke-width="4" opacity="0.5"/>
+  <text x="1400" y="195" font-family="Inter, Arial, sans-serif" font-size="60" fill="#E6681B" text-anchor="middle" opacity="0.6">👤</text>
+  <!-- Decorative shapes -->
+  <circle cx="1500" cy="50" r="30" fill="#E6681B" opacity="0.1"/>
+  <circle cx="100" cy="350" r="20" fill="#E6681B" opacity="0.08"/>
+  <rect x="1450" y="340" width="100" height="4" rx="2" fill="#E6681B" opacity="0.3"/>
+</svg>

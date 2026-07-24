@@ -11,5 +11,7 @@ urlpatterns = [
     path('portfolio/', views.portfolio, name='portfolio'),
     path('services/', views.services, name='services'),
     path('faq/', views.faq, name='faq'),
+    path('brand/', views.brand_kit, name='brand'),
+    path('brand/signature/', views.brand_email_signature, name='brand_email_signature'),
     path('cv/download/', views.cv_download, name='cv_download'),
 ]

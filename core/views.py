@@ -43,6 +43,33 @@ def google_verify(request):
     from django.http import HttpResponse
     return HttpResponse("google-site-verification: googlec4f4ea51a5ac0fa2.html", content_type="text/plain")
 
+def brand_kit(request):
+    return render(request, 'core/brand.html')
+
+def brand_email_signature(request):
+    from django.http import HttpResponse
+    html = """<table cellpadding="0" cellspacing="0" style="font-family: Inter, Arial, sans-serif; font-size: 14px; color: #1A1A2E;">
+  <tr>
+    <td style="padding-right: 20px; vertical-align: top;">
+      <div style="width: 80px; height: 80px; border-radius: 50%; background: #20155C; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 32px; font-weight: 900;">GF</div>
+    </td>
+    <td style="vertical-align: top;">
+      <div style="font-size: 18px; font-weight: 800; color: #20155C;">Godwill FOKA</div>
+      <div style="font-size: 13px; font-weight: 600; color: #E6681B; margin: 2px 0;">Cybersecurity Engineer · IT-Sicherheitsspezialist</div>
+      <div style="font-size: 12px; color: #6B7280; margin: 2px 0;">Initiator @ CYBERILL</div>
+      <div style="margin-top: 8px; font-size: 12px; color: #6B7280;">
+        📧 <a href="mailto:fokagodwill@gmail.com" style="color: #E6681B; text-decoration: none;">fokagodwill@gmail.com</a><br>
+        🔗 <a href="https://linkedin.com/in/godwillfoka" style="color: #E6681B; text-decoration: none;">linkedin.com/in/godwillfoka</a><br>
+        🌐 <a href="https://cyberill.onrender.com" style="color: #E6681B; text-decoration: none;">cyberill.onrender.com</a>
+      </div>
+      <div style="margin-top: 10px; padding-top: 10px; border-top: 2px solid #E6681B; font-size: 11px; color: #9CA3AF;">
+        "Securing digital, transforming the future"
+      </div>
+    </td>
+  </tr>
+</table>"""
+    return HttpResponse(html)
+
 # ===== 404 personnalisée =====
 def custom_404(request, exception=None):
     from django.utils import translation

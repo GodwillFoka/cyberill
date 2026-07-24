@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Brand Kit — CYBERILL{% endblock %}
+{% block meta_desc %}{% if lang == 'fr' %}Logo, couleurs, bannière LinkedIn et signature email CYBERILL.{% elif lang == 'de' %}Logo, Farben, LinkedIn-Banner und E-Mail-Signatur von CYBERILL.{% else %}CYBERILL logo, colors, LinkedIn banner and email signature.{% endif %}{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">Brand Kit</span>
+            <h1 class="section-title">{% if lang == 'fr' %}Identité visuelle CYBERILL{% elif lang == 'de' %}Visuelle Identität CYBERILL{% else %}CYBERILL Visual Identity{% endif %}</h1>
+            <p class="section-subtitle">{% if lang == 'fr' %}Utilise ces ressources pour promouvoir CYBERILL de manière cohérente{% elif lang == 'de' %}Nutze diese Ressourcen, um CYBERILL konsistent zu präsentieren{% else %}Use these resources to promote CYBERILL consistently{% endif %}</p>
+        </div>
+
+        <!-- Colors -->
+        <div class="row g-4 mb-5 fade-in">
+            <div class="col-12">
+                <h3 style="font-weight: 700; margin-bottom: 20px;">🎨 {% if lang == 'fr' %}Couleurs{% elif lang == 'de' %}Farben{% else %}Colors{% endif %}</h3>
+            </div>
+            <div class="col-md-4">
+                <div style="background: #20155C; border-radius: 12px; padding: 40px 20px; text-align: center; color: #fff;">
+                    <strong style="font-size: 1.2rem;">Indigo</strong><br>
+                    <small>#20155C</small><br><br>
+                    <small>{% if lang == 'fr' %}Couleur principale{% elif lang == 'de' %}Primärfarbe{% else %}Primary color{% endif %}</small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div style="background: #E6681B; border-radius: 12px; padding: 40px 20px; text-align: center; color: #fff;">
+                    <strong style="font-size: 1.2rem;">Orange</strong><br>
+                    <small>#E6681B</small><br><br>
+                    <small>{% if lang == 'fr' %}Couleur d'accent{% elif lang == 'de' %}Akzentfarbe{% else %}Accent color{% endif %}</small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div style="background: #FFFFFF; border-radius: 12px; padding: 40px 20px; text-align: center; border: 2px solid #E5E7EB;">
+                    <strong style="font-size: 1.2rem; color: #1A1A2E;">Blanc</strong><br>
+                    <small style="color: #6B7280;">#FFFFFF</small><br><br>
+                    <small style="color: #6B7280;">{% if lang == 'fr' %}Fond{% elif lang == 'de' %}Hintergrund{% else %}Background{% endif %}</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- LinkedIn Banner -->
+        <div class="row mb-5 fade-in">
+            <div class="col-12">
+                <h3 style="font-weight: 700; margin-bottom: 20px;">💼 {% if lang == 'fr' %}Bannière LinkedIn{% elif lang == 'de' %}LinkedIn-Banner{% else %}LinkedIn Banner{% endif %}</h3>
+                <p class="text-muted mb-3">{% if lang == 'fr' %}Télécharge et ajoute cette bannière sur ton profil LinkedIn (1584 × 396 px).{% elif lang == 'de' %}Lade dieses Banner herunter und füge es deinem LinkedIn-Profil hinzu (1584 × 396 px).{% else %}Download and add this banner to your LinkedIn profile (1584 × 396 px).{% endif %}</p>
+                <div style="background: #20155C; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg);">
+                    <img src="{% static 'brand/linkedin-banner.svg' %}" alt="CYBERILL LinkedIn Banner" style="width: 100%; display: block;">
+                </div>
+                <div class="mt-3 text-center">
+                    <a href="{% static 'brand/linkedin-banner.svg' %}" download class="btn btn-accent">📥 {% if lang == 'fr' %}Télécharger le banner{% elif lang == 'de' %}Banner herunterladen{% else %}Download banner{% endif %}</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email Signature -->
+        <div class="row mb-5 fade-in">
+            <div class="col-12">
+                <h3 style="font-weight: 700; margin-bottom: 20px;">📧 {% if lang == 'fr' %}Signature email{% elif lang == 'de' %}E-Mail-Signatur{% else %}Email Signature{% endif %}</h3>
+                <p class="text-muted mb-3">{% if lang == 'fr' %}Copie le code HTML ci-dessous et colle-le dans les paramètres de signature de Gmail.{% elif lang == 'de' %}Kopiere den HTML-Code unten und füge ihn in die Signatur-Einstellungen von Gmail ein.{% else %}Copy the HTML code below and paste it into your Gmail signature settings.{% endif %}</p>
+                <div style="background: var(--bg-alt); border: 1px solid var(--border); border-radius: 12px; padding: 20px;">
+                    <pre style="font-size: 0.8rem; white-space: pre-wrap; max-height: 200px; overflow-y: auto; margin: 0;">&lt;table cellpadding="0" cellspacing="0" style="font-family: Inter, Arial, sans-serif; font-size: 14px; color: #1A1A2E;"&gt;
+  &lt;tr&gt;
+    &lt;td style="padding-right: 20px; vertical-align: top;"&gt;
+      &lt;div style="width: 80px; height: 80px; border-radius: 50%; background: #20155C; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 32px; font-weight: 900;"&gt;GF&lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td style="vertical-align: top;"&gt;
+      &lt;div style="font-size: 18px; font-weight: 800; color: #20155C;"&gt;Godwill FOKA&lt;/div&gt;
+      &lt;div style="font-size: 13px; font-weight: 600; color: #E6681B; margin: 2px 0;"&gt;Cybersecurity Engineer · IT-Sicherheitsspezialist&lt;/div&gt;
+      &lt;div style="font-size: 12px; color: #6B7280; margin: 2px 0;"&gt;Initiator @ CYBERILL&lt;/div&gt;
+      &lt;div style="margin-top: 8px; font-size: 12px; color: #6B7280;"&gt;
+        📧 &amp;lt;a href="mailto:fokagodwill@gmail.com" style="color: #E6681B; text-decoration: none;"&amp;gt;fokagodwill@gmail.com&amp;lt;/a&amp;gt;&lt;br&gt;
+        🔗 &amp;lt;a href="https://linkedin.com/in/godwillfoka" style="color: #E6681B; text-decoration: none;"&amp;gt;linkedin.com/in/godwillfoka&amp;lt;/a&amp;gt;&lt;br&gt;
+        🌐 &amp;lt;a href="https://cyberill.onrender.com" style="color: #E6681B; text-decoration: none;"&amp;gt;cyberill.onrender.com&amp;lt;/a&amp;gt;
+      &lt;/div&gt;
+      &lt;div style="margin-top: 10px; padding-top: 10px; border-top: 2px solid #E6681B; font-size: 11px; color: #9CA3AF;"&gt;
+        "Securing digital, transforming the future"
+      &lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+                </div>
+                <div class="mt-3 text-center">
+                    <a href="{% url 'brand_email_signature' %}" target="_blank" class="btn btn-outline">📧 {% if lang == 'fr' %}Voir la signature en direct{% elif lang == 'de' %}Signatur live ansehen{% else %}View live signature{% endif %}</a>
+                    <a href="{% static 'brand/email-signature.html' %}" download class="btn btn-accent ms-2">📥 {% if lang == 'fr' %}Télécharger le HTML{% elif lang == 'de' %}HTML herunterladen{% else %}Download HTML{% endif %}</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Usage Guide -->
+        <div class="row fade-in">
+            <div class="col-12">
+                <h3 style="font-weight: 700; margin-bottom: 20px;">📋 {% if lang == 'fr' %}Guide d'utilisation{% elif lang == 'de' %}Nutzungsrichtlinien{% else %}Usage Guidelines{% endif %}</h3>
+                <div style="background: var(--bg-alt); border-radius: 12px; padding: 25px;">
+                    <ul style="color: var(--text-muted); line-height: 2;">
+                        <li>✅ {% if lang == 'fr' %}Toujours utiliser les couleurs officielles : Indigo #20155C et Orange #E6681B{% elif lang == 'de' %}Verwende immer die offiziellen Farben: Indigo #20155C und Orange #E6681B{% else %}Always use the official colors: Indigo #20155C and Orange #E6681B{% endif %}</li>
+                        <li>✅ {% if lang == 'fr' %}La devise : "Securing digital, transforming the future"{% elif lang == 'de' %}Das Motto: "Securing digital, transforming the future"{% else %}The motto: "Securing digital, transforming the future"{% endif %}</li>
+                        <li>✅ {% if lang == 'fr' %}Toujours mentionner "CYBERILL" en majuscules{% elif lang == 'de' %}Schreibe "CYBERILL" immer in Großbuchstaben{% else %}Always write "CYBERILL" in uppercase{% endif %}</li>
+                        <li>✅ {% if lang == 'fr' %}Lien vers le site : cyberill.onrender.com{% elif lang == 'de' %}Link zur Website: cyberill.onrender.com{% else %}Link to website: cyberill.onrender.com{% endif %}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
