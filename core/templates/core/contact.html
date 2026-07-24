@@ -1,60 +1,71 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
-{% block title %}Contact — CYBERILL{% endblock %}
-{% block meta_desc %}Contactez CYBERILL pour vos besoins en cybersécurité, transformation digitale, audit ou formation. Godwill FOKA — Berlin.{% endblock %}
+{% block title %}{% if lang == 'fr' %}Contact — CYBERILL{% elif lang == 'de' %}Kontakt — CYBERILL{% else %}Contact — CYBERILL{% endif %}{% endblock %}
+{% block meta_desc %}{% if lang == 'fr' %}Contactez CYBERILL pour vos besoins en cybersécurité, transformation digitale, audit ou formation.{% elif lang == 'de' %}Kontaktieren Sie CYBERILL für Cybersicherheit, digitale Transformation, Audit oder Schulung.{% else %}Contact CYBERILL for cybersecurity, digital transformation, audit or training.{% endif %}{% endblock %}
 
 {% block content %}
 <div class="contact-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 mx-auto">
-                <h1 class="text-center mb-2" style="font-weight: 800; font-size: 2.5rem;">Contact</h1>
+                <h1 class="text-center mb-2" style="font-weight: 800; font-size: 2.5rem;">{% if lang == 'fr' %}Contact{% elif lang == 'de' %}Kontakt{% else %}Contact{% endif %}</h1>
                 <p class="text-center text-muted mb-5">
-                    Vous avez un projet, une question ou besoin de conseils ? Parlons-en.
+                    {% if lang == 'fr' %}Envoyez-moi un message, je vous répondrai dans les plus brefs délais.{% elif lang == 'de' %}Senden Sie mir eine Nachricht, ich werde Ihnen schnellstmöglich antworten.{% else %}Send me a message, I'll get back to you as soon as possible.{% endif %}
                 </p>
 
                 <div class="contact-form">
-                    <form method="post">
-                        {% csrf_token %}
+                    <!-- 🔧 Formulaire Formspree :
+                          1. Va sur https://formspree.io → Crée un compte gratuit
+                          2. Crée un nouveau formulaire → Copie l'URL d'endpoint
+                          3. Remplace [FORMSPREE_URL] ci-dessous par ton endpoint
+                    -->
+                    <form action="[FORMSPREE_URL]" method="post">
                         <div class="mb-3">
-                            <label class="form-label">Nom complet</label>
+                            <label class="form-label">{% if lang == 'fr' %}Nom complet{% elif lang == 'de' %}Vollständiger Name{% else %}Full name{% endif %}</label>
                             <input type="text" name="name" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" name="email" class="form-control" required>
+                            <label class="form-label">{% if lang == 'fr' %}Email{% elif lang == 'de' %}E-Mail{% else %}Email{% endif %}</label>
+                            <input type="email" name="_replyto" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Sujet</label>
+                            <label class="form-label">{% if lang == 'fr' %}Sujet{% elif lang == 'de' %}Betreff{% else %}Subject{% endif %}</label>
                             <select name="subject" class="form-select">
-                                <option value="general">Demande générale</option>
-                                <option value="audit">Audit & Conseil</option>
-                                <option value="formation">Formation & Workshop</option>
+                                <option value="general">{% if lang == 'fr' %}Demande générale{% elif lang == 'de' %}Allgemeine Anfrage{% else %}General inquiry{% endif %}</option>
+                                <option value="audit">{% if lang == 'fr' %}Audit & Conseil{% elif lang == 'de' %}Audit & Beratung{% else %}Audit & Consulting{% endif %}</option>
+                                <option value="formation">{% if lang == 'fr' %}Formation & Workshop{% elif lang == 'de' %}Schulung & Workshop{% else %}Training & Workshop{% endif %}</option>
                                 <option value="pentest">Pentesting</option>
-                                <option value="developpement">Développement d'application</option>
-                                <option value="partenariat">Partenariat</option>
+                                <option value="developpement">{% if lang == 'fr' %}Développement{% elif lang == 'de' %}Entwicklung{% else %}Development{% endif %}</option>
+                                <option value="partenariat">{% if lang == 'fr' %}Partenariat{% elif lang == 'de' %}Partnerschaft{% else %}Partnership{% endif %}</option>
                             </select>
                         </div>
                         <div class="mb-4">
-                            <label class="form-label">Message</label>
+                            <label class="form-label">{% if lang == 'fr' %}Message{% elif lang == 'de' %}Nachricht{% else %}Message{% endif %}</label>
                             <textarea name="message" class="form-control" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-accent w-100">Envoyer le message →</button>
+                        <!-- Anti-spam honeypot -->
+                        <input type="text" name="_gotcha" style="display:none">
+                        <button type="submit" class="btn btn-accent w-100">{% if lang == 'fr' %}Envoyer le message →{% elif lang == 'de' %}Nachricht senden →{% else %}Send message →{% endif %}</button>
                     </form>
+                    <p class="text-center mt-3" style="font-size: 0.8rem; color: var(--text-light);">
+                        {% if lang == 'fr' %}Ou écrivez-moi directement à{% elif lang == 'de' %}Oder schreiben Sie mir direkt an{% else %}Or email me directly at{% endif %}
+                        <a href="mailto:fokagodwill@gmail.com" style="color: var(--accent);">fokagodwill@gmail.com</a>
+                    </p>
                 </div>
 
                 <div class="row mt-5 text-center">
                     <div class="col-md-4 mb-3">
-                        <div style="font-size: 2rem; color: var(--accent);">📧</div>
+                        <div style="font-size: 2rem;">📧</div>
                         <p class="mb-0 mt-2"><a href="mailto:fokagodwill@gmail.com" style="color: var(--text); text-decoration: none;">fokagodwill@gmail.com</a></p>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <div style="font-size: 2rem; color: var(--accent);">📍</div>
+                        <div style="font-size: 2rem;">📍</div>
                         <p class="mb-0 mt-2 text-muted">Berlin, Deutschland</p>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <div style="font-size: 2rem; color: var(--accent);">🔗</div>
+                        <div style="font-size: 2rem;">💼</div>
                         <p class="mb-0 mt-2"><a href="https://linkedin.com/in/godwillfoka" target="_blank" style="color: var(--text); text-decoration: none;">linkedin.com/in/godwillfoka</a></p>
                     </div>
                 </div>
