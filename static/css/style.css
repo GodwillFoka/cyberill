@@ -5,3 +5,13 @@
 .share-btn:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
 .rss-link{color:#FF8C00;font-weight:700;font-size:0.85rem;text-decoration:none;transition:color 0.3s}
 .rss-link:hover{color:#FF6600}
+
+/* Contact Info Cards */
+.contact-info-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:30px 20px;text-align:center;transition:all 0.3s ease;box-shadow:var(--shadow-sm);height:100%}
+.contact-info-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--accent)}
+.contact-icon-circle{width:60px;height:60px;border-radius:50%;background:rgba(230,104,27,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;transition:all 0.3s}
+.contact-info-card:hover .contact-icon-circle{background:rgba(230,104,27,0.2);transform:scale(1.1)}
+.contact-card-title{font-size:0.9rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.contact-card-link{color:var(--text);text-decoration:none;font-weight:600;font-size:0.95rem;transition:color 0.3s;word-break:break-all}
+.contact-card-link:hover{color:var(--accent)}
+.contact-card-text{color:var(--text-muted);font-weight:500;margin-bottom:0}
