@@ -26,3 +26,9 @@
 .cookie-banner.show{display:flex}
 .cookie-banner p{margin:0;max-width:600px}
 .cookie-banner .btn-accent{padding:6px 18px;font-size:0.8rem;white-space:nowrap}
+
+/* Nav Dropdown */
+.nav-dropdown-menu{border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow-lg);padding:8px;margin-top:8px;min-width:200px}
+.nav-dropdown-menu .dropdown-item{border-radius:8px;padding:10px 14px;font-size:0.9rem;font-weight:500;transition:all 0.2s}
+.nav-dropdown-menu .dropdown-item:hover{background:rgba(230,104,27,0.08);color:var(--accent)}
+.nav-dropdown-menu .dropdown-divider{margin:6px 0;opacity:0.2}

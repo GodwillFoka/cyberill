@@ -72,3 +72,6 @@ msgstr "Leistungen"
 
 msgid "FAQ"
 msgstr "FAQ"
+
+msgid "Prestations"
+msgstr "Leistungen"

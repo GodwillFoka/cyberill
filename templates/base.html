@@ -36,11 +36,17 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">{% trans "Accueil" %}</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">{% trans "À propos" %}</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'blog_list' %}">{% trans "Blog" %}</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'portfolio' %}">{% trans "Portfolio" %}</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">{% trans "Services" %}</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'ressources' %}">{% trans "Ressources" %}</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'stats' %}">{% trans "Stats" %}</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'faq' %}">{% trans "FAQ" %}</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'services' %}" data-bs-toggle="dropdown" role="button">{% trans "Services" %}</a>
+                        <ul class="dropdown-menu nav-dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'services' %}">📊 {% trans "Prestations" %}</a></li>
+                            <li><a class="dropdown-item" href="{% url 'portfolio' %}">📁 {% trans "Portfolio" %}</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ressources' %}">📚 {% trans "Ressources" %}</a></li>
+                            <li><a class="dropdown-item" href="{% url 'stats' %}">📈 {% trans "Stats" %}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{% url 'faq' %}">❓ {% trans "FAQ" %}</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-2">
