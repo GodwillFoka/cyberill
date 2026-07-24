@@ -1547,6 +1547,25 @@ body {
     color: var(--accent);
 }
 
+/* Cert download button */
+.btn-download-cert {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-download-cert:hover {
+    background: var(--accent-hover);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
 /* ===== Portfolio / Repo Cards ===== */
 .repo-card-link {
     text-decoration: none;

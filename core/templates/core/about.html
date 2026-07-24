@@ -123,8 +123,9 @@
             <div class="cert-card">
                 <div class="cert-icon">📜</div>
                 <h5>SecNumAcadémie</h5>
-                <p>ANSSI (France)</p>
-                <span class="cert-badge completed">✅ {% if lang == 'fr' %}Complété{% elif lang == 'de' %}Abgeschlossen{% else %}Completed{% endif %}</span>
+                <p>ANSSI (France) — 100% aux 4 modules</p>
+                <span class="cert-badge completed">✅ Complété</span>
+                <div class="mt-2"><a href="{% static 'certifications/ANSSI_SecNumAcademie.pdf' %}" target="_blank" class="btn-download-cert">📥 PDF</a></div>
             </div>
             <div class="cert-card">
                 <div class="cert-icon">📜</div>
@@ -137,24 +138,32 @@
                 <h5>Python Essentials 1</h5>
                 <p>Cisco Networking Academy</p>
                 <span class="cert-badge completed">✅ {% if lang == 'fr' %}Complété{% elif lang == 'de' %}Abgeschlossen{% else %}Completed{% endif %}</span>
+                <div class="mt-2"><a href="{% static 'certifications/Cisco_Python_Essentials_AI.pdf' %}" target="_blank" class="btn-download-cert">📥 PDF</a></div>
             </div>
             <div class="cert-card">
                 <div class="cert-icon">📜</div>
-                <h5>Introduction to Cybersecurity</h5>
+                <h5>English for IT 2 & 7</h5>
+                <p>Cisco + OpenEDG — B2</p>
+                <span class="cert-badge completed">✅ Complété</span>
+                <div class="mt-2"><a href="{% static 'certifications/Cisco_English_for_IT.pdf' %}" target="_blank" class="btn-download-cert">📥 PDF</a></div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <h5>Apply AI: Analyze Reviews</h5>
                 <p>Cisco Networking Academy</p>
-                <span class="cert-badge completed">✅ {% if lang == 'fr' %}Complété{% elif lang == 'de' %}Abgeschlossen{% else %}Completed{% endif %}</span>
-            </div>
-            <div class="cert-card">
-                <div class="cert-icon">📜</div>
-                <h5>Premiers pas Cisco Packet Tracer</h5>
-                <p>Cisco</p>
-                <span class="cert-badge completed">✅ {% if lang == 'fr' %}Complété{% elif lang == 'de' %}Abgeschlossen{% else %}Completed{% endif %}</span>
+                <span class="cert-badge completed">✅ Complété</span>
             </div>
             <div class="cert-card">
                 <div class="cert-icon">📜</div>
                 <h5>Introduction à l'IoT</h5>
                 <p>Cisco — Transformation digitale</p>
                 <span class="cert-badge completed">✅ {% if lang == 'fr' %}Complété{% elif lang == 'de' %}Abgeschlossen{% else %}Completed{% endif %}</span>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <h5>CSI Linux Investigator</h5>
+                <p>Digital Forensics & Investigation</p>
+                <span class="cert-badge inprogress">{% if lang == 'fr' %}En cours{% elif lang == 'de' %}In Bearbeitung{% else %}In progress{% endif %}</span>
             </div>
         </div>
     </div>
