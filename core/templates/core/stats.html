@@ -3,6 +3,7 @@
 {% load i18n %}
 
 {% block title %}{% if lang == 'fr' %}Cyber en chiffres — CYBERILL{% elif lang == 'de' %}Cyber in Zahlen — CYBERILL{% else %}Cyber by numbers — CYBERILL{% endif %}{% endblock %}
+{% block meta_desc %}{% if lang == 'fr' %}Statistiques et chiffres clés de la cybersécurité : coût des violations, menaces courantes, tendances.{% elif lang == 'de' %}Wichtige Cybersicherheitsstatistiken und -zahlen: Kosten von Verstößen, häufige Bedrohungen, Trends.{% else %}Key cybersecurity statistics and figures: breach costs, common threats, trends.{% endif %}{% endblock %}
 
 {% block content %}
 <section class="section">

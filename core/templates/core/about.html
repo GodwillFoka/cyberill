@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}À propos — CYBERILL{% endblock %}
-{% block meta_desc %}Découvrez CYBERILL, l'initiative de Godwill FOKA pour la cybersécurité et la transformation digitale. Mon parcours, ma vision, mes compétences.{% endblock %}
+{% block meta_desc %}{% if lang == 'fr' %}Découvrez CYBERILL, l'initiative de Godwill FOKA pour la cybersécurité et la transformation digitale. Mon parcours, ma vision, mes compétences.{% elif lang == 'de' %}Entdecken Sie CYBERILL, die Initiative von Godwill FOKA für Cybersicherheit und digitale Transformation. Mein Werdegang, meine Vision, meine Fähigkeiten.{% else %}Discover CYBERILL, Godwill FOKA's initiative for cybersecurity and digital transformation. My journey, my vision, my skills.{% endif %}{% endblock %}
 
 {% block content %}
 <div class="about-header">

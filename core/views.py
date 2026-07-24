@@ -20,15 +20,6 @@ def contact(request):
         return render(request, 'core/contact.html')
     return render(request, 'core/contact.html')
 
-def newsletter_signup(request):
-    if request.method == 'POST':
-        email = request.POST.get('email', '')
-        messages.success(
-            request,
-            f"Merci ! {email} — " + _("Message envoyé avec succès")
-        )
-    return redirect(request.META.get('HTTP_REFERER', '/'))
-
 # ===== Ressources Éducatives =====
 def ressources(request):
     return render(request, 'core/ressources.html')

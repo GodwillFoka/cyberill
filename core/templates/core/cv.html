@@ -3,6 +3,7 @@
 {% load i18n %}
 
 {% block title %}{% if lang == 'fr' %}CV — Godwill FOKA{% elif lang == 'de' %}Lebenslauf — Godwill FOKA{% else %}CV — Godwill FOKA{% endif %}{% endblock %}
+{% block meta_desc %}{% if lang == 'fr' %}Curriculum vitae de Godwill FOKA — Cybersecurity Engineer, certifications EC-Council C|CT, Cisco, ANSSI, CSI Linux.{% elif lang == 'de' %}Lebenslauf von Godwill FOKA — Cybersecurity Engineer, Zertifizierungen EC-Council C|CT, Cisco, ANSSI, CSI Linux.{% else %}Curriculum vitae of Godwill FOKA — Cybersecurity Engineer, certifications EC-Council C|CT, Cisco, ANSSI, CSI Linux.{% endif %}{% endblock %}
 
 {% block content %}
 <section class="section">
