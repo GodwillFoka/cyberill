@@ -116,3 +116,21 @@
 .why-card .why-icon{font-size:2.5rem;margin-bottom:15px}
 .why-card h5{font-size:1rem;font-weight:700;margin-bottom:10px}
 .why-card p{font-size:0.9rem;line-height:1.6;margin-bottom:0}
+
+/* Fix text overlapping on hero */
+.hero-visual{overflow:hidden;max-width:100%}
+.hero-typewriter{width:100%;overflow:hidden}
+.type-writer{max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:inline-block;vertical-align:middle}
+
+/* Fix slide overlap */
+.hero-slide{pointer-events:none}
+.hero-slide.active{pointer-events:auto}
+
+/* Fix badge text wrap */
+.hero-badge{white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+
+@media (max-width:576px){
+  .hero-typewriter{font-size:0.8rem !important}
+  .hero-motto{font-size:0.7rem !important}
+  .hero-badge{font-size:0.7rem !important}
+}
