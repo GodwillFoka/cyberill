@@ -13,6 +13,13 @@
             <p class="section-subtitle">{% if lang == 'fr' %}Cybersécurité, transformation digitale & technologies{% elif lang == 'de' %}Cybersicherheit, digitale Transformation & Technologie{% else %}Cybersecurity, digital transformation & technology{% endif %}</p>
         </div>
 
+        <!-- Search bar -->
+        <div class="row justify-content-center mb-4 fade-in">
+            <div class="col-md-6">
+                <input type="text" id="blogSearch" class="form-control" placeholder="{% if lang == 'fr' %}Rechercher un article...{% elif lang == 'de' %}Artikel suchen...{% else %}Search articles...{% endif %}" style="border-radius: 30px; padding: 12px 20px; border: 2px solid var(--border);">
+            </div>
+        </div>
+
         {% if articles %}
         <div class="row g-4 stagger-children">
             {% for article in articles %}

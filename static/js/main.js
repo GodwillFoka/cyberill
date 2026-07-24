@@ -377,3 +377,16 @@ if (articleContent && readingTimeSpan) {
     const minutes = Math.max(1, Math.round(words / 200));
     readingTimeSpan.textContent = minutes + ' min';
 }
+
+// ===== 23. Blog Search =====
+const blogSearch = document.getElementById('blogSearch');
+const blogCards = document.querySelectorAll('.blog-card');
+if (blogSearch && blogCards.length > 0) {
+    blogSearch.addEventListener('input', function() {
+        const q = this.value.toLowerCase().trim();
+        blogCards.forEach(card => {
+            const text = card.textContent.toLowerCase();
+            card.closest('.col-md-6, .col-lg-4').style.display = q === '' || text.includes(q) ? '' : 'none';
+        });
+    });
+}
