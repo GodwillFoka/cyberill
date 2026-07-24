@@ -45,6 +45,10 @@ def cv_page(request):
 def services(request):
     return render(request, 'core/services.html')
 
+# ===== FAQ =====
+def faq(request):
+    return render(request, 'core/faq.html')
+
 # ===== 404 personnalisée =====
 def custom_404(request, exception=None):
     from django.utils import translation

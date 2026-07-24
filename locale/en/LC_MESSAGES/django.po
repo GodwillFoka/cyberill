@@ -68,3 +68,6 @@ msgstr "Projects"
 
 msgid "Services"
 msgstr "Services"
+
+msgid "FAQ"
+msgstr "FAQ"

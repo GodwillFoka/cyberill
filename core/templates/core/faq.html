@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{% if lang == 'fr' %}FAQ — CYBERILL{% elif lang == 'de' %}FAQ — CYBERILL{% else %}FAQ — CYBERILL{% endif %}{% endblock %}
+{% block meta_desc %}{% if lang == 'fr' %}Questions fréquentes sur la cybersécurité, le pentesting, la conformité et les services CYBERILL.{% elif lang == 'de' %}Häufig gestellte Fragen zu Cybersicherheit, Pentesting, Compliance und CYBERILL-Dienstleistungen.{% else %}Frequently asked questions about cybersecurity, pentesting, compliance and CYBERILL services.{% endif %}{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">{% if lang == 'fr' %}FAQ{% elif lang == 'de' %}FAQ{% else %}FAQ{% endif %}</span>
+            <h1 class="section-title">{% if lang == 'fr' %}Questions Fréquentes{% elif lang == 'de' %}Häufig gestellte Fragen{% else %}Frequently Asked Questions{% endif %}</h1>
+            <p class="section-subtitle">{% if lang == 'fr' %}Tout ce que vous devez savoir sur la cybersécurité et les services CYBERILL{% elif lang == 'de' %}Alles, was Sie über Cybersicherheit und CYBERILL-Dienstleistungen wissen müssen{% else %}Everything you need to know about cybersecurity and CYBERILL services{% endif %}</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt pt-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="faq-list fade-in">
+
+                    <!-- Catégorie : Général -->
+                    <h3 class="faq-category">🔐 {% if lang == 'fr' %}Général{% elif lang == 'de' %}Allgemein{% else %}General{% endif %}</h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                            <span>{% if lang == 'fr' %}Qu'est-ce que CYBERILL ?{% elif lang == 'de' %}Was ist CYBERILL?{% else %}What is CYBERILL?{% endif %}</span>
+                            <span class="faq-arrow">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>{% if lang == 'fr' %}CYBERILL est une initiative personnelle dédiée à la cybersécurité et à la transformation digitale, fondée par Godwill FOKA. L'objectif est de rendre la cybersécurité accessible à tous — particuliers, PME et organisations — à travers du conseil, de la formation, des audits et du contenu éducatif.{% elif lang == 'de' %}CYBERILL ist eine persönliche Initiative für Cybersicherheit und digitale Transformation, gegründet von Godwill FOKA. Ziel ist es, Cybersicherheit für alle zugänglich zu machen — Privatpersonen, KMU und Organisationen — durch Beratung, Schulung, Audits und Bildungsinhalte.{% else %}CYBERILL is a personal initiative dedicated to cybersecurity and digital transformation, founded by Godwill FOKA. The goal is to make cybersecurity accessible to everyone — individuals, SMEs, and organizations — through consulting, training, audits, and educational content.{% endif %}</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                            <span>{% if lang == 'fr' %}Quels services proposez-vous ?{% elif lang == 'de' %}Welche Dienstleistungen bieten Sie an?{% else %}What services do you offer?{% endif %}</span>
+                            <span class="faq-arrow">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>{% if lang == 'fr' %}Audit et conseil en cybersécurité, formation et sensibilisation, tests d'intrusion (pentesting), développement d'applications sécurisées, community management et veille stratégique. Chaque service est adapté aux besoins spécifiques de chaque client.{% elif lang == 'de' %}Sicherheitsaudit und -beratung, Schulung und Sensibilisierung, Penetrationstests, Entwicklung sicherer Anwendungen, Community-Management und strategische Überwachung. Jede Dienstleistung wird an die spezifischen Bedürfnisse jedes Kunden angepasst.{% else %}Security audit and consulting, training and awareness, penetration testing, secure application development, community management, and strategic monitoring. Each service is tailored to each client's specific needs.{% endif %}</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                            <span>{% if lang == 'fr' %}Qui peut bénéficier de vos services ?{% elif lang == 'de' %}Wer kann Ihre Dienstleistungen nutzen?{% else %}Who can benefit from your services?{% endif %}</span>
+                            <span class="faq-arrow">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>{% if lang == 'fr' %}Tout le monde ! Particuliers souhaitant sécuriser leurs données, PME n'ayant pas de service IT dédié, startups en pleine croissance, associations, et toute organisation souhaitant améliorer sa sécurité numérique.{% elif lang == 'de' %}Jeder! Privatpersonen, die ihre Daten sichern möchten, KMU ohne eigene IT-Abteilung, Startups in der Wachstumsphase, Vereine und alle Organisationen, die ihre digitale Sicherheit verbessern möchten.{% else %}Everyone! Individuals wanting to secure their data, SMEs without a dedicated IT department, growing startups, associations, and any organization looking to improve their digital security.{% endif %}</p>
+                        </div>
+                    </div>
+
+                    <!-- Catégorie : Cybersécurité -->
+                    <h3 class="faq-category mt-5">🛡️ {% if lang == 'fr' %}Cybersécurité{% elif lang == 'de' %}Cybersicherheit{% else %}Cybersecurity{% endif %}</h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                            <span>{% if lang == 'fr' %}Par où commencer pour sécuriser mon entreprise ?{% elif lang == 'de' %}Wo fange ich an, mein Unternehmen zu sichern?{% else %}Where do I start to secure my business?{% endif %}</span>
+                            <span class="faq-arrow">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>{% if lang == 'fr' %}Commencez par un audit de sécurité pour identifier vos vulnérabilités. Ensuite, mettez en place les mesures prioritaires : mots de passe forts, double authentification, mises à jour régulières et sauvegardes. La sensibilisation de vos équipes est également cruciale — 95% des failles viennent de l'erreur humaine.{% elif lang == 'de' %}Beginnen Sie mit einem Sicherheitsaudit, um Ihre Schwachstellen zu identifizieren. Implementieren Sie dann die wichtigsten Maßnahmen: starke Passwörter, Zwei-Faktor-Authentifizierung, regelmäßige Updates und Backups. Die Sensibilisierung Ihrer Teams ist ebenfalls entscheidend — 95% der Sicherheitsverletzungen sind auf menschliches Versagen zurückzuführen.{% else %}Start with a security audit to identify your vulnerabilities. Then implement priority measures: strong passwords, two-factor authentication, regular updates, and backups. Training your teams is also crucial — 95% of breaches come from human error.{% endif %}</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                            <span>{% if lang == 'fr' %}C'est quoi un pentest ?{% elif lang == 'de' %}Was ist ein Pentest?{% else %}What is a pentest?{% endif %}</span>
+                            <span class="faq-arrow">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>{% if lang == 'fr' %}Un test d'intrusion (pentesting) est une simulation d'attaque cyber réalisée par un expert autorisé. L'objectif est d'identifier les vulnérabilités avant que de vrais attaquants ne les exploitent. Cela inclut des tests de réseau, d'applications web, de sécurité sans fil et d'ingénierie sociale.{% elif lang == 'de' %}Ein Penetrationstest (Pentesting) ist eine simulierte Cyberattacke durch einen autorisierten Experten. Ziel ist es, Schwachstellen zu identifizieren, bevor echte Angreifer sie ausnutzen. Dies umfasst Netzwerktests, Webanwendungstests, WLAN-Sicherheitstests und Social Engineering.{% else %}A penetration test (pentesting) is a simulated cyber attack by an authorized expert. The goal is to identify vulnerabilities before real attackers exploit them. This includes network testing, web application testing, wireless security testing, and social engineering.{% endif %}</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                            <span>{% if lang == 'fr' %}Quelle est la différence entre un virus, un ver et un cheval de Troie ?{% elif lang == 'de' %}Was ist der Unterschied zwischen einem Virus, einem Wurm und einem Trojaner?{% else %}What's the difference between a virus, a worm, and a Trojan?{% endif %}</span>
+                            <span class="faq-arrow">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>{% if lang == 'fr' %}Un <strong>virus</strong> s'attache à un fichier et se propage quand ce fichier est exécuté. Un <strong>ver (worm)</strong> se propage automatiquement via le réseau sans nécessiter d'interaction humaine. Un <strong>cheval de Troie (Trojan)</strong> se fait passer pour un logiciel légitime pour tromper l'utilisateur. Les trois sont des malwares, mais leurs méthodes de propagation diffèrent.{% elif lang == 'de' %}Ein <strong>Virus</strong> heftet sich an eine Datei und verbreitet sich, wenn diese Datei ausgeführt wird. Ein <strong>Wurm</strong> verbreitet sich automatisch über das Netzwerk ohne menschliches Zutun. Ein <strong>Trojaner</strong> gibt sich als legitime Software aus, um den Benutzer zu täuschen. Alle drei sind Malware, aber ihre Verbreitungsmethoden unterscheiden sich.{% else %}A <strong>virus</strong> attaches to a file and spreads when that file is executed. A <strong>worm</strong> spreads automatically over the network without human interaction. A <strong>Trojan horse</strong> disguises itself as legitimate software to trick the user. All three are malware, but their propagation methods differ.{% endif %}</p>
+                        </div>
+                    </div>
+
+                    <!-- Catégorie : Conformité -->
+                    <h3 class="faq-category mt-5">📋 {% if lang == 'fr' %}Conformité{% elif lang == 'de' %}Compliance{% else %}Compliance{% endif %}</h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                            <span>{% if lang == 'fr' %}La DSGVO s'applique-t-elle à ma petite entreprise ?{% elif lang == 'de' %}Gilt die DSGVO für mein kleines Unternehmen?{% else %}Does GDPR apply to my small business?{% endif %}</span>
+                            <span class="faq-arrow">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>{% if lang == 'fr' %}Oui ! La DSGVO s'applique à toute organisation traitant des données personnelles de citoyens européens, quelle que soit sa taille. Les sanctions peuvent atteindre 20 millions € ou 4% du chiffre d'affaires annuel mondial. Même les petites structures doivent tenir un registre des traitements et sécuriser les données.{% elif lang == 'de' %}Ja! Die DSGVO gilt für jede Organisation, die personenbezogene Daten von EU-Bürgern verarbeitet, unabhängig von ihrer Größe. Die Strafen können bis zu 20 Mio. € oder 4% des weltweiten Jahresumsatzes betragen. Auch kleine Unternehmen müssen ein Verarbeitungsverzeichnis führen und Daten schützen.{% else %}Yes! GDPR applies to any organization processing personal data of EU citizens, regardless of size. Penalties can reach €20 million or 4% of annual global turnover. Even small businesses must maintain a processing register and secure data.{% endif %}</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                            <span>{% if lang == 'fr' %}Qu'est-ce que la norme ISO 27001 ?{% elif lang == 'de' %}Was ist die ISO 27001-Norm?{% else %}What is ISO 27001?{% endif %}</span>
+                            <span class="faq-arrow">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>{% if lang == 'fr' %}L'ISO 27001 est une norme internationale pour la gestion de la sécurité de l'information (SMSI). Elle définit les exigences pour établir, mettre en œuvre, maintenir et améliorer un système de management de la sécurité de l'information. Être certifié ISO 27001 démontre un engagement sérieux envers la sécurité.{% elif lang == 'de' %}ISO 27001 ist eine internationale Norm für Informationssicherheits-Managementsysteme (ISMS). Sie definiert die Anforderungen für die Einrichtung, Umsetzung, Aufrechterhaltung und Verbesserung eines Informationssicherheits-Managementsystems. ISO 27001-zertifiziert zu sein, zeigt ein ernsthaftes Engagement für Sicherheit.{% else %}ISO 27001 is an international standard for information security management (ISMS). It defines requirements for establishing, implementing, maintaining, and improving an information security management system. Being ISO 27001 certified demonstrates a serious commitment to security.{% endif %}</p>
+                        </div>
+                    </div>
+
+                    <!-- Catégorie : Contact -->
+                    <h3 class="faq-category mt-5">✉️ {% if lang == 'fr' %}Contact & Services{% elif lang == 'de' %}Kontakt & Dienstleistungen{% else %}Contact & Services{% endif %}</h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                            <span>{% if lang == 'fr' %}Comment puis-vous contacter ?{% elif lang == 'de' %}Wie kann ich Sie kontaktieren?{% else %}How can I contact you?{% endif %}</span>
+                            <span class="faq-arrow">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>{% if lang == 'fr' %}Vous pouvez m'écrire à <strong>fokagodwill@gmail.com</strong>, me contacter sur <strong>LinkedIn</strong> (linkedin.com/in/godwillfoka) ou via <strong>WhatsApp</strong> au +49 15565 880501. Le formulaire de contact sur ce site est également à votre disposition.{% elif lang == 'de' %}Sie können mich unter <strong>fokagodwill@gmail.com</strong> erreichen, auf <strong>LinkedIn</strong> (linkedin.com/in/godwillfoka) oder via <strong>WhatsApp</strong> unter +49 15565 880501. Das Kontaktformular auf dieser Website steht Ihnen ebenfalls zur Verfügung.{% else %}You can email me at <strong>fokagodwill@gmail.com</strong>, reach me on <strong>LinkedIn</strong> (linkedin.com/in/godwillfoka) or via <strong>WhatsApp</strong> at +49 15565 880501. The contact form on this site is also available.{% endif %}</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                            <span>{% if lang == 'fr' %}Quels sont vos tarifs ?{% elif lang == 'de' %}Was sind Ihre Preise?{% else %}What are your rates?{% endif %}</span>
+                            <span class="faq-arrow">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>{% if lang == 'fr' %}Les tarifs dépendent du service et de la complexité du projet. Chaque mission est précédée d'un échange gratuit pour comprendre vos besoins et vous proposer un devis personnalisé. Contactez-moi pour en discuter !{% elif lang == 'de' %}Die Preise hängen von der Dienstleistung und der Komplexität des Projekts ab. Jeder Auftrag wird durch ein kostenloses Gespräch eingeleitet, um Ihre Bedürfnisse zu verstehen und ein individuelles Angebot zu erstellen. Kontaktieren Sie mich!{% else %}Rates depend on the service and project complexity. Each engagement begins with a free consultation to understand your needs and provide a customized quote. Contact me to discuss!{% endif %}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section text-center">
+    <div class="container fade-in">
+        <span class="section-tag">{% if lang == 'fr' %}Contact{% elif lang == 'de' %}Kontakt{% else %}Contact{% endif %}</span>
+        <h2 class="section-title">{% if lang == 'fr' %}Une autre question ?{% elif lang == 'de' %}Noch eine Frage?{% else %}Another question?{% endif %}</h2>
+        <p class="section-subtitle">{% if lang == 'fr' %}Je suis à votre disposition pour répondre à toutes vos questions.{% elif lang == 'de' %}Ich stehe Ihnen gerne zur Verfügung, um alle Ihre Fragen zu beantworten.{% else %}I'm available to answer any questions you may have.{% endif %}</p>
+        <a href="{% url 'contact' %}" class="btn btn-accent">{% if lang == 'fr' %}Me contacter →{% elif lang == 'de' %}Kontaktieren Sie mich →{% else %}Contact me →{% endif %}</a>
+    </div>
+</section>
+{% endblock %}

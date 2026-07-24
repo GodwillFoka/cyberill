@@ -11,5 +11,6 @@ urlpatterns = [
     path('cv/', views.cv_page, name='cv'),
     path('portfolio/', views.portfolio, name='portfolio'),
     path('services/', views.services, name='services'),
+    path('faq/', views.faq, name='faq'),
     path('cv/download/', views.cv_download, name='cv_download'),
 ]

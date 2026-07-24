@@ -69,3 +69,6 @@ msgstr "Portfolio"
 
 msgid "Services"
 msgstr "Leistungen"
+
+msgid "FAQ"
+msgstr "FAQ"
