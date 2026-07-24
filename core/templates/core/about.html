@@ -63,6 +63,23 @@
                     </div>
                 </div>
 
+                <!-- Professional Bio -->
+                <div class="professional-bio mb-5 fade-in">
+                    <h4 style="color: var(--accent); font-weight: 700; margin-bottom: 20px;">👤 {% if lang == 'fr' %}Qui suis-je ?{% elif lang == 'de' %}Wer bin ich?{% else %}Who am I?{% endif %}</h4>
+                    <p style="color: var(--text); font-size: 1rem; line-height: 1.8;">
+                        {% if lang == 'fr' %}Je suis <strong>Godwill FOKA</strong>, un Cybersecurity Engineer basé à Berlin, spécialisé dans la cybersécurité, la transformation digitale et le développement d'applications sécurisées.
+                        <br><br>
+                        Mon parcours m'a mené de <strong>Dschang (Cameroun)</strong> à <strong>Berlin (Allemagne)</strong>, où j'ai bâti une expertise solide à travers des certifications reconnues (EC-Council C|CT, Cisco, ANSSI) et des expériences variées en IT. Je parle couramment français, anglais (B2) et allemand (C1).<br><br>
+                        Ma mission : rendre la cybersécurité <strong>accessible à tous</strong>, accompagner les organisations dans leur transformation numérique, et contribuer à un environnement digital plus sûr.{% elif lang == 'de' %}Ich bin <strong>Godwill FOKA</strong>, ein Cybersecurity Engineer mit Sitz in Berlin, spezialisiert auf Cybersicherheit, digitale Transformation und sichere Anwendungsentwicklung.
+                        <br><br>
+                        Mein Weg führte mich von <strong>Dschang (Kamerun)</strong> nach <strong>Berlin (Deutschland)</strong>, wo ich durch anerkannte Zertifizierungen (EC-Council C|CT, Cisco, ANSSI) und vielfältige IT-Erfahrungen fundierte Expertise aufgebaut habe. Ich spreche fließend Französisch, Englisch (B2) und Deutsch (C1).<br><br>
+                        Meine Mission: Cybersicherheit für <strong>alle zugänglich</strong> machen, Organisationen bei ihrer digitalen Transformation begleiten und zu einer sichereren digitalen Umgebung beitragen.{% else %}I am <strong>Godwill FOKA</strong>, a Cybersecurity Engineer based in Berlin, specializing in cybersecurity, digital transformation, and secure application development.
+                        <br><br>
+                        My journey took me from <strong>Dschang (Cameroon)</strong> to <strong>Berlin (Germany)</strong>, where I built strong expertise through recognized certifications (EC-Council C|CT, Cisco, ANSSI) and diverse IT experiences. I am fluent in French, English (B2), and German (C1).<br><br>
+                        My mission: make cybersecurity <strong>accessible to everyone</strong>, support organizations in their digital transformation, and contribute to a safer digital environment.{% endif %}
+                    </p>
+                </div>
+
                 <div class="mt-4">
                     <h4 style="color: var(--accent); font-weight: 700;">🎓 Formation</h4>
                     <div class="row mt-3 g-3">
@@ -284,6 +301,47 @@
                 <div class="skill-item">
                     <div class="skill-header"><span>🇫🇷 Français (Natif)</span><span>100%</span></div>
                     <div class="skill-bar"><div class="skill-bar-fill" data-width="100"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== Why Work With Me ===== -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-tag">{% if lang == 'fr' %}Valeur ajoutée{% elif lang == 'de' %}Mehrwert{% else %}Value{% endif %}</span>
+            <h2 class="section-title">{% if lang == 'fr' %}Pourquoi travailler avec moi ?{% elif lang == 'de' %}Warum mit mir arbeiten?{% else %}Why work with me?{% endif %}</h2>
+            <p class="section-subtitle">{% if lang == 'fr' %}Ce que j'apporte à votre organisation{% elif lang == 'de' %}Was ich Ihrer Organisation biete{% else %}What I bring to your organization{% endif %}</p>
+        </div>
+        <div class="row g-4 fade-in">
+            <div class="col-md-6">
+                <div class="why-card hover-lift">
+                    <div class="why-icon">🎓</div>
+                    <h5>{% if lang == 'fr' %}Double compétence technique & académique{% elif lang == 'de' %}Doppelte technische & akademische Kompetenz{% else %}Dual technical & academic expertise{% endif %}</h5>
+                    <p class="text-muted">{% if lang == 'fr' %}Formation en ingénierie IT + Master en IA, complétés par des certifications reconnues (C|CT, Cisco, ANSSI).{% elif lang == 'de' %}IT-Ingenieurausbildung + Master in KI, ergänzt durch anerkannte Zertifizierungen (C|CT, Cisco, ANSSI).{% else %}IT engineering background + Master's in AI, complemented by recognized certifications (C|CT, Cisco, ANSSI).{% endif %}</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="why-card hover-lift">
+                    <div class="why-icon">🌍</div>
+                    <h5>{% if lang == 'fr' %}Perspective internationale{% elif lang == 'de' %}Internationale Perspektive{% else %}International perspective{% endif %}</h5>
+                    <p class="text-muted">{% if lang == 'fr' %}Expérience Europe-Afrique, trilingue (FR/EN/DE), compréhension des enjeux cyber dans différents contextes culturels.{% elif lang == 'de' %}Europa-Afrika-Erfahrung, dreisprachig (FR/EN/DE), Verständnis für Cyber-Herausforderungen in verschiedenen kulturellen Kontexten.{% else %}Europe-Africa experience, trilingual (FR/EN/DE), understanding of cyber challenges across different cultural contexts.{% endif %}</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="why-card hover-lift">
+                    <div class="why-icon">🔧</div>
+                    <h5>{% if lang == 'fr' %}Polyvalence opérationnelle{% elif lang == 'de' %}Operative Vielseitigkeit{% else %}Operational versatility{% endif %}</h5>
+                    <p class="text-muted">{% if lang == 'fr' %}Du pentest à la conformité DSGVO, du développement web à l'administration Linux — une palette complète de compétences.{% elif lang == 'de' %}Vom Pentest bis zur DSGVO-Compliance, von der Webentwicklung bis zur Linux-Administration — ein vollständiges Kompetenzspektrum.{% else %}From pentesting to GDPR compliance, from web development to Linux administration — a complete skillset.{% endif %}</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="why-card hover-lift">
+                    <div class="why-icon">💬</div>
+                    <h5>{% if lang == 'fr' %}Pédagogue & communicateur{% elif lang == 'de' %}Pädagoge & Kommunikator{% else %}Educator & communicator{% endif %}</h5>
+                    <p class="text-muted">{% if lang == 'fr' %}39 articles éducatifs, formations, ateliers — je rends la cybersécurité compréhensible pour tous les niveaux.{% elif lang == 'de' %}39 Bildungsartikel, Schulungen, Workshops — ich mache Cybersicherheit für alle Niveaus verständlich.{% else %}39 educational articles, training, workshops — I make cybersecurity understandable for all levels.{% endif %}</p>
                 </div>
             </div>
         </div>
