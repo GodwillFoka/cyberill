@@ -36,9 +36,12 @@ def cv_page(request):
 def services(request):
     return render(request, 'core/services.html')
 
-# ===== FAQ =====
 def faq(request):
     return render(request, 'core/faq.html')
+
+def google_verify(request):
+    from django.http import HttpResponse
+    return HttpResponse("google-site-verification: googlec4f4ea51a5ac0fa2.html", content_type="text/plain")
 
 # ===== 404 personnalisée =====
 def custom_404(request, exception=None):

@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.views.generic.base import RedirectView
 from django.contrib.staticfiles.storage import staticfiles_storage
+from core import views
 
 handler404 = 'core.views.custom_404'
 
@@ -12,6 +13,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('robots.txt', RedirectView.as_view(url=staticfiles_storage.url('robots.txt'))),
     path('sitemap.xml', RedirectView.as_view(url=staticfiles_storage.url('sitemap.xml'))),
+    path('googlec4f4ea51a5ac0fa2.html', views.google_verify, name='google_verify'),
 ]
 
 urlpatterns += i18n_patterns(
