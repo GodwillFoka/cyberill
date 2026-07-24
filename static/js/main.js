@@ -349,3 +349,31 @@ document.querySelectorAll('[data-lightbox]').forEach(el => {
         openLightbox(el.src || el.href, el.dataset.caption || '');
     });
 });
+
+// ===== 20. Scroll Progress Bar =====
+const progressBar = document.getElementById('scrollProgress');
+if (progressBar) {
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = progress + '%';
+    });
+}
+
+// ===== 21. Reading Time =====
+document.querySelectorAll('[data-reading-time]').forEach(el => {
+    const text = el.dataset.readingTime || el.textContent;
+    const words = text.split(/\s+/).length;
+    const minutes = Math.max(1, Math.round(words / 200));
+    el.innerHTML = `<span class="reading-time">📖 ${minutes} min</span>`;
+});
+
+// ===== 22. Reading Time from Article Content =====
+const articleContent = document.querySelector('[data-article-content]');
+const readingTimeSpan = document.querySelector('.reading-time-minutes');
+if (articleContent && readingTimeSpan) {
+    const words = articleContent.textContent.trim().split(/\s+/).length;
+    const minutes = Math.max(1, Math.round(words / 200));
+    readingTimeSpan.textContent = minutes + ' min';
+}

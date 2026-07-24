@@ -91,3 +91,9 @@
 .lightbox-close{position:absolute;top:25px;right:35px;color:#fff;font-size:2.5rem;cursor:pointer;transition:transform 0.3s;background:none;border:none;line-height:1}
 .lightbox-close:hover{transform:rotate(90deg)}
 .lightbox-caption{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);color:#fff;font-size:1rem;background:rgba(0,0,0,0.6);padding:8px 20px;border-radius:8px}
+
+/* Scroll Progress Bar */
+.scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),#FFB347);z-index:9999;width:0%;transition:width 0.1s}
+
+/* Reading Time Badge */
+.reading-time{display:inline-flex;align-items:center;gap:4px;font-size:0.8rem;color:var(--text-muted);background:var(--bg-alt);padding:3px 10px;border-radius:20px;border:1px solid var(--border)}

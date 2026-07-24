@@ -1,0 +1,22 @@
+{
+    "name": "CYBERILL — Cybersecurity by Godwill FOKA",
+    "short_name": "CYBERILL",
+    "description": "Cybersecurity, digital transformation & technology — Godwill FOKA",
+    "start_url": "/en/",
+    "display": "standalone",
+    "background_color": "#20155C",
+    "theme_color": "#20155C",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/static/images/favicon-64.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/images/cyberill-logo-200.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}

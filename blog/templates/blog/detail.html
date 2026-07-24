@@ -13,11 +13,12 @@
             <div class="col-lg-8 mx-auto">
                 <a href="{% url 'blog_list' %}" class="text-muted" style="text-decoration: none;">← Retour au blog</a>
                 <h1 class="mt-3 mb-3" style="font-weight: 800;">{{ article.title }}</h1>
-                <div class="text-muted mb-4">
+                <div class="text-muted mb-4 d-flex align-items-center flex-wrap gap-2">
                     <span>{{ article.date }}</span>
                     {% if article.category %}
-                    <span class="ms-3" style="color: var(--accent);">{{ article.category }}</span>
+                    <span style="color: var(--accent);">• {{ article.category }}</span>
                     {% endif %}
+                    <span class="reading-time">📖 <span class="reading-time-minutes">0 min</span></span>
                 </div>
                 <!-- Social sharing -->
                 <div class="share-bar mb-4">
@@ -26,7 +27,7 @@
                     <a href="https://twitter.com/intent/tweet?text={{ article.title }}&url=https://cyberill.onrender.com{{ request.path }}" target="_blank" class="share-btn" aria-label="Twitter">𝕏</a>
                     <a href="mailto:?subject={{ article.title }}&body=https://cyberill.onrender.com{{ request.path }}" class="share-btn" aria-label="Email">📧</a>
                 </div>
-                <div style="line-height: 1.8; font-size: 1.05rem;">
+                <div style="line-height: 1.8; font-size: 1.05rem;" data-article-content>
                     {{ article.content|linebreaks }}
                 </div>
             </div>
