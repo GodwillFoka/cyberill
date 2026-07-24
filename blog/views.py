@@ -373,7 +373,11 @@ def blog_detail(request, slug):
                 break
     if not article:
         raise Http404("Article not found")
-    return render(request, 'blog/detail.html', {'article': article})
+    
+    # Related articles (same category, exclude current)
+    related = [a for a in articles if a['category'] == article['category'] and a['slug'] != slug][:3]
+    
+    return render(request, 'blog/detail.html', {'article': article, 'related_articles': related})
 
 # ===== RSS Feed =====
 def blog_rss(request):
