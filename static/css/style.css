@@ -1437,6 +1437,116 @@ body {
     .cv-card { padding: 20px; }
 }
 
+/* ===== Dark Mode ===== */
+[data-theme="dark"] {
+    --primary: #20155C;
+    --accent: #E6681B;
+    --accent-hover: #FF8A3C;
+    --text: #E0E0E0;
+    --text-muted: rgba(255, 255, 255, 0.65);
+    --text-light: rgba(255, 255, 255, 0.4);
+    --bg: #0F0B1E;
+    --bg-alt: #1A1530;
+    --bg-gradient: linear-gradient(135deg, #1A1530 0%, #0F0B1E 100%);
+    --border: rgba(255, 255, 255, 0.08);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .navbar {
+    background: rgba(15, 11, 30, 0.95) !important;
+    border-bottom-color: var(--border);
+}
+
+[data-theme="dark"] .lang-dropdown {
+    border-color: var(--border);
+    color: var(--text);
+}
+
+[data-theme="dark"] .dropdown-menu {
+    background: #1A1530;
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .dropdown-item {
+    color: var(--text);
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+    background: rgba(230, 104, 27, 0.1);
+}
+
+[data-theme="dark"] .footer {
+    background: #0A0815;
+}
+
+[data-theme="dark"] .hero {
+    background: linear-gradient(135deg, #0F0B1E 0%, #1A1530 50%, #0F0B1E 100%);
+}
+
+[data-theme="dark"] .about-header {
+    background: linear-gradient(135deg, var(--primary), #0F0B1E);
+}
+
+[data-theme="dark"] .contact-section {
+    background: linear-gradient(135deg, var(--primary), #0F0B1E);
+}
+
+[data-theme="dark"] .gallery-overlay {
+    background: linear-gradient(transparent, rgba(15, 11, 30, 0.95));
+}
+
+[data-theme="dark"] .cv-card {
+    background: #1A1530;
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .cv-cert-badge {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .cv-skill-list li {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .cv-download {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+[data-theme="dark"] .threat-row {
+    background: #1A1530;
+}
+
+[data-theme="dark"] .threat-bar {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Dark mode toggle button */
+.theme-toggle {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1.1rem;
+    line-height: 1;
+    padding: 0;
+    color: var(--text-muted);
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
+    background: rgba(230, 104, 27, 0.05);
+    color: var(--accent);
+}
+
 /* ===== Portfolio / Repo Cards ===== */
 .repo-card-link {
     text-decoration: none;
