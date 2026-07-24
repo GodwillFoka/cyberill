@@ -154,6 +154,18 @@ def brand_email_signature(request):
 </table>"""
     return HttpResponse(html)
 
+def brand_email_signature_outlook(request):
+    from django.http import HttpResponse
+    import os
+    from django.conf import settings
+    path = os.path.join(settings.BASE_DIR, 'static', 'brand', 'email-signature-outlook.html')
+    try:
+        with open(path) as f:
+            html = f.read()
+    except:
+        html = "Outlook signature not found"
+    return HttpResponse(html)
+
 # ===== 404 personnalisée =====
 def custom_404(request, exception=None):
     from django.utils import translation

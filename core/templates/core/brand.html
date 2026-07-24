@@ -156,7 +156,8 @@
 &lt;/table&gt;
                 </div>
                 <div class="mt-3 text-center">
-                    <a href="{% url 'brand_email_signature' %}" target="_blank" class="btn btn-outline">📧 {% if lang == 'fr' %}Voir la signature en direct{% elif lang == 'de' %}Signatur live ansehen{% else %}View live signature{% endif %}</a>
+                    <a href="{% url 'brand_email_signature' %}" target="_blank" class="btn btn-outline">📧 {% if lang == 'fr' %}Voir la signature (SVG){% elif lang == 'de' %}Signatur ansehen (SVG){% else %}View signature (SVG){% endif %}</a>
+                    <a href="{% url 'brand_email_signature_outlook' %}" target="_blank" class="btn btn-outline ms-2">📧 {% if lang == 'fr' %}Version Outlook{% elif lang == 'de' %}Outlook-Version{% else %}Outlook version{% endif %}</a>
                     <a href="{% static 'brand/email-signature.html' %}" download class="btn btn-accent ms-2">📥 {% if lang == 'fr' %}Télécharger le HTML{% elif lang == 'de' %}HTML herunterladen{% else %}Download HTML{% endif %}</a>
                 </div>
             </div>
