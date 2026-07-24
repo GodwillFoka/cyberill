@@ -390,3 +390,24 @@ if (blogSearch && blogCards.length > 0) {
         });
     });
 }
+
+// ===== 24. Typing Effect =====
+document.querySelectorAll('.type-writer').forEach(el => {
+    try {
+        const words = JSON.parse(el.dataset.words.replace(/'/g, '"'));
+        let wordIdx = 0, charIdx = 0, isDeleting = false, isLooping = true;
+        function type() {
+            if (!isLooping) return;
+            const word = words[wordIdx];
+            if (isDeleting) {
+                el.textContent = word.substring(0, charIdx--);
+                if (charIdx < 0) { isDeleting = false; wordIdx = (wordIdx + 1) % words.length; }
+            } else {
+                el.textContent = word.substring(0, charIdx++);
+                if (charIdx > word.length) { isDeleting = true; }
+            }
+            setTimeout(type, isDeleting ? 50 : 120);
+        }
+        type();
+    } catch(e) { el.textContent = el.dataset.words || ''; }
+});

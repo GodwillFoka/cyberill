@@ -97,3 +97,8 @@
 
 /* Reading Time Badge */
 .reading-time{display:inline-flex;align-items:center;gap:4px;font-size:0.8rem;color:var(--text-muted);background:var(--bg-alt);padding:3px 10px;border-radius:20px;border:1px solid var(--border)}
+
+/* Typing Effect */
+.type-writer{display:inline-block;border-right:2px solid var(--accent);animation:blink-cursor 0.8s step-end infinite;white-space:nowrap;overflow:hidden;max-width:100%}
+@keyframes blink-cursor{50%{border-color:transparent}}
+.hero-typewriter{text-align:center;margin-top:12px;font-size:0.95rem;font-weight:600;color:var(--accent);min-height:28px}
