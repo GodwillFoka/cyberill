@@ -4,153 +4,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CYBERILL — Godwill FOKA</title>
+    <title>Godwill FOKA — CYBERILL</title>
     <link rel="stylesheet" href="{% static 'css/book-mode.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <style>
-        body{margin:0;padding:0;font-family:'Inter',sans-serif;background:#0F0B1E;color:#fff;overflow-x:hidden}
-        .book-section{padding:100px 0}
-        .container-book{max-width:900px;margin:0 auto;padding:0 30px}
-        .pullquote{font-family:'Playfair Display',Georgia,serif;font-size:2.2rem;font-style:italic;line-height:1.3;border-left:3px solid var(--accent);padding-left:30px;margin:50px 0;color:rgba(255,255,255,0.85)}
-        .stat-row{display:flex;gap:60px;justify-content:center;margin:60px 0}
-        .stat-item-book{text-align:center}
-        .stat-num{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:900;color:var(--accent);line-height:1}
-        .stat-lbl{font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:8px}
-        .skill-list{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:500px}
-        .skill-list li{font-size:0.9rem;color:rgba(255,255,255,0.7);padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06)}
-        .skill-list li::before{content:'→ ';color:var(--accent)}
-        .cert-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-        .cert-badge-book{background:rgba(180,20,20,0.1);border:1px solid rgba(180,20,20,0.2);padding:6px 16px;border-radius:4px;font-size:0.75rem;color:var(--accent);font-weight:600}
-        .cta-book{display:inline-block;border:1px solid rgba(255,255,255,0.2);color:#fff;padding:12px 32px;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all 0.3s;margin-top:30px}
-        .cta-book:hover{background:var(--accent);border-color:var(--accent);color:#fff}
-        @media(max-width:768px){.stat-row{flex-direction:column;gap:30px}.skill-list{grid-template-columns:1fr}.pullquote{font-size:1.5rem}}
+        body{margin:0;padding:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:#0F0B1E;color:#fff;overflow-x:hidden}
+        
+        /* ===== Organic / Human touches ===== */
+        .hand-drawn{position:absolute;opacity:0.08;pointer-events:none;font-size:12rem;font-weight:900;color:var(--accent);line-height:1;user-select:none}
+        .warm-gradient{background:linear-gradient(145deg,#0F0B1E 0%,#1A1530 50%,#0F0B1E 100%)}
+        .photo-circle{width:140px;height:140px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.1);margin-bottom:20px;filter:grayscale(30%)}
+        .photo-circle:hover{filter:grayscale(0%);border-color:var(--accent);transition:all 0.5s}
+        .signature{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:1.8rem;color:var(--accent);opacity:0.6;margin-top:10px}
+        .story-text{font-size:1.05rem;line-height:1.9;color:rgba(255,255,255,0.75);max-width:600px;margin:0 auto 20px}
+        .story-text strong{color:#fff}
+        .highlight-word{color:var(--accent);font-weight:600}
+        .flag-line{font-size:2rem;letter-spacing:8px;margin:20px 0;opacity:0.5}
+        .human-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:30px;transition:all 0.3s;backdrop-filter:blur(10px)}
+        .human-card:hover{background:rgba(255,255,255,0.04);border-color:rgba(180,20,20,0.2);transform:translateY(-2px)}
+        .human-card .icon{font-size:2rem;margin-bottom:12px}
+        .human-card h4{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;margin-bottom:8px}
+        .human-card p{font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.6;margin:0}
+        .journey-line{position:relative;padding:20px 0 20px 40px;border-left:2px solid rgba(180,20,20,0.3)}
+        .journey-line::before{content:'';position:absolute;left:-5px;top:28px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+        .journey-line .year{font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-weight:600}
+        .journey-line p{font-size:0.9rem;color:rgba(255,255,255,0.6);margin:4px 0 0}
+        .book-cover-subtitle{max-width:500px;margin-left:auto;margin-right:auto}
+        
+        @media(max-width:768px){
+            .photo-circle{width:100px;height:100px}
+            .story-text{font-size:0.95rem}
+            .human-card{padding:20px}
+        }
     </style>
 </head>
 <body>
 
 <!-- ===== BOOK COVER ===== -->
-<section class="book-cover">
-    <div class="book-cover-content">
-        <div class="book-cover-label">Portfolio · Cybersecurity</div>
-        <h1 class="book-cover-title">Godwill<br>FOKA</h1>
-        <p class="book-cover-subtitle">Cybersecurity Engineer &mdash; from Dschang to Berlin, building a safer digital world.</p>
-        <div class="book-cover-line"></div>
-        <div class="book-cover-meta"><span>CYBERILL</span> · Berlin · FR/EN/DE</div>
+<section class="book-cover warm-gradient" style="min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;position:relative;overflow:hidden">
+    <div class="hand-drawn" style="bottom:-40px;right:-40px;transform:rotate(-15deg)">✎</div>
+    
+    <div style="max-width:700px;position:relative;z-index:1">
+        <div style="margin-bottom:30px">
+            <img src="{% static 'images/photo-profile.jpg' %}" alt="Godwill FOKA" class="photo-circle">
+        </div>
+        <div style="font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:20px">Hello, I'm</div>
+        <h1 style="font-family:'Playfair Display',Georgia,serif;font-size:4.5rem;font-weight:900;color:#fff;line-height:1;margin:0 0 12px;letter-spacing:-2px">Godwill FOKA</h1>
+        <p style="font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:400;font-style:italic;color:rgba(255,255,255,0.5);margin:0 0 30px;line-height:1.5">
+            Cybersecurity Engineer,<br>
+            <span style="color:var(--accent)">from Cameroon to Berlin.</span>
+        </p>
+        <div style="width:40px;height:2px;background:var(--accent);margin:0 auto 30px"></div>
+        <div style="font-size:0.75rem;color:rgba(255,255,255,0.3);letter-spacing:2px;text-transform:uppercase">
+            🇨🇲 &nbsp;→&nbsp; 🇩🇪 &nbsp;·&nbsp; C|CT · ANSSI · Cisco
+        </div>
     </div>
 </section>
 
-<!-- ===== CHAPTER I — About ===== -->
-<section class="chapter chapter-light">
-    <div class="chapter-number">I</div>
+<!-- ===== CHAPTER I — My Story ===== -->
+<section class="chapter chapter-dark warm-gradient" style="padding:100px 0;position:relative;overflow:hidden">
+    <div class="hand-drawn" style="top:-60px;left:-40px;transform:rotate(10deg)">⌂</div>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="chapter-tag">Chapter I</div>
-                <h2 class="chapter-title">The Journey</h2>
-                <p class="chapter-text">From the University of Dschang in Cameroon to the tech hub of Berlin, my path has been defined by a relentless pursuit of knowledge and a passion for cybersecurity. With a BSc in IT Engineering, a Master's in Software Engineering &amp; AI, and multiple industry certifications, I bridge the gap between technical rigor and strategic vision.</p>
-                <div class="chapter-pullquote">"Cybersecurity is not just about technology — it's about trust, education, and building a culture of security."</div>
-                <p class="chapter-text">Today, through CYBERILL, I provide consulting, audit, training, and secure development services to organizations that take security seriously.</p>
-                <a href="/{{ lang }}/about/" class="cta-book">Read more →</a>
+            <div class="col-lg-8 text-center">
+                <div style="font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:16px">Chapter I · My Story</div>
+                <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:2.8rem;font-weight:700;margin-bottom:30px;letter-spacing:-1px;line-height:1.15">
+                    From Dschang<br>to Berlin
+                </h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <p class="story-text">
+                    I was born and raised in <strong>Dschang, Cameroon</strong>. Like many, I grew up with a curiosity for how things work — computers, networks, systems. That curiosity became a passion.
+                </p>
+                <p class="story-text">
+                    I earned my <strong>BSc in IT Engineering</strong> from the University of Dschang, then a <strong>Master's in Software Engineering &amp; AI</strong>. But I knew I wanted more. So I packed my bags and moved to <span class="highlight-word">Berlin</span>.
+                </p>
+                <p class="story-text">
+                    Today, I'm pursuing a <strong>Master's in Computer Science at TU Berlin</strong>, holding certifications from <span class="highlight-word">EC-Council</span>, <span class="highlight-word">Cisco</span>, and <span class="highlight-word">ANSSI</span>, and building <strong>CYBERILL</strong> — my initiative to make cybersecurity accessible.
+                </p>
+                <div style="margin:40px auto;text-align:center">
+                    <div class="flag-line">🇨🇲&nbsp;&nbsp;&nbsp;🇩🇪</div>
+                    <div class="signature">"Every expert was once a beginner."</div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ===== Stats ===== -->
-<section class="chapter chapter-dark" style="padding:80px 0">
+<section style="padding:60px 0;border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.05)">
     <div class="container">
-        <div class="stat-row">
-            <div class="stat-item-book">
-                <div class="stat-num">5+</div>
-                <div class="stat-lbl">Years IT Experience</div>
+        <div style="display:flex;gap:40px;justify-content:center;flex-wrap:wrap">
+            <div style="text-align:center;min-width:100px">
+                <div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--accent);line-height:1">5+</div>
+                <div style="font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:6px">Years in IT</div>
             </div>
-            <div class="stat-item-book">
-                <div class="stat-num">8</div>
-                <div class="stat-lbl">Certifications</div>
+            <div style="text-align:center;min-width:100px">
+                <div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--accent);line-height:1">8</div>
+                <div style="font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:6px">Certifications</div>
             </div>
-            <div class="stat-item-book">
-                <div class="stat-num">3</div>
-                <div class="stat-lbl">Languages</div>
+            <div style="text-align:center;min-width:100px">
+                <div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--accent);line-height:1">3</div>
+                <div style="font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:6px">Languages</div>
             </div>
-            <div class="stat-item-book">
-                <div class="stat-num">39</div>
-                <div class="stat-lbl">Blog Articles</div>
+            <div style="text-align:center;min-width:100px">
+                <div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--accent);line-height:1">39</div>
+                <div style="font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:6px">Articles</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ===== CHAPTER II — Services ===== -->
-<section class="chapter chapter-light">
-    <div class="chapter-number">II</div>
+<!-- ===== CHAPTER II — What I Do ===== -->
+<section class="chapter" style="padding:100px 0;position:relative">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="chapter-tag">Chapter II</div>
-                <h2 class="chapter-title">Expertise</h2>
+            <div class="col-lg-8 text-center">
+                <div style="font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:16px">Chapter II · What I Do</div>
+                <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:2.8rem;font-weight:700;margin-bottom:40px;letter-spacing:-1px">My Work</h2>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="book-card">
-                    <div class="book-card-number">01</div>
-                    <div class="book-card-title">Security Consulting</div>
-                    <div class="book-card-text">ISO 27001, DSGVO/GDPR compliance, risk assessment, and security strategy for SMEs and startups.</div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="human-card text-center">
+                    <div class="icon">🛡️</div>
+                    <h4>Security Consulting</h4>
+                    <p>ISO 27001, GDPR, risk assessment &mdash; I help SMEs build a security strategy that works.</p>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="book-card">
-                    <div class="book-card-number">02</div>
-                    <div class="book-card-title">Penetration Testing</div>
-                    <div class="book-card-text">Network, web application, and infrastructure pentesting with detailed remediation reports.</div>
+            <div class="col-md-6 col-lg-3">
+                <div class="human-card text-center">
+                    <div class="icon">🔍</div>
+                    <h4>Pentesting</h4>
+                    <p>Network, web apps, infrastructure &mdash; I find vulnerabilities before the bad guys do.</p>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="book-card">
-                    <div class="book-card-number">03</div>
-                    <div class="book-card-title">Training & Awareness</div>
-                    <div class="book-card-text">Workshops, interactive training, and security awareness programs tailored to your team.</div>
+            <div class="col-md-6 col-lg-3">
+                <div class="human-card text-center">
+                    <div class="icon">🎓</div>
+                    <h4>Training</h4>
+                    <p>Workshops and awareness sessions &mdash; because security starts with people, not tools.</p>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="book-card">
-                    <div class="book-card-number">04</div>
-                    <div class="book-card-title">Secure Development</div>
-                    <div class="book-card-text">Django, Python, PHP — secure application development with security by design principles.</div>
+            <div class="col-md-6 col-lg-3">
+                <div class="human-card text-center">
+                    <div class="icon">⚡</div>
+                    <h4>Secure Dev</h4>
+                    <p>Django, Python, PHP &mdash; secure applications built with security by design.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ===== CHAPTER III — Credentials ===== -->
-<section class="chapter chapter-dark">
-    <div class="chapter-number">III</div>
+<!-- ===== CHAPTER III — My Path ===== -->
+<section class="chapter chapter-dark warm-gradient" style="padding:100px 0;position:relative;overflow:hidden">
+    <div class="hand-drawn" style="bottom:-40px;right:-30px;transform:rotate(20deg)">→</div>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="chapter-tag">Chapter III</div>
-                <h2 class="chapter-title">Credentials</h2>
-                <p class="chapter-text">Industry-recognized certifications that validate my expertise across cybersecurity, networking, and secure development.</p>
-                <div class="cert-badges">
-                    <span class="cert-badge-book">EC-Council C|CT</span>
-                    <span class="cert-badge-book">Cisco CyberOps</span>
-                    <span class="cert-badge-book">ANSSI SecNumAcadémie</span>
-                    <span class="cert-badge-book">Python Essentials</span>
-                    <span class="cert-badge-book">English for IT B2</span>
+            <div class="col-lg-8 text-center">
+                <div style="font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:16px">Chapter III · My Journey</div>
+                <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:2.8rem;font-weight:700;margin-bottom:40px;letter-spacing:-1px">Timeline</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="journey-line">
+                    <div class="year">2024 — Present</div>
+                    <p><strong>CYBERILL</strong> — Founder &amp; Cybersecurity Engineer · Berlin</p>
                 </div>
-                <div style="margin-top:40px">
-                    <h4 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--accent);margin-bottom:16px">Core Skills</h4>
-                    <ul class="skill-list">
-                        <li>Network Defense</li>
-                        <li>Penetration Testing</li>
-                        <li>OSINT & Forensics</li>
-                        <li>ISO 27001 Compliance</li>
-                        <li>Linux Administration</li>
-                        <li>Python & Django</li>
-                        <li>Wireshark & Nmap</li>
-                        <li>SIEM & SOC</li>
-                    </ul>
+                <div class="journey-line">
+                    <div class="year">2023 — 2025</div>
+                    <p><strong>Institut Die Suchenden</strong> — IT Systems Manager · Yaoundé</p>
+                </div>
+                <div class="journey-line">
+                    <div class="year">2022</div>
+                    <p><strong>TU Berlin</strong> — MSc Computer Science (en cours)</p>
+                </div>
+                <div class="journey-line">
+                    <div class="year">2020 — 2022</div>
+                    <p><strong>University of Dschang</strong> — CS Club President · BSc IT Engineering</p>
+                </div>
+                <div class="journey-line">
+                    <div class="year">2019</div>
+                    <p><strong>First line of code</strong> — The beginning of my journey</p>
                 </div>
             </div>
         </div>
@@ -158,16 +196,19 @@
 </section>
 
 <!-- ===== CTA ===== -->
-<section class="chapter chapter-light text-center" style="padding:80px 0">
+<section style="padding:80px 0;text-align:center">
     <div class="container">
-        <p style="font-family:'Playfair Display',serif;font-size:1.5rem;font-style:italic;color:#666;margin-bottom:30px">Let's build something secure together.</p>
-        <a href="/{{ lang }}/contact/" class="cta-book" style="color:#1A1A2E;border-color:#1A1A2E">Get in touch →</a>
+        <p style="font-family:'Playfair Display',serif;font-size:1.5rem;font-style:italic;color:rgba(255,255,255,0.5);margin-bottom:10px">Want to work together?</p>
+        <p style="font-size:0.9rem;color:rgba(255,255,255,0.3);margin-bottom:30px;max-width:400px;margin-left:auto;margin-right:auto">I'm always open to new challenges — whether it's a security audit, a training session, or just a chat about cybersecurity.</p>
+        <a href="/en/contact/" style="display:inline-block;border:1px solid var(--accent);color:var(--accent);padding:12px 36px;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all 0.3s;border-radius:4px">Say hello →</a>
     </div>
 </section>
 
 <!-- ===== FOOTER ===== -->
-<footer class="book-footer">
-    CYBERILL &mdash; Godwill FOKA &mdash; <a href="https://cyberill.onrender.com" style="color:var(--accent);text-decoration:none">cyberill.onrender.com</a>
+<footer style="border-top:1px solid rgba(255,255,255,0.05);padding:30px 0;font-size:0.75rem;color:rgba(255,255,255,0.2);text-align:center">
+    Godwill FOKA · <a href="https://cyberill.onrender.com" style="color:var(--accent);text-decoration:none">cyberill.onrender.com</a> · 
+    <a href="https://linkedin.com/in/godwillfoka" style="color:rgba(255,255,255,0.2);text-decoration:none">LinkedIn</a> · 
+    <a href="https://github.com/GodwillFoka" style="color:rgba(255,255,255,0.2);text-decoration:none">GitHub</a>
 </footer>
 
 </body>
