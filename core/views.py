@@ -172,6 +172,12 @@ def book_mode(request):
     lang = translation.get_language()
     return render(request, 'core/index-book.html', {'lang': lang})
 
+# ===== Premium Home =====
+def home_premium(request):
+    from django.utils import translation
+    lang = translation.get_language()
+    return render(request, 'core/home-premium.html', {'lang': lang})
+
 # ===== 404 personnalisée =====
 def custom_404(request, exception=None):
     from django.utils import translation
