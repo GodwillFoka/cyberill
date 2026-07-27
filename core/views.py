@@ -3,7 +3,9 @@ from django.contrib import messages
 from django.utils.translation import gettext as _
 
 def home(request):
-    return render(request, 'core/index.html')
+    from django.utils import translation
+    lang = translation.get_language()
+    return render(request, 'core/home-clean.html', {'lang': lang})
 
 def about(request):
     return render(request, 'core/about.html')
