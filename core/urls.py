@@ -14,5 +14,6 @@ urlpatterns = [
     path('brand/', views.brand_kit, name='brand'),
     path('brand/signature/', views.brand_email_signature, name='brand_email_signature'),
     path('brand/signature-outlook/', views.brand_email_signature_outlook, name='brand_email_signature_outlook'),
+    path('book/', views.book_mode, name='book_mode'),
     path('cv/download/', views.cv_download, name='cv_download'),
 ]
