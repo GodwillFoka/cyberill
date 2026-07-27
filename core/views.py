@@ -178,6 +178,12 @@ def home_premium(request):
     lang = translation.get_language()
     return render(request, 'core/home-premium.html', {'lang': lang})
 
+# ===== Clean Home =====
+def home_clean(request):
+    from django.utils import translation
+    lang = translation.get_language()
+    return render(request, 'core/home-clean.html', {'lang': lang})
+
 # ===== 404 personnalisée =====
 def custom_404(request, exception=None):
     from django.utils import translation

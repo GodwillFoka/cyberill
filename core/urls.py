@@ -16,5 +16,6 @@ urlpatterns = [
     path('brand/signature-outlook/', views.brand_email_signature_outlook, name='brand_email_signature_outlook'),
     path('book/', views.book_mode, name='book_mode'),
     path('premium/', views.home_premium, name='home_premium'),
+    path('clean/', views.home_clean, name='home_clean'),
     path('cv/download/', views.cv_download, name='cv_download'),
 ]
